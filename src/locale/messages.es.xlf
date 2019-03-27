@@ -1669,6 +1669,23 @@
           <context context-type="linenumber">360</context>
         </context-group>
       <target>Términos y Condiciones</target></trans-unit>
+
+      <trans-unit id="termsAndConditionsConfirmation" datatype="html">
+        <source>Li e aceito os termos e condições.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      <target>He leído y aceptado los terminos y condiciones.</target></trans-unit>
+
       <trans-unit id="termsAndConditionsText" datatype="html">
         <source>
                           Ao se cadastrar você concorda com os nossos Termos e Condições descritos acima.
@@ -1700,7 +1717,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">361</context>
         </context-group>
-      <target>Inscribiendote estas de acuerdo con losTérminos y Condiciones de AIESEC Argentina. Para leerlos, hacé click acá.</target></trans-unit>
+      <target>Acepto que me puedan contactar o enviar un mensaje a través de mi número telefónico.</target></trans-unit>
       <trans-unit id="cellphoneContactable" datatype="html">
         <source> Gostaria de ser contatado por ligação ou mensagens no meu número de celular.</source>
         <context-group purpose="location">

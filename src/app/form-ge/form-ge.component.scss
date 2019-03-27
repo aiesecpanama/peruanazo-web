@@ -2,6 +2,11 @@
 @import '~animate.css/animate.min.css';
 @import '~node_modules/primeng/resources/themes/nova-light/theme.css';
 @import '~node_modules/primeng/resources/primeng.min.css';
+a {
+    color: white;
+    text-decoration: underline;
+}
+
 .forms-term {
     position: relative;
     z-index: -1;

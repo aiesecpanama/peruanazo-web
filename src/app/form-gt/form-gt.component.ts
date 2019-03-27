@@ -44,7 +44,8 @@ export class FormGtComponent implements OnInit {
     other_university: '',
     preferred_destination: { id: '' },
     curriculum: '',
-    referral_type: ''
+    referral_type: '',
+    accepted_terms: ''
   }
 
   cellphoneDefaultMask: string = '000 000 0000';
@@ -193,14 +194,8 @@ export class FormGtComponent implements OnInit {
       birthdate: new FormControl(this.user.birthdate, [
         Validators.required
       ]),
-      password: new FormControl(this.user.password, [
-        Validators.required,
-        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
-      ]),
-      repassword: new FormControl(this.user.repassword, [
-        Validators.required,
-        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
-      ]),
+      cellphone_contactable: new FormControl(this.user.cellphone_contactable, []),
+      accepted_terms: new FormControl(this.user.accepted_terms, []),
     });
     this.step2Form = new FormGroup({
       university_id: new FormControl(this.user.university, [
@@ -218,7 +213,6 @@ export class FormGtComponent implements OnInit {
       city: new FormControl(this.user.city, [
         Validators.required
       ]),
-      cellphone_contactable: new FormControl(this.user.cellphone_contactable, []),
       other_university: new FormControl(this.user.other_university, []),
       curriculum: new FormControl(this.user.curriculum, [
          FileValidatorDirective.validate
@@ -228,6 +222,14 @@ export class FormGtComponent implements OnInit {
       ]),
       referral_type: new FormControl(this.user.referral_type, [
         Validators.required
+      ]),
+      password: new FormControl(this.user.password, [
+        Validators.required,
+        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ]),
+      repassword: new FormControl(this.user.repassword, [
+        Validators.required,
+        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
       ])
     });
     window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
@@ -390,12 +392,21 @@ export class FormGtComponent implements OnInit {
     }
   }
 
-  unableToSubmit() {
-    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.preferred_destination.id || !+this.user.referral_type;
+  checkPassword() {
+    if (this.user.password != this.user.repassword) {
+      this.invalidPassword = true;
+    }
+    else {
+      this.invalidPassword = false;
+    }
+  }
+
+  unableToSubmit() {    
+    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.preferred_destination.id || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword;
   }
 
   emptyFields() {
-    return !(this.user.scholarity && !!this.user.scholarity.id) || !(this.user.english_level && !!this.user.english_level.id);
+    return !(this.user.scholarity && !!this.user.scholarity.id) || !(this.user.english_level && !!this.user.english_level.id) || !(!!this.user.password && !!this.user.repassword);
   }
 
   emptyUniversity() {
@@ -453,14 +464,8 @@ export class FormGtComponent implements OnInit {
 
   registerUser() {
     this.submittedPersonal = true;
-    if (this.user.password != this.user.repassword) {
-      this.invalidPassword = true;
-    }
-    else {
-      this.invalidPassword = false;
-    }
 
-    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPassword && !this.invalidPhone && this.matchDate && !this.isValidPersonal('password')) {
+    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && this.matchDate && this.user.accepted_terms && !this.invalidPhone) {
       this.personalData = false;
       this.studyData = true;
     }
