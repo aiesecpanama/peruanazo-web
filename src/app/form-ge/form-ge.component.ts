@@ -43,7 +43,8 @@ export class FormGeComponent implements OnInit {
     preferred_destination: { id: '' },
     curriculum: '',
     city: { name: '' },
-    referral_type: ''
+    referral_type: '',
+    accepted_terms: ''
   }
 
   scholarityOptions: any = [
@@ -195,14 +196,8 @@ export class FormGeComponent implements OnInit {
       birthdate: new FormControl(this.user.birthdate, [
         Validators.required
       ]),
-      password: new FormControl(this.user.password, [
-        Validators.required,
-        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
-      ]),
-      repassword: new FormControl(this.user.repassword, [
-        Validators.required,
-        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
-      ])
+      cellphone_contactable: new FormControl(this.user.cellphone_contactable, []),
+      accepted_terms: new FormControl(this.user.accepted_terms, []),
     });
     this.step2Form = new FormGroup({
       university_id: new FormControl(this.user.university, [
@@ -226,7 +221,6 @@ export class FormGeComponent implements OnInit {
       when_can_travel: new FormControl(this.user.when_can_travel, [
         Validators.required
       ]),
-      cellphone_contactable: new FormControl(this.user.cellphone_contactable, []),
       preferred_destination: new FormControl(this.user.preferred_destination, [
         Validators.required
       ]),
@@ -235,7 +229,15 @@ export class FormGeComponent implements OnInit {
       ]),
       referral_type: new FormControl(this.user.referral_type, [
         Validators.required
-      ])
+      ]),
+      password: new FormControl(this.user.password, [
+        Validators.required,
+        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ]),
+      repassword: new FormControl(this.user.repassword, [
+        Validators.required,
+        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ]),
     });
     window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
   }
@@ -387,12 +389,21 @@ export class FormGeComponent implements OnInit {
     }
   }
 
+  checkPassword() {
+    if (this.user.password != this.user.repassword) {
+      this.invalidPassword = true;
+    }
+    else {
+      this.invalidPassword = false;
+    }
+  }
+
   unableToSubmit() {
-    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !this.user.preferred_destination.id || !+this.user.referral_type;;
+    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !this.user.preferred_destination.id || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword;;
   }
 
   emptyFields() {
-    return !(this.user.scholarity && !!this.user.scholarity.id) || !(this.user.english_level && !!this.user.english_level.id);
+    return !(this.user.scholarity && !!this.user.scholarity.id) || !(this.user.english_level && !!this.user.english_level.id) || !(!!this.user.password && !!this.user.repassword);
   }
 
   emptyUniversity() {
@@ -450,14 +461,7 @@ export class FormGeComponent implements OnInit {
 
   registerUser() {
     this.submittedPersonal = true;
-    if (this.user.password != this.user.repassword) {
-      this.invalidPassword = true;
-    }
-    else {
-      this.invalidPassword = false;
-    }
-
-    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPassword && !this.invalidPhone && this.matchDate && !this.isValidPersonal('password')) {
+    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPhone && this.matchDate) {
       this.personalData = false;
       this.studyData = true;
     }

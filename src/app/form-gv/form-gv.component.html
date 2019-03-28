@@ -18,16 +18,7 @@
               <h1 i18n="@@formGvTitle">Ser um voluntário global é transformar seus valores em ação e fazer a diferença em diversas regiões do mundo.</h1>
             </div>
           </div>
-          <div class="row" *ngIf="!loading && !completedSignup">
-            <div class="col text-center">
-              <div class='step-position'>
-                <ul>
-                  <li [ngClass]="{active : personalData}"></li>
-                  <li [ngClass]="{active: studyData}"></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <br>
         </div>
       </div>
     </section>
@@ -144,54 +135,20 @@
                     Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-lock"></i><span i18n="@@password">Senha</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="password" class="form-control desktop" placeholder="É para o seu perfil no aiesec.org" i18n-placeholder="@@passwordPlaceholder" [(ngModel)]="user.password"
-                      formControlName="password" name="password" required>
+                
+                <div class="form-group form-check text-center checkbox">
+                  <input type="checkbox" class="form-check-input" [checked]="user.cellphone_contactable" id="aceitoContato" [(ngModel)]="user.cellphone_contactable"
+                    formControlName="cellphone_contactable" name="cellphone_contactable">
+                  <label class="form-check-label" for="aceitoContato" i18n="@@cellphoneContactable"> Gostaria de ser contatado por ligação ou mensagens no meu número de celular.</label>
+                </div>
 
-                    <!-- mobile -->
-                    <i class="fas fa-lock mobile mobile-icon"></i>
-                    <input type="password" class="form-control mobile" placeholder="Senha" i18n-placeholder="@@passwordMobilePlaceholder" [(ngModel)]="user.password" formControlName="password"
-                      name="password" required>
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
+                <!-- Termos -->
+                <div class="form-group form-check text-center checkbox">
+                  <input type="checkbox" class="form-check-input" [checked]="user.accepted_terms" id="aceitoTermos" [(ngModel)]="user.accepted_terms"
+                    formControlName="accepted_terms" name="accepted_terms">
+                  <label class="form-check-label" for="aceitoTermos"><a href="assets/terms/Terminos y Condiciones - AIESEC en Perú.pdf" target="_blank" i18n="@@termsAndConditionsConfirmation">Li e aceito os termos e condições.</a></label>
                 </div>
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="password" class="form-control desktop" placeholder="" [(ngModel)]="user.repassword" formControlName="repassword"
-                      name="repassword" required>
 
-                    <!-- mobile -->
-                    <i class="fas fa-lock mobile mobile-icon"></i>
-                    <input type="password" class="form-control mobile" [(ngModel)]="user.repassword" formControlName="repassword" name="repassword"
-                      required placeholder="Confirmar senha" i18n-placeholder="@@confirmPasswordMobilePlaceholder">
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                </div>
-                <div *ngIf="isValidPersonal('password')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
-                  Preencha com a sua senha.
-                  <br>
-                  <span>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
-                  </span>
-                </div>
-                <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
-                  As senhas não conferem! Digite novamente
-                </div>
               </form>
             </div>
 
@@ -362,33 +319,62 @@
                     Por favor, selecione um valor
                   </div>
                 </div>
-                <!-- Terms -->
-                <div class="row justify-content-center forms-term autocomplete-negative-index2">
-                  <div class="col-sm-10">
-                    <div class="form-group">
-                      <div class="desktop" style='flex-direction: column'>
-                        <label for="inputTermos" class='input-terms-label' i18n="@@termsAndConditions">Termos e Condições</label>
-                        <iframe height="200px" width="100%" scrolling="yes" class='form-control iframe' id="inputTermos" src="../assets/terms/terms.html"></iframe>
-                        <label class="form-group forms-tem-accepted" i18n="@@termsAndConditionsText">
-                          Ao se cadastrar você concorda com os nossos Termos e Condições descritos acima.
-                        </label>
-                      </div>
-                      <div class='mobile forms-terms-area' (click)='openModal()'>
-                        <label for="inputTermos" class='input-terms-label' i18n="@@termsAndConditions">Termos e Condições</label>
-                        <label class='form-group forms-tem-accepted info-mobile-content' i18n="@@termsAndConditionsMobileText">
-                          Ao se cadastrar, você está concordando com os termos e condições da AIESEC Brasil.
-                          <br>
-                          <span style='text-decoration: underline'> Para ler os termos, basta clicar aqui. </span>
-                        </label>
-                      </div>
+                
+                <!-- Password -->
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend desktop">
+                      <div class="input-group-text">
+                        <i class="fas fa-lock"></i><span i18n="@@password">Senha</span></div>
+                    </div>
+                    <!-- desktop -->
+                    <input type="password" class="form-control desktop" placeholder="É para o seu perfil no aiesec.org" i18n-placeholder="@@passwordPlaceholder" [(ngModel)]="user.password"
+                      formControlName="password" name="password" required (blur)="checkPassword()">
+
+                    <!-- mobile -->
+                    <i class="fas fa-lock mobile mobile-icon"></i>
+                    <input type="password" class="form-control mobile" placeholder="Senha" [(ngModel)]="user.password" formControlName="password"
+                      name="password" required (blur)="checkPassword()">
+                    <div class="valid-feedback">
+                      <i class="fas fa-check"></i>
                     </div>
                   </div>
                 </div>
-                <div class="form-group form-check text-center checkbox">
-                  <input type="checkbox" class="form-check-input" [checked]="user.cellphone_contactable" id="aceitoTermos" [(ngModel)]="user.cellphone_contactable"
-                    formControlName="cellphone_contactable" name="cellphone_contactable">
-                  <label class="form-check-label" for="aceitoTermos" i18n="@@cellphoneContactable"> Gostaria de ser contatado por ligação ou mensagens no meu número de celular.</label>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend desktop">
+                      <div class="input-group-text">
+                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
+                    </div>
+                    <!-- desktop -->
+                    <input type="password" class="form-control desktop" placeholder="" [(ngModel)]="user.repassword" formControlName="repassword"
+                      name="repassword" required (blur)="checkPassword()">
+
+                    <!-- mobile -->
+                    <i class="fas fa-lock mobile mobile-icon"></i>
+                    <input type="password" class="form-control mobile" [(ngModel)]="user.repassword" formControlName="repassword" name="repassword"
+                      required placeholder="Confirmar senha" (blur)="checkPassword()">
+                    <div class="valid-feedback">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
                 </div>
+                <div class='error-message animated fadeIn'>
+                  <span>
+                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                  </span>
+                </div>
+                <div *ngIf="user.repassword && isValidStudy('password')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
+                  Preencha com a sua senha.
+                  <br>
+                  <span>
+                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
+                  </span>
+                </div>
+                <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
+                  As senhas não conferem! Digite novamente
+                </div>
+
               </form>
             </div>
 
@@ -427,7 +413,7 @@
                 <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()" data-target="#modalCancelar1">{{formedUser || submittedPersonal ? 'Regresso' : 'Cancelar'}}</button>
               </div>
               <div class="col text-right">
-                <button type="button" (click)="registerUser()" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail)'
+                <button type="button" (click)="registerUser()" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
                   [ngx-scroll-to]="'#form'" i18n="@@next">Próximo</button>
                 <button type="button" (click)="submit()" class="btn btn-primary submit-form" *ngIf="studyData" [ngx-scroll-to]="'#form'"
                   [disabled]='unableToSubmit()' i18n="@@send">

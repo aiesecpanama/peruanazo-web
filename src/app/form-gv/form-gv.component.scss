@@ -3,6 +3,11 @@
 @import '~node_modules/primeng/resources/themes/nova-light/theme.css';
 @import '~node_modules/primeng/resources/primeng.min.css';
 // form A/B - start
+a {
+    color: white;
+    text-decoration: underline;
+}
+
 .relative-form {
     position: relative;
     .toggle-form {

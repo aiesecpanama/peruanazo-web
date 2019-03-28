@@ -1,6 +1,11 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~animate.css/animate.min.css';
 
+a {
+    color: white;
+    text-decoration: underline;
+}
+
 .full-screen {
     position: absolute !important;
     width: 100% !important;
