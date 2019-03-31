@@ -7,6 +7,15 @@ export class DomainsService {
 
 	constructor() { }
 
+	getTravelDomains(){
+		return [
+			{ id: '0', name: 'Lo antes posible' },
+			{ id: '1', name: 'Entre 3 e 6 meses' },
+			{ id: '2', name: 'Mais de 6 meses' },
+			{ id: '3', name: 'Só quero informações' }
+		];
+	}
+
 
 	getReferralTypes(){
 		return [
@@ -32,36 +41,6 @@ export class DomainsService {
 
   getCities(department){
   	return [
-	  	/*{ name : 'Amazonas', department : 'Amazonas' },
-			{ name : 'Apurimac', department : 'Apurimac' },
-			{ name : 'Arequipa', department : 'Arequipa' },
-			{ name : 'Ayacucho', department : 'Ayacucho' },
-			{ name : 'Cajamarca', department : 'Cajamarca' },
-			{ name : 'Lambayeque', department : 'Lambayeque' },
-			{ name : 'Chiclayo', department : 'Lambayeque' },
-			{ name : 'Ancash', department : 'Ancash' },
-			{ name : 'Cusco', department : 'Cusco' },
-			{ name : 'Huancavelica', department : 'Huacavelica' },
-			{ name : 'Junin', department : 'Junin' },
-			{ name : 'Huancayo', department : 'Junin' },
-			{ name : 'Huánuco', department : 'Huanuco' },
-			{ name : 'Huaraz', department : 'Ancash' },
-			{ name : 'Ica', department : 'Ica' },
-			{ name : 'Loreto', department : 'Loreto' },
-			{ name : 'Iquitos', department : 'Loreto' },
-			{ name : 'Juliaca', department : 'Puno' },
-			{ name : 'Lima', department : 'Lima' },
-			{ name : 'Moquegua', department : 'Moquegua' },
-			{ name : 'Pasco', department : 'Pasco' },
-			{ name : 'Piura', department : 'Piura' },
-			{ name : 'Puno', department : 'Puno' },
-			{ name : 'Tacna', department : 'Tacna' },
-			{ name : 'Martin	Tarapoto', department : 'San' },
-			{ name : 'Libertad	Trujillo', department : 'La' },
-			{ name : 'Tumbes', department : 'Tumbes' },
-			{ name : 'Ucayali', department : 'Ucayali' },
-			{ name : 'Nueva Cajamarca', department : 'San Martin' },
-			{ name : 'Madre de Dios', department : 'Madre de Dios' }*/
 			{ name : 'CHACHAPOYAS ', department: 'AMAZONAS' },
 			{ name : 'BAGUA', department: 'AMAZONAS' },
 			{ name : 'BONGARA', department: 'AMAZONAS' },
@@ -285,30 +264,6 @@ export class DomainsService {
 			{ name : 'TACNA' },
 			{ name : 'TUMBES' },
 			{ name : 'UCAYALI' }
-	    /*{ name : 'Amazonas' },
-	    { name : 'Apurimac' },
-	    { name : 'Arequipa' },
-	    { name : 'Ayacucho' },
-	    { name : 'Cajamarca' },
-	    { name : 'Lambayeque' },
-	    { name : 'Ancash' },
-	    { name : 'Cusco' },
-	    { name : 'Huacavelica' },
-	    { name : 'Junin' },
-	    { name : 'Huanuco' },
-	    { name : 'Ica' },
-	    { name : 'Loreto' },
-	    { name : 'Puno' },
-	    { name : 'Lima' },
-	    { name : 'Madre de Dios' },
-	    { name : 'Moquegua' },
-	    { name : 'San Martin' },
-	    { name : 'Pasco' },
-	    { name : 'Piura' },
-	    { name : 'Tacna' },
-	    { name : 'La Libertad' },
-	    { name : 'Tumbes' },
-	    { name : 'Ucayali' }*/
 	  ];
   }
 }

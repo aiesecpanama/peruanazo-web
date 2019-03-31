@@ -47,12 +47,7 @@ export class FormGvComponent implements OnInit {
   cellphoneLargerMask: string = '0 000 000 0000';
   cellphoneMask: any;
 
-  travelOptions = [
-    { id: '0', name: 'Lo antes posible' },
-    { id: '1', name: 'Próximos 3 meses' },
-    { id: '2', name: 'Próximos 6 meses' },
-    { id: '3', name: 'En un año' }
-  ]
+  travelOptions = []
 
   msgs: Message[] = [];
 
@@ -103,7 +98,8 @@ export class FormGvComponent implements OnInit {
     public router: Router,
     public urlScrapper: ActivatedRoute,
     private domainsService: DomainsService
-  ) {
+  ) {    
+    this.travelOptions = domainsService.getTravelDomains();
     this.referralTypes = domainsService.getReferralTypes();
     this.scholarityOptions = domainsService.getScholarityDomains();
     this.departments = domainsService.getDepartments();
