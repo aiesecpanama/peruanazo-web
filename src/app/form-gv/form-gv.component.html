@@ -293,7 +293,7 @@
                     <div class="dropdown">
                       <select required [(ngModel)]='user.referral_type' name='referral_type' formControlName='referral_type' class='select-without-background'>
                         <option value='' i18n='@@referralTypeOption'> Selecione uma opção </option>
-                        <option *ngFor='let option of referralType' [ngValue]='option.id'> {{ option.value }}</option>
+                        <option *ngFor='let option of referralTypes' [ngValue]='option.id'> {{ option.value }}</option>
                       </select>
                     </div>
                   </div>

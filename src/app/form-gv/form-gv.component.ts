@@ -61,25 +61,7 @@ export class FormGvComponent implements OnInit {
   departments: any = [];
   citiesOptions: any = []
 
-  referralType = [
-    { id: 1, value: 'Me contó un amigo' },
-    { id: 2, value: 'Un amigo lo compartió en Facebook' },
-    { id: 3, value: 'Un amigo lo compartió en InstaStories' },
-    { id: 4, value: 'Un amigo lo compartió en otra red social' },
-    { id: 5, value: 'Lo encontré en Google' },
-    { id: 6, value: 'Vi una publicación en un grupo de Facebook' },
-    { id: 7, value: 'Vi una publicidad en Facebook' },
-    { id: 8, value: 'Vi una publicidad en Instagram' },
-    { id: 9, value: 'Lo escuché en una presentación en mi universidad' },
-    { id: 10, value: 'Recibí un correo de mi universidad' },
-    { id: 11, value: 'Lo escuché en un stand informativo en mi universidad' },
-    { id: 12, value: 'Lo ví en una red social / pagina web de mi universidad' },
-    { id: 13, value: 'Me enteré por un evento o feria' },
-    { id: 14, value: 'Me enteré a traves de una organización aliada' },
-    { id: 15, value: 'Fuí a un evento de Spanglish' },
-    { id: 16, value: 'Ví un anuncio de Potenciate' },
-    { id: 17, value: 'Medios / Influencers' },
-  ]
+  referralTypes = []
   
 
   universities: any[];
@@ -122,6 +104,7 @@ export class FormGvComponent implements OnInit {
     public urlScrapper: ActivatedRoute,
     private domainsService: DomainsService
   ) {
+    this.referralTypes = domainsService.getReferralTypes();
     this.scholarityOptions = domainsService.getScholarityDomains();
     this.departments = domainsService.getDepartments();
     this.step1Form = new FormGroup({
