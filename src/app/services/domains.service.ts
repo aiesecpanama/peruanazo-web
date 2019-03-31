@@ -6,6 +6,18 @@ import { Injectable } from '@angular/core';
 export class DomainsService {
 
 	constructor() { }
+
+
+	getReferralTypes(){
+		return [
+			{ id : 1, value: 'Facebook' },
+			{ id : 2, value: 'Instagram' },
+			{ id : 3, value: 'Sugerido por Amigos o Familiares' },
+			{ id : 4, value: 'Evento en mi Universidad' },
+			{ id : 5, value: 'Publicidad Visual en mi Universidad' },
+			{ id : 6, value: 'Otros' }
+		];
+	}
 	
 	getScholarityDomains(){
 		return [
