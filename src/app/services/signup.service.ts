@@ -70,12 +70,14 @@ export class SignupService {
 			.then((res) => res.json());
 	}
 
-	getUniversities(search?, city?){
+	getUniversities(search?, filters:any = {}){
 
-		let query = { limit : 10, name : '', city : '' };
+		let query = { limit : 10, name : '', city : '', department : '', program : '' };
 
 		if (search) query.name = search;
-		if (city) query.city = city;
+		if (filters.city) query.city = filters.city;
+		if (filters.department) query.department = filters.department;
+		if (filters.program) query.program = filters.program;
 
 		return this.http.get(SignupService.url + `/universities`, {
 			params : query

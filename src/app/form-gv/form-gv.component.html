@@ -162,7 +162,7 @@
                     </div>
                     <div class="dropdown">
                       <div class="styled-select">
-                        <p-autoComplete [(ngModel)]="user.scholarity" (ngModelChange)="changeScholarity(user.scholarity.id)" [suggestions]="filteredScholarityOptions"
+                        <p-autoComplete [(ngModel)]="user.scholarity" (onSelect)="changeScholarity(user.scholarity.id)" [suggestions]="filteredScholarityOptions"
                           (completeMethod)="searchScholarity($event)" #scholarityAutocomplete (onFocus)="selectInput('scholarity');scholarityAutocomplete.handleDropdownClick();"
                           dropdownMode="current" field="name" formControlName="scholarity" emptyMessage="Nenhum resultado" placeholder="Qual seu nível de escolaridade?" i18n-emptyMessage="@@noResults" i18n-placeholder="@@scholarityPlaceholder"></p-autoComplete>
                         <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('scholarity')" *ngIf="user.scholarity"></i>
@@ -173,7 +173,31 @@
                     Selecione um nível de escolaridade
                   </div>
                 </div>
-                <div class="form-group city" *ngIf='user.scholarity && user.scholarity.id > 1'>
+
+                <div class="form-group department">
+                  <div class="input-group select-dropdown">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-home"></i>
+                        <span i18n="@@department">Departamento</span>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <div class="styled-select">
+                        <p-autoComplete [(ngModel)]="user.department" [suggestions]="filteredDepartmentsOptions" (completeMethod)="searchDepartments($event)"
+                          #departmentsAutocomplete (onFocus)="selectInput('department'); departmentsAutocomplete.handleDropdownClick();" dropdownMode="current"
+                          field="name" formControlName="department" name='department' emptyMessage="Nenhum resultado" placeholder="Departamento"
+                          i18n-emptyMessage="@@noResults" i18n-placeholder="@@departmentPlaceholder" (onSelect)="filterCities(user.department)"></p-autoComplete>
+                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('department')" *ngIf="user.department"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="isValidStudy('department')" class='error-message' i18n="@@formCityEmpty">
+                    Por favor, selecione seu departamento
+                  </div>
+                </div>
+
+                <div class="form-group city">
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -195,41 +219,21 @@
                     Por favor, selecione sua cidade
                   </div>
                 </div>
-                <div class='info-message' *ngIf='user.city.name == "Otras ciudades" && !user.university.id'>
-                  <div class='row'>
-                    <div class='col-1'>
-                      <i class="fas fa-info-circle"></i>
-                    </div>
-                    <div class='col-11'>
-                      <p>
-                        <b *ngIf='user.scholarity.id > 1' i18n='@@formCityNotFound'>
-                          Não encontrou sua cidade acima?
-                        </b>
-                        <span *ngIf='user.scholarity.id > 1' i18n='@@formChoiceUniversity'>
-                          Escolha a província onde você estuda e depois insira o nome da universidade
-                        </span>
-                        <span *ngIf='user.scholarity.id <= 1' i18n='@@formChoiceProvince'>
-                          Escolha a província onde você reside
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="animated fadeIn faster form-group  university" *ngIf='user.city.name'>
+                
+                <div class="animated fadeIn faster form-group  university" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-graduation-cap"></i>
-                        <span *ngIf='user.city.name != "Otras ciudades"' i18n="@@university">Universidade</span>
-                        <span *ngIf='user.city.name == "Otras ciudades"' i18n="@@province">Província</span>
+                        <span i18n="@@university">Universidade</span>
                       </div>
                     </div>
                     <div class="dropdown">
                       <div class="styled-select">
                         <p-autoComplete [(ngModel)]="user.university" [suggestions]="universities" (completeMethod)="searchUnivesity($event)" #universityAutocomplete
                           (onFocus)="selectInput('university');universityAutocomplete.handleDropdownClick();" (keyup)='checkUniversityValue($event)'
-                          dropdownMode="current" field="name" formControlName="university_id" emptyMessage="Nenhum resultado" placeholder="{{ (user.scholarity.id <= 1) ? '¿Donde vives?' : '¿Donde estudias?' }}"
-                          i18n-emptyMessage="@@noResults" (onSelect)='checkUniversity(user.university)'></p-autoComplete>
+                          dropdownMode="current" field="name" formControlName="university_id" emptyMessage="Nenhum resultado" placeholder="Donde estudias?"
+                          i18n-emptyMessage="@@noResults"></p-autoComplete>
                         <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('university')" *ngIf="user.university"></i>
                       </div>
                     </div>
@@ -238,30 +242,8 @@
                     Selecione uma universidade.
                   </div>
                 </div>
-                <div class="animated fadeIn faster form-group" *ngIf='showOtherUniversityField && user.city.name && user.university && user.scholarity.id > 1 && user.university.id'>
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span i18n="@@universityName">Nome da Universidade</span>
-                      </div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="text" class="form-control desktop" placeholder="Digite o nome da sua universidade" [(ngModel)]="user.other_university"
-                      formControlName="other_university" i18n-placeholder="@@otherUniversityPlaceholder" name="other_university" required>
-            
-                    <!-- mobile -->
-                    <input type="text" class="form-control mobile" placeholder="Por favor, digite o nome da sua universidade" i18n-placeholder="@@otherUniversityMobilePlaceholder"
-                      [(ngModel)]="user.other_university" formControlName="other_university" name="other_university" required>
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                  <div *ngIf="submittedStudy && !user.other_university" class='error-message' i18n="@@formOtherUniversityInvalid">
-                    Por favor, digite uma universidade válida.
-                  </div>
-                </div>
-                <div class=" animated fadeIn faster form-group college_course" *ngIf='user.scholarity.id > 1'>
+
+                <div class=" animated fadeIn faster form-group college_course" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
