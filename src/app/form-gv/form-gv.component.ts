@@ -47,17 +47,16 @@ export class FormGvComponent implements OnInit {
   cellphoneLargerMask: string = '0 000 000 0000';
   cellphoneMask: any;
 
-  travelOptions = []
+  travelOptions = [];
 
   msgs: Message[] = [];
 
   scholarityOptions: any = [];
   
   departments: any = [];
-  citiesOptions: any = []
+  citiesOptions: any = [];
 
-  referralTypes = []
-  
+  referralTypes:any = [];  
 
   universities: any[];
   filteredScholarityOptions: Observable<any[]>;
@@ -68,8 +67,8 @@ export class FormGvComponent implements OnInit {
 
   placeholderBirthdate: string;
 
-  personalData: boolean = true;
-  studyData: boolean = false;
+  personalData: boolean = false;
+  studyData: boolean = true;
 
   invalidEmail: boolean = false;
   invalidPassword: boolean = false;
@@ -98,7 +97,7 @@ export class FormGvComponent implements OnInit {
     public router: Router,
     public urlScrapper: ActivatedRoute,
     private domainsService: DomainsService
-  ) {    
+  ) {
     this.travelOptions = domainsService.getTravelDomains();
     this.referralTypes = domainsService.getReferralTypes();
     this.scholarityOptions = domainsService.getScholarityDomains();
@@ -215,6 +214,14 @@ export class FormGvComponent implements OnInit {
     this.filteredDepartmentsOptions = this._search(this.departments, event.query);
   }
 
+  searchUnivesity(event) {
+    if (!event.originalEvent) {
+      this.universities = this.universities.slice(); //fixing autocomplete first load that wasn't showing the suggestions
+      return;
+    }
+    this.fillUniversitySelect(event.query);
+  };
+
   checkCityValue() {
     if (this.user.city) {
       this.user.university = null;
@@ -231,14 +238,6 @@ export class FormGvComponent implements OnInit {
       }
     }
   }
-
-  searchUnivesity(event) {
-    if (!event.originalEvent) {
-      this.universities = this.universities.slice(); //fixing autocomplete first load that wasn't showing the suggestions
-      return;
-    }
-    this.fillUniversitySelect(event.query);
-  };
 
   checkUniversityValue(event) {
     if (event.keyCode == 8 && !this.user.university) {
@@ -323,7 +322,7 @@ export class FormGvComponent implements OnInit {
     return this.signupService.getUniversities(search, {
       city : this.user.city.name,
       department : this.user.department.name,
-      program : '1'
+      program : '0'
     }).then((res: any) => {
       this.universities = res;
     }, (err) => {

@@ -173,9 +173,33 @@
                   <div *ngIf="isValidStudy('scholarity')" class='error-message' i18n='@@formScholarityEmpty'>
                     Selecione um nível de escolaridade
                   </div>
-                </div>  
+                </div>
+
+                <div class="form-group department">
+                  <div class="input-group select-dropdown">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-home"></i>
+                        <span i18n="@@department">Departamento</span>
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <div class="styled-select">
+                        <p-autoComplete [(ngModel)]="user.department" [suggestions]="filteredDepartmentsOptions" (completeMethod)="searchDepartments($event)"
+                          #departmentsAutocomplete (onFocus)="selectInput('department'); departmentsAutocomplete.handleDropdownClick();" dropdownMode="current"
+                          field="name" formControlName="department" name='department' emptyMessage="Nenhum resultado" placeholder="Departamento"
+                          i18n-emptyMessage="@@noResults" i18n-placeholder="@@departmentPlaceholder" (onSelect)="filterCities(user.department)"></p-autoComplete>
+                        <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('department')" *ngIf="user.department"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf="isValidStudy('department')" class='error-message' i18n="@@formCityEmpty">
+                    Por favor, selecione seu departamento
+                  </div>
+                </div>
+
                 <div class="animated fadeIn faster form-group city">
-                  <div class="input-group select-dropdown" *ngIf='user.scholarity && user.scholarity.id > 1'>
+                  <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-home"></i>
@@ -196,41 +220,21 @@
                     Por favor, selecione sua cidade
                   </div>
                 </div>
-                <div class='info-message' *ngIf='user.city.name == "Otras ciudades" && !user.university.id'>
-                  <div class='row'>
-                    <div class='col-1'>
-                      <i class="fas fa-info-circle"></i>
-                    </div>
-                    <div class='col-11'>
-                      <p>
-                        <b *ngIf='user.scholarity.id > 1' i18n='@@formCityNotFound'>
-                          Não encontrou sua cidade acima?
-                        </b>
-                        <span *ngIf='user.scholarity.id > 1' i18n='@@formChoiceUniversity'>
-                          Escolha a província onde você estuda e depois insira o nome da universidade
-                        </span>
-                        <span *ngIf='user.scholarity.id <= 1' i18n='@@formChoiceProvince'>
-                          Escolha a província onde você reside
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="animated fadeIn faster form-group university" *ngIf='user.city.name'>
+         
+                <div class="animated fadeIn faster form-group university" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-graduation-cap"></i>
-                        <span *ngIf='user.city.name != "Otras ciudades"' i18n="@@university">Universidade</span>
-                        <span *ngIf='user.city.name == "Otras ciudades"' i18n="@@province">Província</span>
+                        <span i18n="@@university">Universidade</span>
                       </div>
                     </div>
                     <div class="dropdown">
                       <div class="styled-select">
                         <p-autoComplete [(ngModel)]="user.university" [suggestions]="universities" (completeMethod)="searchUnivesity($event)" #universityAutocomplete
-                          (onFocus)="selectInput('university');universityAutocomplete.handleDropdownClick()" (keyup)='checkUniversityValue($event)'
-                          dropdownMode="current" field="name" formControlName="university_id" emptyMessage="Nenhum resultado" placeholder="{{ user.scholarity.id <= 1 ? '¿Donde vives?' : '¿Donde estudias?' }}"
-                          i18n-emptyMessage="@@noResults" (onSelect)='checkUniversity(user.university)'></p-autoComplete>
+                          (onFocus)="selectInput('university');universityAutocomplete.handleDropdownClick();" (keyup)='checkUniversityValue($event)'
+                          dropdownMode="current" field="name" formControlName="university_id" emptyMessage="Nenhum resultado" placeholder="¿Donde estudias?"
+                          i18n-emptyMessage="@@noResults" ></p-autoComplete>
                         <i class="fas fa-times autocomplete-clear-btn" (click)="clearField('university')" *ngIf="user.university"></i>
                       </div>
                     </div>
@@ -239,31 +243,8 @@
                     Selecione uma universidade.
                   </div>
                 </div>
-                <div class="animated fadeIn faster form-group" *ngIf='showOtherUniversityField && user.city.name && user.university && user.scholarity.id > 1 && user.university.id'>
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span i18n="@@universityName">Nome da Universidade</span>
-                      </div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="text" class="form-control desktop" placeholder="¿Qué universidad?" [(ngModel)]="user.other_university" formControlName="other_university"
-                      i18n-placeholder="@@otherUniversityPlaceholder" name="other_university" required>
-            
-                    <!-- mobile -->
-                    <i class="fas fa-user mobile mobile-icon"></i>
-                    <input type="text" class="form-control mobile" placeholder="¿Qué universidad?" i18n-placeholder="@@otherUniversityMobilePlaceholder"
-                      [(ngModel)]="user.other_university" formControlName="other_university" name="other_university" required>
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                  <div *ngIf="submittedStudy && !user.other_university" class='error-message' i18n="@@formOtherUniversityInvalid">
-                    Por favor, digite uma universidade válida.
-                  </div>
-                </div>
-                <div class="animated fadeIn faster form-group college_course" *ngIf='user.scholarity.id > 1'>
+  
+                <div class="animated fadeIn faster form-group college_course" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -285,6 +266,62 @@
                     Selecione um curso.
                   </div>
                 </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend desktop">
+                      <div class="input-group-text">
+                        <i class="fas fa-lock"></i><span i18n="@@password">Senha</span></div>
+                    </div>
+                    <!-- desktop -->
+                    <input type="password" class="form-control desktop" placeholder="É para o seu perfil no aiesec.org" i18n-placeholder="@@passwordPlaceholder" [(ngModel)]="user.password"
+                      formControlName="password" name="password" required (blur)="checkPassword()">
+
+                    <!-- mobile -->
+                    <i class="fas fa-lock mobile mobile-icon"></i>
+                    <input type="password" class="form-control mobile" placeholder="Senha" [(ngModel)]="user.password" formControlName="password"
+                      name="password" required (blur)="checkPassword()">
+                    <div class="valid-feedback">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend desktop">
+                      <div class="input-group-text">
+                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
+                    </div>
+                    <!-- desktop -->
+                    <input type="password" class="form-control desktop" placeholder="" [(ngModel)]="user.repassword" formControlName="repassword"
+                      name="repassword" required (blur)="checkPassword()">
+
+                    <!-- mobile -->
+                    <i class="fas fa-lock mobile mobile-icon"></i>
+                    <input type="password" class="form-control mobile" [(ngModel)]="user.repassword" formControlName="repassword" name="repassword"
+                      required placeholder="Confirmar senha" (blur)="checkPassword()">
+                    <div class="valid-feedback">
+                      <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class='error-message animated fadeIn'>
+                  <span>
+                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                  </span>
+                </div>
+                <div *ngIf="user.repassword && isValidStudy('password')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
+                  Preencha com a sua senha.
+                  <br>
+                  <span>
+                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
+                  </span>
+                </div>
+                <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
+                  As senhas não conferem! Digite novamente
+                </div>
+
                 <div class="form-group english_level">
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
@@ -351,6 +388,27 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="form-group experiences-input">
+                  <div class="input-group select-dropdown">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-book-open"></i>
+                        <span i18n="@@workExperience">Experiencia laboral ?</span>
+                      </div>
+                    </div>
+                    <div class="label-experience">
+                      <span i18n="@@workExperienceTime">Escolha o período de tempo de trabalho</span>
+                    </div>
+                  </div>
+                  <div class="form-checkbox-select">
+                    <div class="checkbox-item" *ngFor="let workExperience of workExperienceOptions">
+                      <label>
+                        <input type="radio" value="{{workExperience.id}}" [(ngModel)]="user.work_experience" name='work_experience' formControlName="work_experience"> {{workExperience.name}}
+                      </label>
+                    </div>
+                  </div>
+                </div>
             
                 <div class="form-group">
                   <div class="input-group">
@@ -371,78 +429,23 @@
                   </div>
                 </div>
                 <div class="form-group getToKnow">
-                    <div class="input-group select-dropdown">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <span i18n='@@referralType'>Como conheceu a AIESEC?</span>
-                        </div>
-                      </div>
-                      <div class="dropdown">
-                        <select required [(ngModel)]='user.referral_type' name='referral_type' formControlName='referral_type' class='select-without-background'>
-                          <option value='' i18n='@@referralTypeOption'> Selecione uma opção </option>
-                          <option *ngFor='let option of referralType' [ngValue]='option.id'> {{ option.value }}</option>
-                        </select>
+                  <div class="input-group select-dropdown">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <span i18n='@@referralType'>Como conheceu a AIESEC?</span>
                       </div>
                     </div>
-                    <div *ngIf="isValidStudy('referral_type')" class='error-message'>
-                      Por favor, selecione um valor
+                    <div class="dropdown">
+                      <select required [(ngModel)]='user.referral_type' name='referral_type' formControlName='referral_type' class='select-without-background'>
+                        <option value='' i18n='@@referralTypeOption'> Selecione uma opção </option>
+                        <option *ngFor='let option of referralTypes' [ngValue]='option.id'> {{ option.value }}</option>
+                      </select>
                     </div>
                   </div>
-
-                  <!-- Password -->
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-lock"></i><span i18n="@@password">Senha</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="password" class="form-control desktop" placeholder="É para o seu perfil no aiesec.org" i18n-placeholder="@@passwordPlaceholder" [(ngModel)]="user.password"
-                      formControlName="password" name="password" required (blur)="checkPassword()">
-
-                    <!-- mobile -->
-                    <i class="fas fa-lock mobile mobile-icon"></i>
-                    <input type="password" class="form-control mobile" placeholder="Senha" [(ngModel)]="user.password" formControlName="password"
-                      name="password" required (blur)="checkPassword()">
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
+                  <div *ngIf="isValidStudy('referral_type')" class='error-message'>
+                    Por favor, selecione um valor
                   </div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-prepend desktop">
-                      <div class="input-group-text">
-                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
-                    </div>
-                    <!-- desktop -->
-                    <input type="password" class="form-control desktop" placeholder="" [(ngModel)]="user.repassword" formControlName="repassword"
-                      name="repassword" required (blur)="checkPassword()">
-
-                    <!-- mobile -->
-                    <i class="fas fa-lock mobile mobile-icon"></i>
-                    <input type="password" class="form-control mobile" [(ngModel)]="user.repassword" formControlName="repassword" name="repassword"
-                      required placeholder="Confirmar senha" (blur)="checkPassword()">
-                    <div class="valid-feedback">
-                      <i class="fas fa-check"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class='error-message animated fadeIn'>
-                  <span>
-                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
-                  </span>
-                </div>
-                <div *ngIf="user.repassword && isValidStudy('password')" class='error-message animated fadeIn' i18n="@@formPasswordEmpty">
-                  Preencha com a sua senha.
-                  <br>
-                  <span>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
-                  </span>
-                </div>
-                <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
-                  As senhas não conferem! Digite novamente
-                </div>
+                </div>               
 
               </form>
             </div>
