@@ -43,10 +43,10 @@
     }
     .product-image {
         @at-root :host-context(.no-webp) #{&} {
-            background-image: url('../../assets/products/gv/product-step.jpeg');
+            background-image: url('../../assets/products/gv/product-step.jpg');
         }
         @at-root :host-context(.webp) #{&} {
-            background-image: url('../../assets/products/gv/product-step.jpg.webp');
+            background-image: url('../../assets/products/gv/product-step.webp');
         }
         min-height: 400px;
         position: relative;
@@ -142,6 +142,7 @@
 }
 
 .faq {
+    background: white;
     .container>.row {
         justify-content: space-between;
         align-items: center;
@@ -156,7 +157,7 @@
             background-image: url('../../assets/products/gv/faq-image.jpg');
         }
         @at-root :host-context(.webp) #{&} {
-            background-image: url('../../assets/products/gv/faq-image.jpg.webp');
+            background-image: url('../../assets/products/gv/faq-image.webp');
         }
         min-height: 450px;
         position: relative;
@@ -179,6 +180,7 @@
 }
 
 .know-aiesec {
+    background: #FE4902;
     .container {
         >.row {
             justify-content: space-between;
@@ -246,10 +248,10 @@
     }
     .aiesec-image {
         @at-root :host-context(.no-webp) #{&} {
-            background-image: url('../../assets/products/gv/aiesec.jpeg');
+            background-image: url('../../assets/products/gv/aiesec.jpg');
         }
         @at-root :host-context(.webp) #{&} {
-            background-image: url('../../assets/products/gv/aiesec.jpg.webp');
+            background-image: url('../../assets/products/gv/aiesec.webp');
         }
         min-height: 450px;
         position: relative;

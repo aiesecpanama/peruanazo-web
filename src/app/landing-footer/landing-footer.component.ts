@@ -30,91 +30,171 @@ export class LandingFooterComponent implements OnInit {
 
       this.partners = [
         {
-          title: 'Aerlíneas Argentinas',
-          img: webpSupport ? '../../assets/images/partners/aerolineasargentinas.png.webp' : '../../assets/images/partners/aerolineasargentinas.png',
-          site: 'https://www.aerolineas.com.ar/',
+          title: 'ADEX',
+          img: webpSupport ? '../../assets/images/partners/adex.webp' : '../../assets/images/partners/adex.jpg',
+          site: 'http://www.adexperu.org.pe/',
         },
         {
-          title: 'Aneic',
-          img: webpSupport ? '../../assets/images/partners/aneic.png.webp' : '../../assets/images/partners/aneic.png',
-          site: 'https://www.facebook.com/ANEICArgen/',
+          title: 'CISCO',
+          img: webpSupport ? '../../assets/images/partners/cisco.webp' : '../../assets/images/partners/cisco.jpg',
+          site: 'https://www.cisco.com/',
         },
         {
-          title: 'April',
-          img: webpSupport ? '../../assets/images/partners/april.png.webp' : '../../assets/images/partners/april.png',
-          site: 'http://bit.ly/Seguros-AIESECArgentina',
+          title: 'COCA-COLA',
+          img: webpSupport ? '../../assets/images/partners/cocacola.webp' : '../../assets/images/partners/cocacola.jpg',
+          site: 'http://www.cocacolalatinamerica.com/es/pe/home/',
         },
         {
-          title: 'Banco de Alimentos',
-          img: webpSupport ? '../../assets/images/partners/bancodealimentos.png.webp' : '../../assets/images/partners/bancodealimentos.png',
-          site: 'https://www.bancodealimentos.org.ar/',
+          title: 'DIRECTV',
+          img: webpSupport ? '../../assets/images/partners/directv.webp' : '../../assets/images/partners/directv.jpg',
+          site: 'https://www.directv.com.pe/',
         },
         {
-          title: 'CF',
-          img: webpSupport ? '../../assets/images/partners/cf.png.webp' : '../../assets/images/partners/cf.png',
-          site: 'http://www.circuloformacion.es/area-negocio/fiep',
+          title: 'FALA-BEM',
+          img: webpSupport ? '../../assets/images/partners/falabem.webp' : '../../assets/images/partners/falabem.jpg',
+          site: 'https://www.facebook.com/falabemperu/',
 
         },
         {
-          title: 'DHL',
-          img: webpSupport ? '../../assets/images/partners/dhl.png.webp' : '../../assets/images/partners/dhl.png',
-          site: 'https://www.logistics.dhl/ar-es/home.html',
+          title: 'G4S',
+          img: webpSupport ? '../../assets/images/partners/g4s.webp' : '../../assets/images/partners/g4s.jpg',
+          site: 'http://www.g4s.com.pe/',
         },
         {
-          title: 'Electrolux',
-          img: webpSupport ? '../../assets/images/partners/electrolux.png.webp' : '../../assets/images/partners/electrolux.png',
-          site: 'http://www.electrolux.com.ar/',
+          title: 'Instituto Peruano Chino',
+          img: webpSupport ? '../../assets/images/partners/ipch.webp' : '../../assets/images/partners/ipch.jpg',
+          site: 'https://institutoperuanochino.com/',
 
         },
         {
-          title: 'GSK',
-          img: webpSupport ? '../../assets/images/partners/gsk.png.webp' : '../../assets/images/partners/gsk.png',
-          site: 'https://ar.gsk.com/', 
+          title: 'Junior Achievement',
+          img: webpSupport ? '../../assets/images/partners/japeru.webp' : '../../assets/images/partners/japeru.jpg',
+          site: 'http://jawperu.org/', 
 
         },
         {
-          title: 'unjuve',
-          img: webpSupport ? '../../assets/images/partners/injuve.jpg.webp' : '../../assets/images/partners/injuve.jpg',
-          site: 'http://www.injuve.gob.sv/',
+          title: 'Universidad La Salle',
+          img: webpSupport ? '../../assets/images/partners/lasalle.webp' : '../../assets/images/partners/lasalle.jpg',
+          site: 'https://www.ulasalle.edu.pe/',
 
         },
         {
-          title: 'JCI',
-          img: webpSupport ? '../../assets/images/partners/jci.png.webp' : '../../assets/images/partners/jci.png',
-          site: 'https://jciargentina.org.ar/',
+          title: 'Universidad de Ciencias y Artes de América Latina',
+          img: webpSupport ? '../../assets/images/partners/ucal.webp' : '../../assets/images/partners/ucal.jpg',
+          site: 'https://www.ucal.edu.pe/',
         },
         {
-          title: 'Scalabl',
-          img: webpSupport ? '../../assets/images/partners/scalabl.png.webp' : '../../assets/images/partners/scalabl.png',
-          site: 'https://www.scalabl.com/academy/buenos-aires-startup-academy/?gclid=Cj0KCQiA-onjBRDSARIsAEZXcKbjNL1sPADH-vzzFLkcHI17goK5Tt3tUK2R1IZd5J88wqAzwnM03ToaAgYfEALw_wcB',
+          title: 'Universidad Católica Santo Toribio de Mogrovejo',
+          img: webpSupport ? '../../assets/images/partners/usat.webp' : '../../assets/images/partners/usat.jpg',
+          site: 'www.usat.edu.pe/',
 
         },
         {
-          title: 'Scouts',
-          img: webpSupport ? '../../assets/images/partners/scouts.png.webp' : '../../assets/images/partners/scouts.png',
-          site: 'https://www.scouts.org.ar/',
+          title: 'MEXICHEM',
+          img: webpSupport ? '../../assets/images/partners/mexichem.webp' : '../../assets/images/partners/mexichem.jpg',
+          site: 'http://www.mexichem.com/',
 
         },
         {
-          title: 'Siglo 21',
-          img: webpSupport ? '../../assets/images/partners/siglo21.png.webp' : '../../assets/images/partners/siglo21.png',
-          site: 'http://www.tandil.siglo21.com.ar/landing/',
+          title: 'Municipalidad de Lima',
+          img: webpSupport ? '../../assets/images/partners/muni.webp' : '../../assets/images/partners/muni.jpg',
+          site: 'https://munibecas.org/',
 
         },
         {
-          title: 'Techo',
-          img: webpSupport ? '../../assets/images/partners/techo.png.webp' : '../../assets/images/partners/techo.png',
-          site: 'https://www.techo.org/argentina/',
+          title: 'NESTLE',
+          img: webpSupport ? '../../assets/images/partners/nestle.webp' : '../../assets/images/partners/nestle.jpg',
+          site: 'https://www.nestle.com.pe/',
         },
         {
-          title: 'Unicef',
-          img: webpSupport ? '../../assets/images/partners/unicef.png.webp' : '../../assets/images/partners/unicef.png',
-          site: 'https://www.unicef.org/argentina/',
+          title: 'Instituto Neumann',
+          img: webpSupport ? '../../assets/images/partners/neumann.webp' : '../../assets/images/partners/neumann.jpg',
+          site: 'https://www.neumann.edu.pe/',
         },
         {
-          title: 'Unilever',
-          img: webpSupport ? '../../assets/images/partners/unilever.png.webp' : '../../assets/images/partners/unilever.png',
-          site: 'https://www.unilever.com.ar/',
+          title: 'TASA',
+          img: webpSupport ? '../../assets/images/partners/tasa.webp' : '../../assets/images/partners/tasa.jpg',
+          site: 'https://www.tasa.com.pe/',
+        },
+        {
+          title: 'Instituto Toulouse Lautrec',
+          img: webpSupport ? '../../assets/images/partners/tls.webp' : '../../assets/images/partners/tls.jpg',
+          site: 'http://www.tls.edu.pe/',
+        },
+        {
+          title: 'TUENTI',
+          img: webpSupport ? '../../assets/images/partners/tuenti.webp' : '../../assets/images/partners/tuenti.jpg',
+          site: 'https://www.tuenti.pe/',
+        },
+        {
+          title: 'Universidad Andina Néstor Cáceres Velasquez',
+          img: webpSupport ? '../../assets/images/partners/uancv.webp' : '../../assets/images/partners/uancv.jpg',
+          site: 'https://uancv.edu.pe/',
+        },
+        {
+          title: 'Universidad Alas Peruanas',
+          img: webpSupport ? '../../assets/images/partners/uap.webp' : '../../assets/images/partners/uap.jpg',
+          site: 'https://uap.edu.pe/',
+        },
+        {
+          title: 'Universidad Nacional Hermilio Valdizán',
+          img: webpSupport ? '../../assets/images/partners/unheval.webp' : '../../assets/images/partners/unheval.jpg',
+          site: 'https://www.unheval.edu.pe/portal/',
+        },
+        {
+          title: 'Universidad Femenina del Sagrado Corazón',
+          img: webpSupport ? '../../assets/images/partners/unife.webp' : '../../assets/images/partners/unife.jpg',
+          site: 'www.unife.edu.pe/',
+        },
+        {
+          title: 'Universidad Tecnológica del Perú',
+          img: webpSupport ? '../../assets/images/partners/unitec.webp' : '../../assets/images/partners/unitec.jpg',
+          site: 'https://www.utp.edu.pe/arequipa/',
+        },
+        {
+          title: 'Universidad Científica del Sur',
+          img: webpSupport ? '../../assets/images/partners/cientifica.webp' : '../../assets/images/partners/cientifica.jpg',
+          site: 'https://www.cientifica.edu.pe/',
+        },
+        {
+          title: 'Universidad Continental',
+          img: webpSupport ? '../../assets/images/partners/continental.webp' : '../../assets/images/partners/continental.jpg',
+          site: 'https://ucontinental.edu.pe/',
+        },
+        {
+          title: 'Universidad Privada César Vallejo',
+          img: webpSupport ? '../../assets/images/partners/cesarvallejo.webp' : '../../assets/images/partners/cesarvallejo.jpg',
+          site: 'https://www.ucv.edu.pe/',
+        },
+        {
+          title: 'Universidad Nacional San Luis Gonzaga',
+          img: webpSupport ? '../../assets/images/partners/sanluisica.webp' : '../../assets/images/partners/sanluisica.jpg',
+          site: 'http://www.unica.edu.pe/',
+        },
+        {
+          title: 'Universidad Nacional Mayor San Marcos',
+          img: webpSupport ? '../../assets/images/partners/unmsm.webp' : '../../assets/images/partners/unmsm.jpg',
+          site: 'http://www.unmsm.edu.pe',
+        },
+        {
+          title: 'Universidad Privada Antenor Orrego',
+          img: webpSupport ? '../../assets/images/partners/upao.webp' : '../../assets/images/partners/upao.jpg',
+          site: 'http://www.upao.edu.pe/',
+        },
+        {
+          title: 'Universidad Privada del Norte',
+          img: webpSupport ? '../../assets/images/partners/upn.webp' : '../../assets/images/partners/upn.jpg',
+          site: 'https://www.upn.edu.pe/es',
+        },
+        {
+          title: 'Universidad San Ignacio de Loyola',
+          img: webpSupport ? '../../assets/images/partners/usil.webp' : '../../assets/images/partners/usil.jpg',
+          site: 'https://www.usil.edu.pe/',
+        },
+        {
+          title: 'Universidad Privada de Tacna',
+          img: webpSupport ? '../../assets/images/partners/tacna.webp' : '../../assets/images/partners/tacna.jpg',
+          site: 'www.upt.edu.pe/',
         }
       ];
     });

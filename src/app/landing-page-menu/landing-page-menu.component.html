@@ -14,19 +14,19 @@
           </div>
           <ul id="menu">
             <li>
-              <span i18n="@@makeAnExchange">Faça um intercâmbio </span>
+              <span i18n="@@makeAnExchange">Toma un intercambio</span>
               <i class="fas fa-chevron-down"></i>
               <ul class="animated fadeIn faster ul-products">
                 <li (click)="goToGv()" i18n="@@globalVolunteer">
-                  Voluntário Global
+                  Voluntario Global
                 </li>
                 <li (click)="goToGe()" i18n="@@globalEntrepreneur">
-                  Empreendedor Global
+                  Emprendedor Global
                 </li>
                 <li (click)="goToGt()" i18n="@@globalTalent">
                   Talento Global
                 </li>
-                <a href="http://bit.ly/AIESECArgentinaCasasGlobales">
+                <a href="https://aiesec.pe/familia/">
                   <li>
                     Casas Globales
                   </li>
@@ -34,75 +34,39 @@
               </ul>
             </li>
             <li>
-              <span i18n="@@becomeOurPartner">Seja nosso Parceiro </span>
+              <span i18n="@@becomeOurPartner">Sé nuestro Aliado </span>
               <i class="fas fa-angle-down"></i>
               <ul class="animated fadeIn faster ul-partners">
-                <a href="https://aiesecargentina.org/ongs/">
+                <a href="https://aiesec.pe/ongs/">
                   <li i18n="@@ong">
                     ONG
                   </li>
                 </a>
-                <a href="https://aiesecargentina.org/startups-2/">
+                <a href="https://aiesec.pe/empresas/">
                   <li i18n="@@companies">
                     Empresas
                   </li>
                 </a>
               </ul>
             </li>
-            <a href="http://bit.ly/AIESECArgentinaSumate">
+            <a href="https://aiesec.pe/intercambios/unete/">
               <li>
                 <span>Sé Miembro</span>
               </li>
             </a>
-            <li>
-              <span>Blog </span>
-              <i class="fas fa-chevron-down"></i>
-              <ul class="animated fadeIn faster ul-blog">
-                <a href="https://aiesecargentina.org/voluntarios-en-el-exterior/">
-                  <li>
-                    Voluntarios en el exterior
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/historias-de-emprendedores/">
-                  <li>
-                    Historias de Emprendedores
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/historias-de-liderazgo/">
-                  <li>
-                    Historias de liderazgo
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/historias-de-casas-globales/">
-                  <li>
-                    Historias de Casas Globales
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/propositoymotivacion/">
-                  <li>
-                    Propósito y Motivación
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/educacion/">
-                  <li>
-                    Educación
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/blog/talento-por-el-mundo/">
-                  <li>
-                    Talento por el mundo
-                  </li>
-                </a>
-              </ul>
-            </li>
-            <a href="https://aiesecargentina.org/youth-speak/">
+            <a href="https://aiesec.pe/blog/">
+              <li>
+                <span>BLOG</span>
+              </li>
+            </a>
+            <a href="https://aiesec.pe/youthspeakforum">
               <li i18n="@@youthspeak">
                 Youthspeak
               </li>
             </a>
-            <a href="https://aiesecargentina.org/contactanos/">
+            <a href="https://aiesec.pe/contacto/">
               <li i18n="@@contact">
-                Contato
+                Contacto
               </li>
             </a>
           </ul>
@@ -110,18 +74,18 @@
           <ul *ngIf="responsiveMenu" class='active-responsive-menu animated fadeIn faster' id="active-responsive-menu" (click)="toggleResponsiveMenu()">
             <div class="logo-menu" routerLink="/"></div>
             <li>
-              <span i18n="@@makeAnExchange">Faça um intercâmbio</span>
+              <span i18n="@@makeAnExchange">Toma un intercambio</span>
               <ul class="animated fadeIn faster">
                 <li (click)="goToGv()" [ngx-scroll-to]="'#header-product'" i18n="@@globalVolunteer">
-                  Voluntário Global
+                  Voluntario Global
                 </li>
                 <li (click)="goToGe()" [ngx-scroll-to]="'#header-product'" i18n="@@globalEntrepreneur">
-                  Empreendedor Global
+                  Emprendedor Global
                 </li>
                 <li (click)="goToGt()" [ngx-scroll-to]="'#header-product'" i18n="@@globalTalent">
                   Talento Global
                 </li>
-                <a href="http://bit.ly/AIESECArgentinaCasasGlobales">
+                <a href="https://aiesec.pe/familia/">
                   <li>
                     Casas Globales
                   </li>
@@ -129,73 +93,38 @@
               </ul>
             </li>
             <li>
-              <span i18n="@@becomeOurPartner">Seja nosso Parceiro</span>
+              <span i18n="@@becomeOurPartner">Sé nuestro Aliado</span>
               <ul class="animated fadeIn faster">
-                <a href="https://aiesecargentina.org/ongs/">
+                <a href="https://aiesec.pe/ongs/">
                   <li i18n="@@ong">
                     ONG
                   </li>
                 </a>
-                <a href="https://aiesecargentina.org/startups-2/">
+                <a href="https://aiesec.pe/empresas/">
                   <li i18n="@@companies">
                     Empresas
                   </li>
                 </a>
               </ul>
             </li>
-            <a href="http://bit.ly/AIESECArgentinaSumate">
+            <a href="https://aiesec.pe/intercambios/unete/">
               <li>
                 <span>Sé Miembro</span>
               </li>
             </a>
-            <li>
-              <span>Blog</span>
-              <ul class="animated fadeIn faster">
-                <a href="https://aiesecargentina.org/voluntarios-en-el-exterior/">
-                  <li>
-                    Voluntarios en el exterior
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/historias-de-emprendedores/">
-                  <li>
-                    Historias de Emprendedores
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/historias-de-liderazgo/">
-                  <li>
-                    Historias de liderazgo
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/historias-de-casas-globales/">
-                  <li>
-                    Historias de Casas Globales
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/propositoymotivacion/">
-                  <li>
-                    Propósito y Motivación
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/educacion/">
-                  <li>
-                    Educación
-                  </li>
-                </a>
-                <a href="https://aiesecargentina.org/blog/talento-por-el-mundo/">
-                  <li>
-                    Talento por el mundo
-                  </li>
-                </a>
-              </ul>
-            </li>
-            <a href="https://aiesecargentina.org/youth-speak/">
+            <a href="https://aiesec.pe/blog/">
+              <li>
+                <span>BLOG</span>
+              </li>
+            </a>
+            <a href="https://aiesec.pe/youthspeakforum">
               <li>
                 <span i18n="@@youthspeak">Youthspeak</span>
               </li>
             </a>
-            <a href="https://aiesecargentina.org/contactanos/">
+            <a href="https://aiesec.pe/contacto/">
               <li>
-                <span i18n="@@contact">Contato</span>
+                <span i18n="@@contact">Contacto</span>
               </li>
             </a>
           </ul>
@@ -208,33 +137,33 @@
       </h1>
       <h2 class='color-white' i18n="@@landingGtDescription">
         Descubra
-        <b>seu verdadeiro talento.</b>
+        <b>su verdadero talento.</b>
       </h2>
       <button class='button with-background bold gt without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
     </div>
     <div class="product-info" *ngIf="actualPage == 'emprendedor-global'">
       <h1 class='color-white bold' i18n="@@landingGeTitle">
-        Empreendedor Global
+        Emprendedor Global
       </h1>
       <h2 class='color-white' i18n="@@landingGeDescription">
-        Empreendedorismo é
-        <b>encontrar sua paixão.</b>
+        Se emprendedor y
+        <b>encuentra tu pasión.</b>
       </h2>
       <button class='button with-background bold ge without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
     </div>
     <div class="product-info" *ngIf="actualPage == 'voluntario-global'">
       <h1 class='color-white bold' i18n="@@landingGvTitle">
-        Voluntário Global
+        Voluntario Global
       </h1>
       <h2 class='color-white' i18n="@@landingGvDescription">
-        Voluntário para
-        <b>as pessoas.</b>
+        Voluntario para
+        <b>las personas.</b>
       </h2>
       <button class='button with-background bold gv without-border border-radius margin' (click)='scrollToForm()'> Inscribite </button>
     </div>
     <div class="product-info" *ngIf="actualPage == ''">
       <h1 class='color-white bold intro' i18n="@@landingPageIntro">
-        A AIESEC é o maior movimento de liderança jovem do mundo
+        AIESEC, el mayor movimiento de liderazgo joven del mundo.
       </h1>
     </div>
   </div>
