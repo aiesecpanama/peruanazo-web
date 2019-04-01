@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl : 'https://api.aiesecargentina.org'
+  apiUrl : 'http://3.210.8.113'
 };
