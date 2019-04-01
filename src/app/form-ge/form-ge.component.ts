@@ -1,12 +1,13 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { SignupService } from '../services/signup.service';
+import { DomainsService } from '../services/domains.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import * as moment from 'moment';
 import { Message } from 'primeng/components/common/api';
 import { TranslateService } from '../../../node_modules/@ngx-translate/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import * as _ from 'lodash';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import * as $ from 'jquery';
 
 import { FileValidatorDirective } from './../file-input-validator.directive';
@@ -28,6 +29,7 @@ export class FormGeComponent implements OnInit {
     birthdate: '',
     password: '',
     repassword: '',
+    department : { name: '' },
     university: { id: '', name: '', local_committee_id: '' },
     college_course: { id: '', name: '' },
     cellphone_contactable: '',
@@ -38,8 +40,8 @@ export class FormGeComponent implements OnInit {
     utm_campaign: '',
     utm_term: '',
     utm_content: '',
-    other_university: '',
     when_can_travel: '',
+    work_experience : '',
     preferred_destination: { id: '' },
     curriculum: '',
     city: { name: '' },
@@ -47,14 +49,7 @@ export class FormGeComponent implements OnInit {
     accepted_terms: ''
   }
 
-  scholarityOptions: any = [
-    { id: '0', name: 'Secundario Incompleto' },
-    { id: '1', name: 'Secundario Completo' },
-    { id: '2', name: 'Universitario en Curso' },
-    { id: '3', name: 'Universitario Completo' },
-    { id: '4', name: 'Grado Maestro en Curso' },
-    { id: '5', name: 'Grado Maestro Completo' }
-  ];
+  scholarityOptions: any = [];
 
   englishLevelOptions: any = [
     { id: '1', name: 'Básico' },
@@ -66,12 +61,7 @@ export class FormGeComponent implements OnInit {
   cellphoneLargerMask:string = '0 000 000 0000';
   cellphoneMask : any;
 
-  travelOptions = [
-    { id: '0', name: 'Lo antes posible' },
-    { id: '1', name: 'Próximos 3 meses' },
-    { id: '2', name: 'Próximos 6 meses' },
-    { id: '3', name: 'En un año' }
-  ]
+  travelOptions = []
 
   preferredDestionationOptions: any = [
     { id: '1', name: 'Brazil' },
@@ -79,72 +69,23 @@ export class FormGeComponent implements OnInit {
     { id: '3', name: 'Peru' }
   ]
 
-  citiesOptions: any = [
-    { name: "CABA" },
-    { name: "Bahía Blanca" },
-    { name: "Bariloche" },
-    { name: "Catamarca" },
-    { name: "Cipolletti" },
-    { name: "Comodoro Rivadavia" },
-    { name: "Córdoba" },
-    { name: "Corrientes" },
-    { name: "Formosa" },
-    { name: "Gran Buenos Aires Oeste" },
-    { name: "Jujuy" },
-    { name: "La Plata" },
-    { name: "La Rioja" },
-    { name: "Lomas de Zamora" },
-    { name: "Mar del Plata" },
-    { name: "Mendoza" },
-    { name: "Neuquén" },
-    { name: "Parana" },
-    { name: "Posadas" },
-    { name: "Resistencia" },
-    { name: "Rio Cuarto" },
-    { name: "Rio Gallegos" },
-    { name: "Rosario" },
-    { name: "Salta" },
-    { name: "San Juan" },
-    { name: "San Luis" },
-    { name: "Santa Fe" },
-    { name: "Santa Rosa (La Pampa)" },
-    { name: "Santiago del Estero" },
-    { name: "Trelew" },
-    { name: "Tucumán" },
-    { name: "Ushuaia" },
-    { name: "Viedma" },
-    { name: "Otras ciudades" }
-  ]
+  departments: any = [];
 
-  referralType = [
-    { id: 1, value: 'Me contó un amigo' },
-    { id: 2, value: 'Un amigo lo compartió en Facebook' },
-    { id: 3, value: 'Un amigo lo compartió en InstaStories' },
-    { id: 4, value: 'Un amigo lo compartió en otra red social' },
-    { id: 5, value: 'Lo encontré en Google' },
-    { id: 6, value: 'Vi una publicación en un grupo de Facebook' },
-    { id: 7, value: 'Vi una publicidad en Facebook' },
-    { id: 8, value: 'Vi una publicidad en Instagram' },
-    { id: 9, value: 'Lo escuché en una presentación en mi universidad' },
-    { id: 10, value: 'Recibí un correo de mi universidad' },
-    { id: 11, value: 'Lo escuché en un stand informativo en mi universidad' },
-    { id: 12, value: 'Lo ví en una red social / pagina web de mi universidad' },
-    { id: 13, value: 'Me enteré por un evento o feria' },
-    { id: 14, value: 'Me enteré a traves de una organización aliada' },
-    { id: 15, value: 'Fuí a un evento de Spanglish' },
-    { id: 16, value: 'Ví un anuncio de Potenciate' },
-    { id: 17, value: 'Medios / Influencers' },
-  ]
+  citiesOptions: any = []  
+
+  workExperienceOptions:any = [];
+
+  referralTypes:any = [];  
 
   universities: any = [];
 
   filteredScholarityOptions: Observable<any[]>;
+  filteredDepartmentsOptions: Observable<any[]>;
   filteredCourses: Observable<any[]>;
   filteredEnglishLevelOptions: Observable<any[]>;
   filteredCitiesOptions: Observable<any[]>;
   filteredPlaces: Observable<any[]>;
   filteredPreferredDestinationsOptions: Observable<any[]>;
-  showOtherUniversityField: boolean = false;
 
   placeholderBirthdate: string;
 
@@ -181,8 +122,14 @@ export class FormGeComponent implements OnInit {
     public signupService: SignupService,
     public translate: TranslateService,
     public router: Router,
-    public urlScrapper: ActivatedRoute
+    public urlScrapper: ActivatedRoute,
+    private domainsService: DomainsService
   ) {
+    this.workExperienceOptions = domainsService.getWorkExperienceDomains();
+    this.travelOptions = domainsService.getTravelDomains();
+    this.referralTypes = domainsService.getReferralTypes();
+    this.scholarityOptions = domainsService.getScholarityDomains();
+    this.departments = domainsService.getDepartments();
     this.step1Form = new FormGroup({
       fullname: new FormControl(this.user.fullname, [
         Validators.required
@@ -200,6 +147,9 @@ export class FormGeComponent implements OnInit {
       accepted_terms: new FormControl(this.user.accepted_terms, []),
     });
     this.step2Form = new FormGroup({
+      department: new FormControl(this.user.department, [
+        Validators.required
+      ]),
       university_id: new FormControl(this.user.university, [
         Validators.required
       ]),
@@ -215,10 +165,10 @@ export class FormGeComponent implements OnInit {
       scholarity: new FormControl(this.user.scholarity, [
         Validators.required
       ]),
-      other_university: new FormControl(this.user.other_university, [
+      when_can_travel: new FormControl(this.user.when_can_travel, [
         Validators.required
       ]),
-      when_can_travel: new FormControl(this.user.when_can_travel, [
+      work_experience: new FormControl(this.user.work_experience, [
         Validators.required
       ]),
       preferred_destination: new FormControl(this.user.preferred_destination, [
@@ -279,6 +229,7 @@ export class FormGeComponent implements OnInit {
 
     this.filteredScholarityOptions = this.scholarityOptions;
     this.filteredCitiesOptions = this.citiesOptions;
+    this.filteredDepartmentsOptions = this.departments;
 
     this.fillCourseSelect().then(() => {
       this.filteredCourses = this.courses;
@@ -314,9 +265,16 @@ export class FormGeComponent implements OnInit {
     }
   }
 
+  filterCities(department){
+    this.citiesOptions = this.domainsService.getCities(department);
+    this.filteredCitiesOptions = of(this.citiesOptions);
+    this.user.city = { name: '' };
+  }
+
   filterUniversities(city) {
-    if (city)
-      this.fillUniversitySelect();
+    if (city){
+      this.fillUniversitySelect((this.user.scholarity.id && +this.user.scholarity.id <= 1) ? 'otras' : undefined);
+    }
   }
 
   accessAiesec() {
@@ -332,27 +290,16 @@ export class FormGeComponent implements OnInit {
   }
 
   fillUniversitySelect(search?) {
-    return this.signupService.getUniversities(search, this.user.city.name).then((res: any) => {
+    return this.signupService.getUniversities(search, {
+      city : this.user.city.name,
+      department : this.user.department.name,
+      program : '1'
+    }).then((res: any) => {
       this.universities = res;
-      _.forEach(this.universities, (university) => {
-        if (_.includes(university.name.split(' '), "Otras")) {
-          university.other_university = true;
-        }
-      });
-      this.universities = this._search(this.universities, search);
     }, (err) => {
       this.msgs = [];
       this.msgs.push({ severity: 'error', summary: 'FALHA EM RECUPERAR DADOS!', detail: 'Não foi possível recuperar os dados das faculdades disponíveis.' });
     })
-  }
-
-  checkUniversity(university) {
-    if (university.other_university || (this.user.city.name == 'Otras ciudades' && this.user.university)) {
-      this.showOtherUniversityField = true;
-    }
-    else {
-      this.showOtherUniversityField = false;
-    }
   }
 
   fillCourseSelect() {
@@ -377,16 +324,12 @@ export class FormGeComponent implements OnInit {
   }
 
   changeScholarity(scholarity_level) {
-    if (scholarity_level && (+scholarity_level == 0) || (+scholarity_level == 1)) {
-      this.user.city = _.find(this.citiesOptions, (city) => { return city.name == 'Otras ciudades' });
-      this.filterUniversities(this.user.city);
-    }
-    else {
-      this.user.city = { name : '' },
-      this.user.university = { id: '', name: '', local_committee_id: '' };
-      this.user.college_course = { id: '', name: '' };
-      this.user.other_university = null;
-    }
+    this.user.university = { id: '', name: '', local_committee_id: '' };
+    this.user.college_course = { id: '', name: '' };
+
+    if (this.user.city) {
+      this.fillUniversitySelect(scholarity_level && scholarity_level <= 1 ? 'otras' : undefined);
+    } 
   }
 
   checkPassword() {
@@ -407,9 +350,13 @@ export class FormGeComponent implements OnInit {
   }
 
   emptyUniversity() {
+    if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
+      return false;
+    }
     if (this.user.university && this.user.university.id) {
       return !this.user.university.id
-    } else {
+    }
+    else {
       return true;
     }
   }
@@ -467,21 +414,11 @@ export class FormGeComponent implements OnInit {
     }
   }
 
-  checkUniversityField() {
-    if (!this.showOtherUniversityField || +this.user.scholarity.id == 0 || +this.user.scholarity.id == 1) {
-      this.user.other_university = '';
-      return false;
-    }
-    else if (this.showOtherUniversityField && !this.user.other_university) {
-      return true;
-    }
-  }
-
   submit() {
+    if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
+      this.user.university = this.universities[0];
+    }
     this.submittedStudy = true;
-    if (this.checkUniversityField()) {
-      return;
-    };
     let user = {
       ge_participant: {
         fullname: this.user.fullname,
@@ -502,7 +439,6 @@ export class FormGeComponent implements OnInit {
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         when_can_travel: +this.user.when_can_travel,
         preferred_destination: +this.user.preferred_destination.id,
-        other_university: this.user.other_university ? this.user.other_university : null,
         referral_type: +this.user.referral_type
       }
     };
@@ -561,6 +497,20 @@ export class FormGeComponent implements OnInit {
     this.filteredScholarityOptions = this._search(this.scholarityOptions, event.query);
   };
 
+  searchCities(event) {
+    if (!event.originalEvent) {
+      this.filteredCitiesOptions = this.citiesOptions;
+    }
+    this.filteredCitiesOptions = this._search(this.citiesOptions, event.query);
+  }
+
+  searchDepartments(event) {
+    if (!event.originalEvent) {
+      this.filteredDepartmentsOptions = this.departments;
+    }
+    this.filteredDepartmentsOptions = this._search(this.departments, event.query);
+  }
+
   searchUnivesity(event) {
     if (!event.originalEvent) {
       this.universities = this.universities.slice(); //fixing autocomplete first load that wasn't showing the suggestions
@@ -591,16 +541,8 @@ export class FormGeComponent implements OnInit {
     this.filteredPreferredDestinationsOptions = this._search(this.preferredDestionationOptions, event.query);
   };
 
-  searchCities(event) {
-    if (!event.originalEvent){
-      this.filteredCitiesOptions = this.citiesOptions;
-    }
-    this.filteredCitiesOptions = this._search(this.citiesOptions, event.query);
-  }
-
   checkCityValue() {
     if (this.user.city) {
-      this.user.other_university = null;
       this.user.university = null;
     }
   }
@@ -637,11 +579,9 @@ export class FormGeComponent implements OnInit {
     this.user[field] = '';
     if (field == 'city') {
       this.user.university = { id: '', name: '', local_committee_id: '' };
-      this.user.other_university = null;
       this.filteredCitiesOptions = this.citiesOptions;
     }
     else if (field == 'university') {
-      this.user.other_university = null;
       this.fillUniversitySelect();
     }
   }

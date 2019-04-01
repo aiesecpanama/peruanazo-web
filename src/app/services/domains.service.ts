@@ -7,6 +7,15 @@ export class DomainsService {
 
 	constructor() { }
 
+	getWorkExperienceDomains(){
+		return [
+			{ id: '0', name: 'No' },
+			{ id: '1', name: 'Si, menor a 3 meses' },
+			{ id: '2', name: 'Si, menor a 6 meses' },
+			{ id: '3', name: 'Si, mayor a 6 meses' }
+		];
+	}
+
 	getTravelDomains(){
 		return [
 			{ id: '0', name: 'Lo antes posible' },
