@@ -1260,6 +1260,74 @@
           <context context-type="linenumber">224</context>
         </context-group>
       <target>Ciudad</target></trans-unit>
+      <trans-unit id="department" datatype="html">
+        <source>Departamento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Departamento</target>
+      </trans-unit>
+
+      <trans-unit id="departmentPlaceholder" datatype="html">
+        <source>Departamento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Departamento</target>
+      </trans-unit>
+
+      <trans-unit id="workExperience" datatype="html">
+        <source>Experiencia laboral</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Experiencia laboral</target>
+      </trans-unit>
+
+      <trans-unit id="workExperienceTime" datatype="html">
+        <source>Escolha o período de tempo de trabalho</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Seleccione el período de tiempo de trabajo</target>
+      </trans-unit>
+
       <trans-unit id="cityPlaceholder" datatype="html">
         <source>Cidade onde estuda</source>
         <context-group purpose="location">
