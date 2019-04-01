@@ -67,8 +67,8 @@ export class FormGvComponent implements OnInit {
 
   placeholderBirthdate: string;
 
-  personalData: boolean = false;
-  studyData: boolean = true;
+  personalData: boolean = true;
+  studyData: boolean = false;
 
   invalidEmail: boolean = false;
   invalidPassword: boolean = false;
