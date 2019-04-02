@@ -46,7 +46,8 @@ export class FormGeComponent implements OnInit {
     curriculum: '',
     city: { name: '' },
     referral_type: '',
-    accepted_terms: ''
+    accepted_terms: '',
+    exchange_reason: ''
   }
 
   scholarityOptions: any = [];
@@ -61,7 +62,8 @@ export class FormGeComponent implements OnInit {
   cellphoneLargerMask:string = '0 000 000 0000';
   cellphoneMask : any;
 
-  travelOptions = []
+  travelOptions = [];
+  reasonOptions = [];
 
   preferredDestionationOptions: any = [
     { id: '1', name: 'Brazil' },
@@ -127,6 +129,7 @@ export class FormGeComponent implements OnInit {
   ) {
     this.workExperienceOptions = domainsService.getWorkExperienceDomains();
     this.travelOptions = domainsService.getTravelDomains();
+    this.reasonOptions = domainsService.getReasonsOptionsGE();
     this.referralTypes = domainsService.getReferralTypes();
     this.scholarityOptions = domainsService.getScholarityDomains();
     this.departments = domainsService.getDepartments();
@@ -188,6 +191,9 @@ export class FormGeComponent implements OnInit {
         Validators.required,
         Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
       ]),
+      exchange_reason: new FormControl(this.user.exchange_reason, [
+        Validators.required,
+      ])
     });
     window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
   }
@@ -342,7 +348,7 @@ export class FormGeComponent implements OnInit {
   }
 
   unableToSubmit() {
-    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !this.user.preferred_destination.id || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword;;
+    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !this.user.preferred_destination.id || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword || !this.user.exchange_reason.toString();
   }
 
   emptyFields() {
@@ -439,7 +445,8 @@ export class FormGeComponent implements OnInit {
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         when_can_travel: +this.user.when_can_travel,
         preferred_destination: +this.user.preferred_destination.id,
-        referral_type: +this.user.referral_type
+        referral_type: +this.user.referral_type,
+        exchange_reason: this.user.exchange_reason
       }
     };
 

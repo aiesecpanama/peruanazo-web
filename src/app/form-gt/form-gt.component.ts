@@ -47,7 +47,8 @@ export class FormGtComponent implements OnInit {
     preferred_destination: { id: '' },
     curriculum: '',
     referral_type: '',
-    accepted_terms: ''
+    accepted_terms: '',
+    exchange_reason: ''
   }
 
   cellphoneDefaultMask: string = '000 000 0000';
@@ -55,6 +56,7 @@ export class FormGtComponent implements OnInit {
   cellphoneMask : any;
 
   scholarityOptions: any = [];
+  reasonOptions = [];
 
   englishLevelOptions: any = [
     { id: '1', name: 'Básico' },
@@ -130,6 +132,7 @@ export class FormGtComponent implements OnInit {
   ) {
     this.workExperienceOptions = domainsService.getWorkExperienceDomains();
     this.referralTypes = domainsService.getReferralTypes();
+    this.reasonOptions = domainsService.getReasonsOptionsGT();
     this.scholarityOptions = domainsService.getScholarityDomains();
     this.departments = domainsService.getDepartments();
     this.step1Form = new FormGroup({
@@ -186,6 +189,9 @@ export class FormGtComponent implements OnInit {
       repassword: new FormControl(this.user.repassword, [
         Validators.required,
         Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ]),
+      exchange_reason: new FormControl(this.user.exchange_reason, [
+        Validators.required,
       ])
     });
     window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
@@ -350,7 +356,7 @@ export class FormGtComponent implements OnInit {
   }
 
   unableToSubmit() {    
-    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.preferred_destination.id || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword;
+    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.preferred_destination.id || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword || !this.user.exchange_reason.toString();
   }
 
   emptyFields() {
@@ -447,7 +453,8 @@ export class FormGtComponent implements OnInit {
         utm_term: (localStorage.getItem('utm_term') ? localStorage.getItem('utm_term') : null),
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         preferred_destination: +this.user.preferred_destination.id,
-        referral_type: +this.user.referral_type
+        referral_type: +this.user.referral_type,
+        exchange_reason: this.user.exchange_reason
       }
     };
 
