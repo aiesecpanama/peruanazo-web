@@ -40,7 +40,8 @@ export class FormGvComponent implements OnInit {
     when_can_travel: '',
     city: { name: '' },
     referral_type: '',
-    accepted_terms: ''
+    accepted_terms: '',
+    exchange_reason: ''
   }
 
   cellphoneDefaultMask: string = '000 000 0000';
@@ -48,6 +49,7 @@ export class FormGvComponent implements OnInit {
   cellphoneMask: any;
 
   travelOptions = [];
+  reasonOptions = [];
 
   msgs: Message[] = [];
 
@@ -99,6 +101,7 @@ export class FormGvComponent implements OnInit {
     private domainsService: DomainsService
   ) {
     this.travelOptions = domainsService.getTravelDomains();
+    this.reasonOptions = domainsService.getReasonsOptionsGV();
     this.referralTypes = domainsService.getReferralTypes();
     this.scholarityOptions = domainsService.getScholarityDomains();
     this.departments = domainsService.getDepartments();
@@ -147,6 +150,9 @@ export class FormGvComponent implements OnInit {
       repassword: new FormControl(this.user.repassword, [
         Validators.required,
         Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ]),
+      exchange_reason: new FormControl(this.user.exchange_reason, [
+        Validators.required,
       ])
     });
     window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
@@ -305,7 +311,6 @@ export class FormGvComponent implements OnInit {
     }
   }
 
-
   accessAiesec() {
     window.open("https://aiesec.org/", "_blank");
   }
@@ -361,7 +366,7 @@ export class FormGvComponent implements OnInit {
   }
 
   unableToSubmit() {
-    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword;
+    return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !this.user.when_can_travel || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword || !this.user.exchange_reason.toString();
   }
 
   emptyFields() {
@@ -453,7 +458,8 @@ export class FormGvComponent implements OnInit {
         utm_term: (localStorage.getItem('utm_term') ? localStorage.getItem('utm_term') : null),
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         when_can_travel: +this.user.when_can_travel,
-        referral_type: +this.user.referral_type
+        referral_type: +this.user.referral_type,
+        exchange_reason: this.user.exchange_reason
       }
     };
     this.loading = true; 

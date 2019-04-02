@@ -275,4 +275,67 @@ export class DomainsService {
 			{ name : 'UCAYALI' }
 	  ];
   }
+
+  getReasonsOptionsGV(){
+  	return [
+  		{
+  			value: 'Desarrollo personal y professional',
+  			id: 0
+  		},
+  		{
+  			value: 'Viajar y conocer nuevas culturas',
+  			id: 1
+  		},
+  		{
+  			value: 'Impacto social',
+  			id: 2
+  		},
+  		{
+  			value: 'Otra',
+  			id: 3
+  		}
+  	];
+  };
+
+  getReasonsOptionsGE(){
+  	return [
+  		{
+  			value: 'Mejorar mis oportunidades de empleo',
+  			id: 0
+  		},
+  		{
+  			value: 'Viajar y conocer nuevas culturas',
+  			id: 1
+  		},
+  		{
+  			value: 'Internacionalizar mis conocimientos',
+  			id: 2
+  		},
+  		{
+  			value: 'Otra',
+  			id: 3
+  		}
+  	];  	
+  };
+
+  getReasonsOptionsGT(){
+  	return [
+  		{
+  			value: 'Tener mejores oportunidades de vida',
+  			id: 0
+  		},
+  		{
+  			value: 'Ampliar mis horizontes professionales',
+  			id: 1
+  		},
+  		{
+  			value: 'Viajar y hacer networking professional',
+  			id: 2
+  		},
+  		{
+  			value: 'Otra',
+  			id: 3
+  		}
+  	];  	
+  };
 }
