@@ -426,6 +426,7 @@ export class FormGtComponent implements OnInit {
     if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && this.matchDate && this.user.accepted_terms && !this.invalidPhone) {
       this.personalData = false;
       this.studyData = true;
+      this.signupService.registerUserToRD(this.user, 'expa_reg_form_gt');
     }
   }
 
