@@ -37,8 +37,16 @@
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <i class="far fa-times-circle fa-lg"></i>
               </button>
-              <p><span i18n="@@alreadyExistsUserEmail">Já existe um usuário com esse endereço de email!</span>
-                <strong i18n="@@accessThePlatformQuestion">Gostaria de acessar a plataforma?</strong>
+              <p>
+                <span i18n="@@alreadyExistsUserEmail">Já existe um usuário com esse endereço de email!</span>
+                <br/>
+                <a href="https://auth.aiesec.org/users/sign_in?country=Peru#login" class="form-email-warning">
+                  <strong i18n="@@accessThePlatformQuestion">Gostaria de acessar a plataforma?</strong>
+                </a>
+                <br/>  
+                <a href="https://auth.aiesec.org/users/password/new" class="form-email-warning">
+                  <strong i18n="@@recoverPlatformPassword">Recuperar minha senha</strong>
+                </a>                
               </p>
             </div>
             <div class="animated fadeIn" *ngIf="personalData && !completedSignup">
@@ -69,11 +77,11 @@
                         <i class="fas fa-mobile-alt"></i><span i18n="@@cellphone">Celular</span></div>
                     </div>
                     <!-- desktop -->
-                    <input type="tel" class="form-control desktop tel-mask" mask="{{ cellphoneMask }}" placeholder="Vamos falar com você por aqui!"
+                    <input type="tel" class="form-control desktop tel-mask" mask="{{ cellphoneMask }}" prefix="9" placeholder="Vamos falar com você por aqui!"
                       [(ngModel)]="user.cellphone" formControlName="cellphone" name="cellphone" i18n-placeholder="@@cellphonePlaceholder" (keydown)='checkMaskCellphone($event)' (blur)="checkPhone()" required>
                     <!-- mobile -->
                     <i class="fas fa-mobile-alt mobile mobile-icon"></i>
-                    <input type="tel" class="form-control mobile tel-mask" mask="{{ cellphoneMask }}" placeholder="Celular" [(ngModel)]="user.cellphone"
+                    <input type="tel" class="form-control mobile tel-mask" mask="{{ cellphoneMask }}" prefix="9" placeholder="Celular" [(ngModel)]="user.cellphone"
                       formControlName="cellphone" name="cellphone" (blur)="checkPhone()"  (keydown)='checkMaskCellphone($event)' required>
                     <div class="valid-feedback">
                       <i class="fas fa-check"></i>
@@ -192,7 +200,7 @@
                       </div>
                     </div>
                   </div>
-                  <div *ngIf="isValidStudy('department')" class='error-message' i18n="@@formCityEmpty">
+                  <div *ngIf="isValidStudy('department')" class='error-message' i18n="@@formDepartmentEmpty">
                     Por favor, selecione seu departamento
                   </div>
                 </div>
@@ -265,9 +273,9 @@
                 </div>
 
                 <!-- Password -->
-                <div class='error-message animated fadeIn'>
+                <div class='error-message animated fadeIn' [hidden]="!user.password">
                   <span>
-                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit
+                    Para poder acceder a nuestras oportunidades en aiesec.org es necesario que crees una contraseña.
                   </span>
                 </div>
                 <div class="form-group">

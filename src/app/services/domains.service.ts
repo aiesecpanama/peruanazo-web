@@ -21,7 +21,7 @@ export class DomainsService {
 			{ id: '0', name: 'Lo antes posible' },
 			{ id: '1', name: 'Entre 3 e 6 meses' },
 			{ id: '2', name: 'Mais de 6 meses' },
-			{ id: '3', name: '¿Cómo conociste AIESEC?' }
+			{ id: '3', name: 'Solo quiero información' }
 		];
 	}
 

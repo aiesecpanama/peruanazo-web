@@ -43,9 +43,7 @@ export class FormGvComponent implements OnInit {
     accepted_terms: '',
     exchange_reason: ''
   }
-
-  cellphoneDefaultMask: string = '000 000 0000';
-  cellphoneLargerMask: string = '0 000 000 0000';
+  cellphoneDefaultMask: string = '00 000 000';
   cellphoneMask: any;
 
   travelOptions = [];
@@ -155,7 +153,7 @@ export class FormGvComponent implements OnInit {
         Validators.required,
       ])
     });
-    window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
+    window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años - dd/mm/aaaa" : this.placeholderBirthdate = "Fecha de nacimiento";
   }
 
   ngOnInit() {
@@ -236,12 +234,7 @@ export class FormGvComponent implements OnInit {
 
   checkMaskCellphone(event) {
     if (+event.key >= 0 && +event.key <= 9 || event.key == "Backspace") {
-      if (this.user.cellphone.replace(/[()_+-\s]/g, '').length < 10) {
-        this.cellphoneMask = this.cellphoneDefaultMask;
-      }
-      else {
-        this.cellphoneMask = this.cellphoneLargerMask;
-      }
+      this.cellphoneMask = this.cellphoneDefaultMask;
     }
   }
 
@@ -413,7 +406,7 @@ export class FormGvComponent implements OnInit {
 
   checkPhone() {
     let cellphone = this.user.cellphone.replace(/[(+)_-\s]/g, '');
-    if (cellphone.length <= 9) {
+    if (cellphone.length < 8) {
       this.invalidPhone = true;
       return;
     }
@@ -443,7 +436,7 @@ export class FormGvComponent implements OnInit {
       gv_participant: {
         city : this.user.city.name,
         fullname: this.user.fullname,
-        cellphone: this.user.cellphone.replace(/[(+)_-\s]/g, ''),
+        cellphone: '9' + this.user.cellphone.replace(/[(+)_-\s]/g, ''),
         email: this.user.email,
         password: this.user.password,
         birthdate: moment(this.user.birthdate, 'DDMMYYYY').format('DD/MM/YYYY'),
