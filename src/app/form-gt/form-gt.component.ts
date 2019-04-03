@@ -34,7 +34,7 @@ export class FormGtComponent implements OnInit {
     department : { name: '' },
     university: { id: '', name: '', local_committee_id: '' },
     college_course: { id: '', name: '' },
-    cellphone_contactable: '',
+    cellphone_contactable: true,
     scholarity: { id: ''},
     utm_source: '',
     utm_medium: '',
@@ -42,13 +42,13 @@ export class FormGtComponent implements OnInit {
     utm_term: '',
     utm_content: '',
     city: { name: '' },
-    work_experience : '',
+    work_experience : { id: ''},
     referral_type: '',
     accepted_terms: '',
     exchange_reason: ''
   }
 
-  cellphoneDefaultMask: string = '00 000 000';
+  cellphoneDefaultMask: string = '000 000 000';
   cellphoneMask : any;
 
   scholarityOptions: any = [];
@@ -119,7 +119,7 @@ export class FormGtComponent implements OnInit {
     public urlScrapper: ActivatedRoute,
     private domainsService: DomainsService
   ) {
-    this.workExperienceOptions = domainsService.getWorkExperienceDomains();
+    this.workExperienceOptions = domainsService.getWorkExperienceDomainsGT();
     this.referralTypes = domainsService.getReferralTypes();
     this.reasonOptions = domainsService.getReasonsOptionsGT();
     this.scholarityOptions = domainsService.getScholarityDomains();
@@ -411,7 +411,7 @@ export class FormGtComponent implements OnInit {
     let user = {
       gt_participant: {
         fullname: this.user.fullname,
-        cellphone: '9' + this.user.cellphone.replace(/[(+)_-\s]/g, ''),
+        cellphone: this.user.cellphone.replace(/[(+)_-\s]/g, ''),
         email: this.user.email,
         password: this.user.password,
         birthdate: moment(this.user.birthdate, 'DDMMYYYY').format('YYYY-MM-DD'),
@@ -426,10 +426,10 @@ export class FormGtComponent implements OnInit {
         utm_term: (localStorage.getItem('utm_term') ? localStorage.getItem('utm_term') : null),
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         referral_type: +this.user.referral_type,
-        exchange_reason: this.user.exchange_reason
+        exchange_reason: this.user.exchange_reason,
+        work_experience: (this.user.work_experience ? +this.user.work_experience : null)
       }
     };
-    
     this.loading = true;
     this.signupService.addGtParticipant(user)
       .then((res: any) => {
@@ -518,6 +518,9 @@ export class FormGtComponent implements OnInit {
 
   checkMaskCellphone(event) {
     if (+event.key >= 0 && +event.key <= 9 || event.key == "Backspace") {
+      if (this.user.cellphone.length == 0){
+        this.user.cellphone += '9';
+      }
       this.cellphoneMask = this.cellphoneDefaultMask;
     }
   }
