@@ -12,12 +12,12 @@
         </picture>
         <p class="desktop" i18n="@@landingGvAboutDesktop">
           <strong style="font-weight: bold"> ¿Te atreves a impactar positivamente el mundo?</strong>
-          <br> ¡Bueno, creemos que puedes hacerlo a través del Voluntariado Internacional hacia los
+          <br/> ¡Bueno, creemos que puedes hacerlo a través del Voluntariado Internacional hacia los
           Objetivos  de Desarrollo Sostenible propuestos por la ONU!
         </p> 
         <p class="mobile" i18n="@@landingGvAboutMobile">
           <strong style="font-weight: bold"> ¿Te atreves a impactar positivamente el mundo?</strong>
-          <br> ¡Bueno, creemos que puedes hacerlo a través del Voluntariado Internacional hacia los
+          <br/> ¡Bueno, creemos que puedes hacerlo a través del Voluntariado Internacional hacia los
           Objetivos  de Desarrollo Sostenible propuestos por la ONU!
         </p>
         <button type="button" (click)="goToGv()" class="btn btn-outline-light desktop" i18n="@@learnMore" style="text-transform: uppercase;">CONOCE MÁS</button>
@@ -52,8 +52,8 @@
               </p>
             </div>
           </div>
-          <button class="button" (click)="goToGe()"  class="background-white gv without-border"  i18n="@@signup">
-            INSCRÍBASE
+          <button class="button" (click)="goToGv()"  class="background-white gv without-border"  i18n="@@signup">
+            INSCRÍBETE
           </button>
         </div>
       </div>
@@ -109,11 +109,12 @@
             </div>
           </div>
           <button class="button" (click)="goToGe()" class="background-white ge without-border" i18n="@@signup">
-            INSCRÍBASE
+            INSCRÍBETE
           </button>
         </div>
       </div>
     </div>
+
     <div class="col-lg-4 col-sm-12 column-3 align-center">
       <div class="bg-color"></div>
       <div class="bg-content">
@@ -125,11 +126,12 @@
         <p class="desktop" i18n="@@landingGtAboutDesktop">
           <strong style="font-weight:bold;"> ¿Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? </strong>
           <br>  Diferenciate a través de una pasantía profesional en el extranjero.
+          <br><br>
         </p>
         <p class="mobile" i18n="@@landingGtAboutMobile">
           Pasantía profesional en una empresa.
         </p>
-        <button type="button" (click)="goToGt()" class="btn btn-outline-light desktop" style="text-transform: uppercase;" i18n="@@learnMore">CONOCE MÁS</button>
+        <button type="button" (click)="goToGt()" class="btn btn-outline-light desktop" i18n="@@learnMore" style="text-transform: uppercase;">CONOCE MÁS</button>
         <button type="button" class="button centered border border-white without-background color-white mobile" (click)="goToGt()">
           <span i18n="@@learnMore">CONOCE MÁS</span>
           <i *ngIf="!seeMoreGt" class="fas fa-angle-down"></i>
@@ -160,8 +162,8 @@
               </p>
             </div>
           </div>
-          <button class="button" (click)="goToGe()"  class="background-white gt without-border" i18n="@@signup">
-            INSCRÍBASE
+          <button class="button" (click)="goToGt()" class="background-white gt without-border" i18n="@@signup">
+            INSCRÍBETE
           </button>
         </div>
       </div>

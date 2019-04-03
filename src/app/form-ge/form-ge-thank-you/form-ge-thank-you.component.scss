@@ -41,27 +41,27 @@ $break-sm: 576px;
             border-radius: 5px;
             &.back-to-home {
                 @at-root :host-context(.no-webp) #{&} {
-                    background-image: url('/assets/images/header.jpg');
+                    background-image: url('/assets/products/ge/argentina.png');
                 }
                 @at-root :host-context(.webp) #{&} {
-                    background-image: url('/assets/images/header.jpg.webp');
+                    background-image: url('/assets/products/ge/argentina.webp');
                 }
                 background-position: right center;
             }
             &.go-to-portal {
                 @at-root :host-context(.no-webp) #{&} {
-                    background-image: url('/assets/images/case1.jpg');
+                    background-image: url('/assets/products/ge/egipto.png');
                 }
                 @at-root :host-context(.webp) #{&} {
-                    background-image: url('/assets/images/case1.jpg.webp');
+                    background-image: url('/assets/products/ge/egipto.webp');
                 }
             }
             &.go-to-blog {
                 @at-root :host-context(.no-webp) #{&} {
-                    background-image: url('/assets/images/case2.jpg');
+                    background-image: url('/assets/products/ge/brasil.png');
                 }
                 @at-root :host-context(.webp) #{&} {
-                    background-image: url('/assets/images/case2.jpg.webp');
+                    background-image: url('/assets/products/ge/brasil.webp');
                 }
             }
         }
