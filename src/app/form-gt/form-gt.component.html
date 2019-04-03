@@ -79,11 +79,11 @@
                         <i class="fas fa-mobile-alt"></i><span i18n="@@cellphone">Celular</span></div>
                     </div>
                     <!-- desktop -->
-                    <input type="tel" class="form-control desktop tel-mask" mask="{{ cellphoneMask }}" placeholder="Vamos falar com você por aqui!"
+                    <input type="tel" class="form-control desktop tel-mask" mask="{{ cellphoneMask }}" prefix="9" placeholder="Vamos falar com você por aqui!"
                       [(ngModel)]="user.cellphone" i18n-placeholder="@@cellphonePlaceholder" formControlName="cellphone" name="cellphone" (keydown)='checkMaskCellphone($event)' (blur)="checkPhone()" required>
                     <!-- mobile -->
                     <i class="fas fa-mobile-alt mobile mobile-icon"></i>
-                    <input type="tel" class="form-control mobile tel-mask" mask="{{ cellphoneMask }}" placeholder="Celular" [(ngModel)]="user.cellphone"
+                    <input type="tel" class="form-control mobile tel-mask" mask="{{ cellphoneMask }}" prefix="9" placeholder="Celular" [(ngModel)]="user.cellphone"
                       formControlName="cellphone" name="cellphone" (blur)="checkPhone()"  (keydown)='checkMaskCellphone($event)' required>
                     <div class="valid-feedback">
                       <i class="fas fa-check"></i>
