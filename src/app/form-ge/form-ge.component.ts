@@ -32,7 +32,7 @@ export class FormGeComponent implements OnInit {
     department : { name: '' },
     university: { id: '', name: '', local_committee_id: '' },
     college_course: { id: '', name: '' },
-    cellphone_contactable: '',
+    cellphone_contactable: true,
     scholarity: {id:''},
     utm_source: '',
     utm_medium: '',
@@ -49,7 +49,7 @@ export class FormGeComponent implements OnInit {
 
   scholarityOptions: any = [];
 
-  cellphoneDefaultMask: string = '00 000 000';
+  cellphoneDefaultMask: string = '000 000 000';
   cellphoneMask : any;
 
   travelOptions = [];
@@ -116,7 +116,7 @@ export class FormGeComponent implements OnInit {
     public urlScrapper: ActivatedRoute,
     private domainsService: DomainsService
   ) {
-    this.workExperienceOptions = domainsService.getWorkExperienceDomains();
+    this.workExperienceOptions = domainsService.getWorkExperienceDomainsGE();
     this.travelOptions = domainsService.getTravelDomains();
     this.reasonOptions = domainsService.getReasonsOptionsGE();
     this.referralTypes = domainsService.getReferralTypes();
@@ -407,7 +407,7 @@ export class FormGeComponent implements OnInit {
     let user = {
       ge_participant: {
         fullname: this.user.fullname,
-        cellphone: '9' + this.user.cellphone.replace(/[(+)_-\s]/g, ''),
+        cellphone: this.user.cellphone.replace(/[(+)_-\s]/g, ''),
         email: this.user.email,
         password: this.user.password,
         birthdate: moment(this.user.birthdate, 'DDMMYYYY').format('DD/MM/YYYY'),
@@ -423,7 +423,8 @@ export class FormGeComponent implements OnInit {
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         when_can_travel: +this.user.when_can_travel,
         referral_type: +this.user.referral_type,
-        exchange_reason: this.user.exchange_reason
+        exchange_reason: this.user.exchange_reason,
+        work_experience: (this.user.work_experience ? +this.user.work_experience : null)
       }
     };
     
@@ -515,6 +516,9 @@ export class FormGeComponent implements OnInit {
 
   checkMaskCellphone(event) {
     if (+event.key >= 0 && +event.key <= 9 || event.key == "Backspace") {
+      if (this.user.cellphone.length == 0){
+        this.user.cellphone += '9';
+      }
       this.cellphoneMask = this.cellphoneDefaultMask;
     }
   }
