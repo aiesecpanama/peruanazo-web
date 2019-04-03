@@ -97,4 +97,18 @@ export class SignupService {
 			.toPromise()
 			.then((res) => res.json());
 	}
+
+	registerUserToRD(user, formId){
+		var data = {
+			"token_rdstation": "81f10af20f51319deda30ab995bcbf2e",
+			"identificador": formId,
+			"email": user.email,
+		  "nome": user.fullname,
+		  "celular": user.cellphone,
+		  "nascimento": user.birthdate
+		}
+		return this.http.post('https://www.rdstation.com.br/api/1.3/conversions', data, this.headers())
+		.toPromise()
+		.then((res) => res.json());
+	}
 }
