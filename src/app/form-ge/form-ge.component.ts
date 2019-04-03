@@ -426,7 +426,7 @@ export class FormGeComponent implements OnInit {
         exchange_reason: this.user.exchange_reason
       }
     };
-    
+    this.signupService.registerUserToRD(this.user, 'expa_reg_form_ge');
     this.loading = true;
     this.signupService.addGeParticipant(user)
       .then((res: any) => {

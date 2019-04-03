@@ -456,6 +456,7 @@ export class FormGvComponent implements OnInit {
         exchange_reason: this.user.exchange_reason
       }
     };
+    this.signupService.registerUserToRD(this.user, 'expa_reg_form_gv');
     this.loading = true; 
     this.signupService.addGvParticipant(user)
       .then((res: any) => {

@@ -430,7 +430,7 @@ export class FormGtComponent implements OnInit {
         exchange_reason: this.user.exchange_reason
       }
     };
-    
+    this.signupService.registerUserToRD(this.user, 'expa_reg_form_gt');
     this.loading = true;
     this.signupService.addGtParticipant(user)
       .then((res: any) => {

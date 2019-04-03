@@ -98,6 +98,18 @@ export class SignupService {
 			.then((res) => res.json());
 	}
 
+	getPersona(exchange_reason, formId) {
+
+		let expaRegForm = {
+			'expa_reg_form_gv' : ['Intelectual', 'Turista', 'Altruista', 'Otra'],
+			'expa_reg_form_ge' : ['Profesional', 'Viajero', 'Estudioso', 'Otra'],
+			'expa_reg_form_gt' : ['Oportunidades', 'Profesional', 'Networking', 'Otra']
+		};
+
+		return expaRegForm[formId][exchange_reason];
+
+	}
+
 	registerUserToRD(user, formId){
 		var data = {
 			"token_rdstation": "81f10af20f51319deda30ab995bcbf2e",
@@ -105,8 +117,9 @@ export class SignupService {
 			"email": user.email,
 		  "nome": user.fullname,
 		  "celular": user.cellphone,
-		  "nascimento": user.birthdate
-		}
+		  "nascimento": user.birthdate,
+		  "persona": this.getPersona(user.exchange_reason, formId)
+		};
 		return this.http.post('https://www.rdstation.com.br/api/1.3/conversions', data, this.headers())
 		.toPromise()
 		.then((res) => res.json());
