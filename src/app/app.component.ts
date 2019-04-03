@@ -19,7 +19,7 @@ export class AppComponent {
   changeOfRoutes(){
     this.activate.queryParams.subscribe((param: any) => {
       if (!param['embedded']){
-        this.window.fbq('init', '786594798205999');
+        this.window.fbq('init', '1214565305375863');
         this.window.fbq('track', 'PageView');
       }
     });
