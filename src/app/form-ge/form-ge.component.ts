@@ -406,6 +406,7 @@ export class FormGeComponent implements OnInit {
     this.submittedStudy = true;
     let user = {
       ge_participant: {
+        city : this.user.city.name,
         fullname: this.user.fullname,
         cellphone: this.user.cellphone.replace(/[(+)_-\s]/g, ''),
         email: this.user.email,

@@ -411,6 +411,7 @@ export class FormGtComponent implements OnInit {
     this.submittedStudy = true;
     let user = {
       gt_participant: {
+        city : this.user.city.name,
         fullname: this.user.fullname,
         cellphone: this.user.cellphone.replace(/[(+)_-\s]/g, ''),
         email: this.user.email,
