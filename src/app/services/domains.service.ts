@@ -27,8 +27,8 @@ export class DomainsService {
 	getTravelDomains(){
 		return [
 			{ id: '0', name: 'Lo antes posible' },
-			{ id: '1', name: 'Entre 3 y 6 meses' },
-			{ id: '2', name: 'Más de 6 meses' },
+			{ id: '1', name: 'Dentro de 3 meses' },
+			{ id: '2', name: 'En el próximo semestre' },
 			{ id: '3', name: 'Sólo quiero información' }
 		];
 	}
@@ -51,7 +51,7 @@ export class DomainsService {
 			{ id: '1', name: 'Secundaria completa' },
 			{ id: '2', name: 'Estudiante de pregrado' },
 			{ id: '3', name: 'Universidad Completa' },
-			{ id: '4', name: 'Instituto Tecnico Completo' },
+			{ id: '4', name: 'Instituto Técnico Completo' },
 			{ id: '5', name: 'Estudiante de Postgrado' }
 		];
 	}
@@ -149,7 +149,7 @@ export class DomainsService {
 			{ name : 'HUACAYBAMBA', department: 'HUANUCO' },
 			{ name : 'HUAMALIES', department: 'HUANUCO' },
 			{ name : 'LEONCIO PRADO', department: 'HUANUCO' },
-			{ name : 'MARA&Ntilde;ON', department: 'HUANUCO' },
+			{ name : 'MARAÑON', department: 'HUANUCO' },
 			{ name : 'PACHITEA', department: 'HUANUCO' },
 			{ name : 'PUERTO INCA', department: 'HUANUCO' },
 			{ name : 'LAURICOCHA', department: 'HUANUCO' },
@@ -181,14 +181,14 @@ export class DomainsService {
 			{ name : 'GRAN CHIMU', department: 'LA LIBERTAD' },
 			{ name : 'VIRU', department: 'LA LIBERTAD' },
 			{ name : 'CHICLAYO', department: 'LAMBAYEQUE' },
-			{ name : 'FERRE&Ntilde;AFE', department: 'LAMBAYEQUE' },
+			{ name : 'FERREÑAFE', department: 'LAMBAYEQUE' },
 			{ name : 'LAMBAYEQUE', department: 'LAMBAYEQUE' },
 			{ name : 'LIMA', department: 'LIMA' },
 			{ name : 'CALLAO', department: 'LIMA' },
 			{ name : 'BARRANCA', department: 'LIMA' },
 			{ name : 'CAJATAMBO', department: 'LIMA' },
 			{ name : 'CANTA', department: 'LIMA' },
-			{ name : 'CA&Ntilde;ETE', department: 'LIMA' },
+			{ name : 'CAÑET', department: 'LIMA' },
 			{ name : 'HUARAL', department: 'LIMA' },
 			{ name : 'HUAROCHIRI', department: 'LIMA' },
 			{ name : 'HUAURA', department: 'LIMA' },
