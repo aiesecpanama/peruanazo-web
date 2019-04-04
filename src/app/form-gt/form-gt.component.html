@@ -48,7 +48,7 @@
               </p>
             </div>
             <div class="animated fadeIn" *ngIf="personalData && !completedSignup">
-              <form [formGroup]="step1Form" class="forms gv" (keydown.enter)="registerUser()">
+              <form [formGroup]="step1Form" class="forms gv">
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
@@ -89,11 +89,8 @@
                       <i class="fas fa-check"></i>
                     </div>
                   </div>
-                  <div *ngIf="isValidPersonal('cellphone')" class='error-message' i18n="@@formCellphoneEmpty">
+                  <div *ngIf="isValidPersonal('cellphone') || invalidPhone" class='error-message' i18n="@@formCellphoneEmpty">
                     Preencha o seu número de celular.
-                  </div>
-                  <div *ngIf="invalidPhone" class='error-message' i18n="@@formCellphoneInvalid">
-                    Por favor, digite um número de celular válido.
                   </div>
                 </div>
                 <div class="form-group">
@@ -134,9 +131,6 @@
                     <div class="valid-feedback">
                       <i class="fas fa-check"></i>
                     </div>
-                  </div>
-                  <div *ngIf="isValidPersonal('birthdate')" class='error-message' i18n="@@formBirthdateEmpty">
-                    Preencha com a sua data de nascimento.
                   </div>
                   <div *ngIf="invalidDate" class='error-message' i18n="@@formBirthdateInvalid">
                     Por favor, preencha com uma data válida
@@ -428,11 +422,11 @@
             <div class="form-row buttons" *ngIf="!completedSignup" id="row-with-buttons">
               <div class="col text-left">
                 <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()" data-target="#modalCancelar1"
-                  [ngx-scroll-to]="'#header-talentos-globais'">{{formedUser || submittedPersonal ? 'Regresso' : 'Cancelar'}}</button>
+                  [ngx-scroll-to]="'#header-talentos-globais'">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
               </div>
               <div class="col text-right">
                 <button type="button" (click)="registerUser()" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
-                  [ngx-scroll-to]="'#header-talentos-globais'">Próximo</button>
+                  [ngx-scroll-to]="'#header-talentos-globais'" i18n="@@next">Próximo</button>
                 <button type="button" (click)="submit()" class="btn btn-primary submit-form" *ngIf="studyData" [ngx-scroll-to]="'#header-talentos-globais'"
                   [disabled]='unableToSubmit()' i18n="@@send">
                   Enviar

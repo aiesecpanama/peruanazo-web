@@ -7,21 +7,29 @@ export class DomainsService {
 
 	constructor() { }
 
-	getWorkExperienceDomains(){
+	getWorkExperienceDomainsGE(){
 		return [
-			{ id: '0', name: 'No' },
-			{ id: '1', name: 'Si, menor a 3 meses' },
-			{ id: '2', name: 'Si, menor a 6 meses' },
-			{ id: '3', name: 'Si, mayor a 6 meses' }
+			{ id: '0', name: 'No tengo' },
+			{ id: '1', name: 'Menos de 3 meses' },
+			{ id: '2', name: 'Menos de 6 meses' },
+			{ id: '3', name: 'Más de 6 meses' }
+		];
+	}
+
+	getWorkExperienceDomainsGT(){
+		return [
+			{ id: '0', name: 'No tengo' },
+			{ id: '1', name: 'Más de 6 meses' },
+			{ id: '2', name: 'Más de 1 año' },
 		];
 	}
 
 	getTravelDomains(){
 		return [
 			{ id: '0', name: 'Lo antes posible' },
-			{ id: '1', name: 'Entre 3 e 6 meses' },
-			{ id: '2', name: 'Mais de 6 meses' },
-			{ id: '3', name: 'Solo quiero información' }
+			{ id: '1', name: 'Entre 3 y 6 meses' },
+			{ id: '2', name: 'Más de 6 meses' },
+			{ id: '3', name: 'Sólo quiero información' }
 		];
 	}
 
@@ -115,7 +123,6 @@ export class DomainsService {
 			{ name : 'SAN MARCOS', department: 'CAJAMARCA' },
 			{ name : 'SAN PABLO', department: 'CAJAMARCA' },
 			{ name : 'SANTA CRUZ', department: 'CAJAMARCA' },
-			{ name : 'CALLAO', department: 'CALLAO' },
 			{ name : 'CUSCO', department: 'CUSCO' },
 			{ name : 'ACOMAYO', department: 'CUSCO' },
 			{ name : 'ANTA', department: 'CUSCO' },
@@ -177,6 +184,7 @@ export class DomainsService {
 			{ name : 'FERRE&Ntilde;AFE', department: 'LAMBAYEQUE' },
 			{ name : 'LAMBAYEQUE', department: 'LAMBAYEQUE' },
 			{ name : 'LIMA', department: 'LIMA' },
+			{ name : 'CALLAO', department: 'LIMA' },
 			{ name : 'BARRANCA', department: 'LIMA' },
 			{ name : 'CAJATAMBO', department: 'LIMA' },
 			{ name : 'CANTA', department: 'LIMA' },
@@ -254,7 +262,6 @@ export class DomainsService {
 			{ name : 'AREQUIPA' },
 			{ name : 'AYACUCHO' },
 			{ name : 'CAJAMARCA' },
-			{ name : 'CALLAO' },
 			{ name : 'CUSCO' },
 			{ name : 'HUANCAVELICA' },
 			{ name : 'HUANUCO' },
@@ -279,7 +286,7 @@ export class DomainsService {
   getReasonsOptionsGV(){
   	return [
   		{
-  			value: 'Desarrollo personal y professional',
+  			value: 'Desarrollo personal y profesional',
   			id: 0
   		},
   		{

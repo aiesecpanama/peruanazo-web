@@ -30,7 +30,7 @@ export class FormGvComponent implements OnInit {
     department : { name: '' },
     university: { id: '', name: '', local_committee_id: '' },
     college_course: { id: '', name: '' },
-    cellphone_contactable: '',
+    cellphone_contactable: true,
     scholarity: { id: '' },
     utm_source: '',
     utm_medium: '',
@@ -43,7 +43,7 @@ export class FormGvComponent implements OnInit {
     accepted_terms: '',
     exchange_reason: ''
   }
-  cellphoneDefaultMask: string = '00 000 000';
+  cellphoneDefaultMask: string = '000 000 000';
   cellphoneMask: any;
 
   travelOptions = [];
@@ -234,6 +234,9 @@ export class FormGvComponent implements OnInit {
 
   checkMaskCellphone(event) {
     if (+event.key >= 0 && +event.key <= 9 || event.key == "Backspace") {
+      if (this.user.cellphone.length == 0){
+        this.user.cellphone += '9';
+      }
       this.cellphoneMask = this.cellphoneDefaultMask;
     }
   }
@@ -437,7 +440,7 @@ export class FormGvComponent implements OnInit {
       gv_participant: {
         city : this.user.city.name,
         fullname: this.user.fullname,
-        cellphone: '9' + this.user.cellphone.replace(/[(+)_-\s]/g, ''),
+        cellphone: this.user.cellphone.replace(/[(+)_-\s]/g, ''),
         email: this.user.email,
         password: this.user.password,
         birthdate: moment(this.user.birthdate, 'DDMMYYYY').format('DD/MM/YYYY'),
