@@ -608,6 +608,10 @@ section.header h1 {
     border-top: none;
     border-left: none;
     border-right: none;
+    &.input-group-text-without-input {
+        width: 100%;
+        margin: 5px;
+    }
 }
 
 input::-webkit-input-placeholder {
