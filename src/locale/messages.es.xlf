@@ -879,7 +879,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">81</context>
         </context-group>
-      <target>Vamos a hablar con vos por acá!</target></trans-unit>
+      <target>Vamos a hablar contigo por acá</target></trans-unit>
       <trans-unit id="cellphoneMobilePlaceholder" datatype="html">
         <source>Celular</source>
         <context-group purpose="location">
@@ -935,7 +935,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">105</context>
         </context-group>
-      <target>Relajate, nosostros tampoco nos gusta el spam</target></trans-unit>
+      <target>Relájate, a nosotros tampoco nos gusta el spam</target></trans-unit>
       <trans-unit id="emailMobilePlaceholder" datatype="html">
         <source>Email</source>
         <context-group purpose="location">
@@ -1023,7 +1023,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">140</context>
         </context-group>
-      <target>Completa com una fecha válida, por favor</target></trans-unit>
+      <target>Completa con una fecha válida, por favor</target></trans-unit>
       <trans-unit id="formBirthdateError" datatype="html">
         <source>
           Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
@@ -1669,7 +1669,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">332</context>
         </context-group>
-      <target>¿Cuándo puedes viajar?</target></trans-unit>
+      <target>¿Cuando deseas irte de intercambio?</target></trans-unit>
       <trans-unit id="whenCanTravelLabel" datatype="html">
         <source>
                       Escolha o período de tempo que você estará disponível
@@ -1678,7 +1678,7 @@
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">383</context>
         </context-group>
-      <target>Elige el periodo de tiempo en el que tendrás disponibilidad</target></trans-unit>
+      <target></target></trans-unit>
       
       <trans-unit id="referralType" datatype="html">
         <source>
@@ -2799,7 +2799,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">336</context>
         </context-group>
-      <target>Elige el periodo de tiempo en el que puedes tomar el intercambio</target></trans-unit>
+      <target></target></trans-unit>
       <trans-unit id="programOverview" datatype="html">
         <source>
             Visão geral do programa
