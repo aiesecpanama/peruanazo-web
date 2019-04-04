@@ -413,7 +413,7 @@ export class FormGeComponent implements OnInit {
         birthdate: moment(this.user.birthdate, 'DDMMYYYY').format('DD/MM/YYYY'),
         local_committee_id: +this.user.university.local_committee_id,
         university_id: (this.user.university.id == '' ? null : +this.user.university.id),
-        college_course_id: (this.user.college_course.id == '' ? null : +this.user.college_course.id),
+        college_course_id: (this.user.college_course.id == '' ? '' : +this.user.college_course.id),
         cellphone_contactable: (this.user.cellphone_contactable ? true : false),
         scholarity: +this.user.scholarity.id,
         utm_source: (localStorage.getItem('utm_source') ? localStorage.getItem('utm_source') : null),
