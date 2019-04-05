@@ -390,16 +390,17 @@ export class FormGeComponent implements OnInit {
     }
   }
 
-  registerUser() {
+  registerUser(el: HTMLElement) {
     this.submittedPersonal = true;
     if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPhone && this.matchDate) {
       this.personalData = false;
       this.studyData = true;
       this.signupService.registerUserToRD(this.user, 'expa_reg_form_ge');
+      el.scrollIntoView();
     }
   }
 
-  submit() {
+  submit(el: HTMLElement) {
     if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
       this.user.university = this.universities[0];
     }
@@ -444,6 +445,7 @@ export class FormGeComponent implements OnInit {
           localStorage.removeItem('utm_campaign');
           localStorage.removeItem('utm_term');
           localStorage.removeItem('utm_content');
+          el.scrollIntoView();
           this.router.navigate(['/emprendedor-global/obrigado']);
         }
       },

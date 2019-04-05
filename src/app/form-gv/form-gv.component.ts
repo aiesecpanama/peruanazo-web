@@ -418,12 +418,13 @@ export class FormGvComponent implements OnInit {
     }
   }
 
-  registerUser() {
+  registerUser(el: HTMLElement) {
     this.submittedPersonal = true;
     if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPhone && this.matchDate) {
       this.personalData = false;
       this.studyData = true;
       this.signupService.registerUserToRD(this.user, 'expa_reg_form_gv');
+      el.scrollIntoView();
     }
   }
 
@@ -431,7 +432,7 @@ export class FormGvComponent implements OnInit {
     this.formToggle ? this.formToggle = false : this.formToggle = true;
   }
 
-  submit() {
+  submit(el: HTMLElement) {
     if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
       this.user.university = this.universities[0];
     }
@@ -474,6 +475,7 @@ export class FormGvComponent implements OnInit {
           localStorage.removeItem('utm_campaign');
           localStorage.removeItem('utm_term');
           localStorage.removeItem('utm_content');
+          el.scrollIntoView();
           this.router.navigate(['/voluntario-global/obrigado']);
         }
       },

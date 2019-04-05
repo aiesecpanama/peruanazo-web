@@ -421,14 +421,11 @@
 
             <div class="form-row buttons" *ngIf="!completedSignup" id="row-with-buttons">
               <div class="col text-left">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()" data-target="#modalCancelar1"
-                  [ngx-scroll-to]="'#header-talentos-globais'">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp(headerGTRef)" data-target="#modalCancelar1">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
               </div>
               <div class="col text-right">
-                <button type="button" (click)="registerUser()" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
-                  [ngx-scroll-to]="headerGTRef" i18n="@@next">Próximo</button>
-                <button type="button" (click)="submit()" class="btn btn-primary submit-form" *ngIf="studyData" [ngx-scroll-to]="headerGTRef"
-                  [disabled]='unableToSubmit()' i18n="@@send">
+                <button type="button" (click)="registerUser(headerGTRef)" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms' i18n="@@next">Próximo</button>
+                <button type="button" (click)="submit(headerGTRef)" class="btn btn-primary submit-form" *ngIf="studyData" [disabled]='unableToSubmit()' i18n="@@send">
                   Enviar
                   <i class="fab fa-telegram-plane"></i>
                 </button>

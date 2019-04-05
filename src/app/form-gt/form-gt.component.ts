@@ -237,7 +237,7 @@ export class FormGtComponent implements OnInit {
     (event.target.innerWidth > 600 ? this.placeholderBirthdate = "Os programas da AIESEC são para pessoas de 18 à 30 anos" : this.placeholderBirthdate = "Fecha de nacimiento");
   }
 
-  cancelSignUp() {
+  cancelSignUp(el: HTMLElement) {
     if (this.formedUser) {
       this.onCancelEvent.emit();
     } else {
@@ -246,6 +246,7 @@ export class FormGtComponent implements OnInit {
         this.submittedStudy = false;
         this.personalData = true;
         this.studyData = false;
+        el.scrollIntoView();
       } else {
         this.router.navigate(['/']);
       }
@@ -394,17 +395,17 @@ export class FormGtComponent implements OnInit {
     }
   }
 
-  registerUser() {
+  registerUser(el: HTMLElement) {
     this.submittedPersonal = true;
-
     if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && this.matchDate && this.user.accepted_terms && !this.invalidPhone) {
       this.personalData = false;
       this.studyData = true;
       this.signupService.registerUserToRD(this.user, 'expa_reg_form_gt');
+      el.scrollIntoView();
     }
   }
 
-  submit() {
+  submit(el: HTMLElement) {
     if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
       this.user.university = this.universities[0];
     }
@@ -447,6 +448,7 @@ export class FormGtComponent implements OnInit {
           localStorage.removeItem('utm_campaign');
           localStorage.removeItem('utm_term');
           localStorage.removeItem('utm_content');
+          el.scrollIntoView();
           this.router.navigate(['/talento-global/obrigado']);
         }
       },
