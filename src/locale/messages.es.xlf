@@ -1633,7 +1633,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">332</context>
         </context-group>
-      <target>Cual es la principal razón por la cual quieres ser un Talento Global?</target></trans-unit>
+      <target>¿Cuál es la principal razón por la cual quieres ser un Talento Global?</target></trans-unit>
 
       <trans-unit id="preferredDestinationPlaceholder" datatype="html">
         <source>Selecione</source>
