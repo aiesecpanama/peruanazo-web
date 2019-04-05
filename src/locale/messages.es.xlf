@@ -494,7 +494,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">66</context>
         </context-group>
-      <target>Asumí los desafíos de trabajar en una Startup y desarrollate como un líder emprendedor</target></trans-unit>
+      <target>Asume los desafíos de trabajar en una StartUp y desarróllate como un líder emprendedor</target></trans-unit>
       <trans-unit id="landingGeAboutMobile" datatype="html">
         <source>
           Imersão em Startups
@@ -746,7 +746,7 @@
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      <target>Asumí los desafíos de trabajar en una Startup y desarrollate como un líder emprendedor</target></trans-unit>
+      <target>Asume los desafíos de trabajar en una StartUp y desarróllate como un líder emprendedor</target></trans-unit>
       <trans-unit id="alreadyExistsUserEmail" datatype="html">
         <source>Já existe um usuário com esse endereço de email!</source>
         <context-group purpose="location">
@@ -761,7 +761,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">49</context>
         </context-group>
-      <target>Ya existe un usuario con esa dirección de email</target></trans-unit>
+      <target>Ya existe un usuario con esa dirección de correo. ¿Te gustaría acceder a la plataforma o recibir una nueva clave en tu correo?</target></trans-unit>
       <trans-unit id="accessThePlatformQuestion" datatype="html">
         <source>Gostaria de acessar a plataforma?</source>
         <context-group purpose="location">
@@ -776,7 +776,22 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">50</context>
         </context-group>
-      <target>Te gustaría acceder a la plataforma?</target></trans-unit>
+      <target>Quiero acceder a la plataforma</target></trans-unit>
+      <trans-unit id="recoverPlatformPassword" datatype="html">
+        <source>Recuperar minha senha</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      <target>Quiero recibir una nueva clave en mi correo</target></trans-unit>
       <trans-unit id="fullname" datatype="html">
         <source>Nome Completo</source>
         <context-group purpose="location">
@@ -806,7 +821,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">62</context>
         </context-group>
-      <target>Cómo te llamas?</target></trans-unit>
+      <target>¿Cómo te llamas?</target></trans-unit>
       <trans-unit id="fullnameMobilePlaceholder" datatype="html">
         <source>Nome completo</source>
         <context-group purpose="location">
@@ -864,7 +879,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">81</context>
         </context-group>
-      <target>Vamos a hablar con vos por acá!</target></trans-unit>
+      <target>Vamos a hablar contigo por acá</target></trans-unit>
       <trans-unit id="cellphoneMobilePlaceholder" datatype="html">
         <source>Celular</source>
         <context-group purpose="location">
@@ -874,8 +889,8 @@
       <target>Celular</target></trans-unit>
       <trans-unit id="formCellphoneEmpty" datatype="html">
         <source>
-                    Preencha o seu número de celular.
-                  </source>
+          Preencha o seu número de celular.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">92</context>
@@ -888,11 +903,11 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">91</context>
         </context-group>
-      <target>Complete su número de celular</target></trans-unit>
+      <target>Completa tu número de celular, por favor</target></trans-unit>
       <trans-unit id="formCellphoneInvalid" datatype="html">
         <source>
-                    Por favor, digite um número de celular válido.
-                  </source>
+          Por favor, digite um número de celular válido.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">95</context>
@@ -920,7 +935,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">105</context>
         </context-group>
-      <target>Relajate, a nosotros tampoco nos gusta el spam</target></trans-unit>
+      <target>Relájate, a nosotros tampoco nos gusta el spam</target></trans-unit>
       <trans-unit id="emailMobilePlaceholder" datatype="html">
         <source>Email</source>
         <context-group purpose="location">
@@ -949,8 +964,8 @@
       <target>Campo obligatorio</target></trans-unit>
       <trans-unit id="formEmailEmpty" datatype="html">
         <source>
-                    Preencha com o seu email.
-                  </source>
+          Rellene con su correo electrónico.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">120</context>
@@ -959,7 +974,7 @@
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">121</context>
         </context-group>
-      <target>Complete con su mail</target></trans-unit>
+      <target>Completa tu correo electrónico, por favor</target></trans-unit>
       <trans-unit id="birthdate" datatype="html">
         <source>Data de Nascimento</source>
         <context-group purpose="location">
@@ -977,8 +992,8 @@
       <target>Fecha de nacimiento</target></trans-unit>
       <trans-unit id="formBirthdateEmpty" datatype="html">
         <source>
-                    Preencha com a sua data de nascimento.
-                  </source>
+          Llene su fecha de nacimiento.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">138</context>
@@ -994,8 +1009,8 @@
       <target>Completa con tu fecha de nacimiento</target></trans-unit>
       <trans-unit id="formBirthdateInvalid" datatype="html">
         <source>
-                    Por favor, preencha com uma data válida
-                  </source>
+          Por favor, preencha com uma data válida
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">141</context>
@@ -1008,11 +1023,11 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">140</context>
         </context-group>
-      <target>Por favor, complete con una fecha válida</target></trans-unit>
+      <target>Completa con una fecha válida, por favor</target></trans-unit>
       <trans-unit id="formBirthdateError" datatype="html">
         <source>
-                    Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
-                  </source>
+          Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">144</context>
@@ -1130,7 +1145,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">192</context>
         </context-group>
-      <target>Las contraseñas no coinciden! Escriba nuevamente</target></trans-unit>
+      <target>¡Las contraseñas no coinciden! Escribe nuevamente</target></trans-unit>
       <trans-unit id="scholarity" datatype="html">
         <source>Escolaridade</source>
         <context-group purpose="location">
@@ -1162,7 +1177,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">280</context>
         </context-group>
-      <target>Elegí un nivel de estudio.</target></trans-unit>
+      <target>Elige un nivel de estudios</target></trans-unit>
       <trans-unit id="noResults" datatype="html">
         <source>Nenhum resultado</source>
         <context-group purpose="location">
@@ -1244,7 +1259,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">210</context>
         </context-group>
-      <target>Cual es tu nivel de estudio?</target></trans-unit>
+      <target>¿Cuál es tu nivel de estudios?</target></trans-unit>
       <trans-unit id="city" datatype="html">
         <source>Cidade</source>
         <context-group purpose="location">
@@ -1260,6 +1275,91 @@
           <context context-type="linenumber">224</context>
         </context-group>
       <target>Ciudad</target></trans-unit>
+      <trans-unit id="department" datatype="html">
+        <source>Departamento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Departamento</target>
+      </trans-unit>
+
+      <trans-unit id="departmentPlaceholder" datatype="html">
+        <source>Departamento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Departamento</target>
+      </trans-unit>
+
+      <trans-unit id="formDepartmentEmpty" datatype="html">
+        <source>Por favor, selecione seu departamento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Por favor, seleciona tu departamento</target>
+      </trans-unit>
+
+      <trans-unit id="workExperience" datatype="html">
+        <source>Experiencia laboral</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>Experiencia laboral</target>
+      </trans-unit>
+
+      <trans-unit id="workExperienceTime" datatype="html">
+        <source>Escolha o período de tempo de trabalho</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">224</context>
+        </context-group>
+        <target>¿Con cuánto tiempo de experiencia laboral en tu área cuentas?</target>
+      </trans-unit>
+
       <trans-unit id="cityPlaceholder" datatype="html">
         <source>Cidade onde estuda</source>
         <context-group purpose="location">
@@ -1492,7 +1592,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">317</context>
         </context-group>
-      <target>Inserte su carrera</target></trans-unit>
+      <target>Seleccione su carrera</target></trans-unit>
       <trans-unit id="formCollegeCourseEmpty" datatype="html">
         <source>
                     Selecione um curso.
@@ -1509,54 +1609,32 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">323</context>
         </context-group>
-      <target>Seleccione una carrera</target></trans-unit>
-      <trans-unit id="englishLevel" datatype="html">
-        <source>Nível de Inglês</source>
+      <target>Seleccione su carrera</target></trans-unit>
+
+      <trans-unit id="exchangeReasonGV" datatype="html">
+        <source>Qual é a principal razão pela qual você quer ser um Voluntário Global?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">335</context>
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">327</context>
         </context-group>
+      <target>¿Cuál es la principal razón por la cual quieres ser un Voluntario Global?</target></trans-unit>
+
+      <trans-unit id="exchangeReasonGE" datatype="html">
+        <source>Qual é a principal razão pela qual você quer ser um Empreendedor Global?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">336</context>
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">330</context>
         </context-group>
-      <target>Nivel de inglés</target></trans-unit>
-      <trans-unit id="englishLevelPlaceholder" datatype="html">
-        <source>Isso nos ajuda a te direcionar para as vagas mais adequadas</source>
+      <target>¿Cuál es la principal razón por la cual quieres ser un Emprendedor Global?</target></trans-unit>
+
+      <trans-unit id="exchangeReasonGT" datatype="html">
+        <source>Qual é a principal razão pela qual você quer ser um Talento Global?</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">342</context>
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">332</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">343</context>
-        </context-group>
-      <target>Eso nos ayuda a direccionarte a las oportunidades más adecuadas</target></trans-unit>
-      <trans-unit id="formEnglishLevelEmpty" datatype="html">
-        <source>
-                    Selecione um nível de inglês.
-                  </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">348</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">349</context>
-        </context-group>
-      <target>Seleccione un nivel de inglés</target></trans-unit>
-      <trans-unit id="preferredDestinations" datatype="html">
-        <source>Onde deseja viver a
-                          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>experiência?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">357</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">358</context>
-        </context-group>
-      <target>Donde deseas vivir tu experiencia?</target></trans-unit>
+      <target>¿Cuál es la principal razón por la cual quieres ser un Talento Global?</target></trans-unit>
+
       <trans-unit id="preferredDestinationPlaceholder" datatype="html">
         <source>Selecione</source>
         <context-group purpose="location">
@@ -1591,7 +1669,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">332</context>
         </context-group>
-      <target>Cuando podés viajar</target></trans-unit>
+      <target>¿Cuando deseas irte de intercambio?</target></trans-unit>
       <trans-unit id="whenCanTravelLabel" datatype="html">
         <source>
                       Escolha o período de tempo que você estará disponível
@@ -1600,18 +1678,8 @@
           <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
           <context context-type="linenumber">383</context>
         </context-group>
-      <target>Eligí el período de tiempo que vas a estar disponible</target></trans-unit>
-      <trans-unit id="curriculum" datatype="html">
-        <source>Currículo</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
-          <context context-type="linenumber">402</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
-          <context context-type="linenumber">381</context>
-        </context-group>
-      <target>CV</target></trans-unit>
+      <target></target></trans-unit>
+      
       <trans-unit id="referralType" datatype="html">
         <source>
                     Como conheceu a AIESEC?
@@ -1628,7 +1696,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">351</context>
         </context-group>
-      <target>Cómo conoció a AIESEC?</target></trans-unit>
+      <target>¿Cómo conociste AIESEC?</target></trans-unit>
        <trans-unit id="referralTypeOption" datatype="html">
         <source>
                     Selecione uma opção
@@ -1645,7 +1713,19 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">356</context>
         </context-group>
-      <target>Seleccione una opción</target></trans-unit>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">335</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">337</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">332</context>
+        </context-group>
+      <target>Selecciona una opción</target></trans-unit>
       <trans-unit id="termsAndConditions" datatype="html">
         <source>Termos e Condições</source>
         <context-group purpose="location">
@@ -1669,6 +1749,23 @@
           <context context-type="linenumber">360</context>
         </context-group>
       <target>Términos y Condiciones</target></trans-unit>
+
+      <trans-unit id="termsAndConditionsConfirmation" datatype="html">
+        <source>Li e aceito os termos e condições.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
+          <context context-type="linenumber">149</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-ge/form-ge.component.html</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      <target>He leído y aceptado los Términos y Condiciones de Registro.</target></trans-unit>
+
       <trans-unit id="termsAndConditionsText" datatype="html">
         <source>
                           Ao se cadastrar você concorda com os nossos Termos e Condições descritos acima.
@@ -1700,7 +1797,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">361</context>
         </context-group>
-      <target>Inscribiendote estas de acuerdo con losTérminos y Condiciones de AIESEC Argentina. Para leerlos, hacé click acá.</target></trans-unit>
+      <target>Acepto que me puedan contactar a través de mi número telefónico o WhatsApp</target></trans-unit>
       <trans-unit id="cellphoneContactable" datatype="html">
         <source> Gostaria de ser contatado por ligação ou mensagens no meu número de celular.</source>
         <context-group purpose="location">
@@ -1715,7 +1812,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">373</context>
         </context-group>
-      <target>Te gustaría ser contactado por llamada o mensaje en tu número de celular.</target></trans-unit>
+      <target>Acepto que me puedan contactar a través de mi número telefónico o WhatsApp</target></trans-unit>
       <trans-unit id="thanksForSubscribleText" datatype="html">
         <source>Obrigado por se increver!</source>
         <context-group purpose="location">
@@ -1821,7 +1918,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">414</context>
         </context-group>
-      <target>Próximo</target></trans-unit>
+      <target>Siguiente</target></trans-unit>
       <trans-unit id="send" datatype="html">
         <source>
                   Enviar
@@ -1839,11 +1936,42 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">416</context>
         </context-group>
-      <target>Enviar</target></trans-unit>
+      <target>Registrarme</target></trans-unit>
+
+      <trans-unit id="cvInEnglishTitle" datatype="html">
+        <source>
+                Fazer o CV em inglês
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+      <target>Hacer el CV en inglés</target></trans-unit>
+
+      <trans-unit id="cvInEnglishText" datatype="html">
+        <source>
+          É necessário preparar seu CV em inglês para apresentar para as empresas que você está se candidatando. Não se preocupe, estamos
+          aqui para te ajudar!
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+        <target>Es necesario preparar tu CV en inglés para presentar a las empresas a las que estás aplicando. No te preocupes, estamos aqui para ayudarte!</target>
+      </trans-unit>
+      
       <trans-unit id="accessHomePage" datatype="html">
         <source>
-												Acessar a página inicial
-											</source>
+          Acessar a página inicial
+        </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-ge/form-ge-thank-you/form-ge-thank-you.component.html</context>
           <context context-type="linenumber">44</context>
@@ -2656,21 +2784,22 @@
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      <target>VIví la realidad de una empresa internacional, desarrolla tus habilidades y traé el mundo a tu curriculum</target></trans-unit>
+      
+      <target>Vive la realidad de una empresa internacional, desarrolla tus habilidades y trae el mundo a tu currículum</target></trans-unit>
       <trans-unit id="formGvTitle" datatype="html">
         <source>Ser um voluntário global é transformar seus valores em ação e fazer a diferença em diversas regiões do mundo.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
-      <target>Ser voluntario global es transformar tus valores en acción y marcar la diferencia en diversas regiones del mundo</target></trans-unit>
+      <target>Ser Voluntario Global es transformar tus valores en acción y marcar la diferencia en diversas regiones del mundo</target></trans-unit>
       <trans-unit id="whenCanTravelAvailable" datatype="html">
         <source>Escolha o período de tempo que você estará disponível</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">336</context>
         </context-group>
-      <target>Elegí el período de tiempo en el que estarás disponible</target></trans-unit>
+      <target></target></trans-unit>
       <trans-unit id="programOverview" datatype="html">
         <source>
             Visão geral do programa
@@ -2767,34 +2896,8 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">56</context>
         </context-group>
-      <target>Tu AIESEC más cercano entrará en contacto para sacar tus dudas e indicar oportunidades.</target></trans-unit>
-      <trans-unit id="cvInEnglishTitle" datatype="html">
-        <source>
-                Fazer o CV em inglês
-              </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
-          <context context-type="linenumber">69</context>
-        </context-group>
-      <target>Hacer el CV en inglés</target></trans-unit>
-      <trans-unit id="cvInEnglishText" datatype="html">
-        <source>
-                É necessário preparar seu CV em inglês para apresentar para as empresas que você está se candidatando. Não se preocupe, estamos
-                aqui para te ajudar!
-              </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
-      <target>Es necesario preparar tu CV en inglés para presentar a las empresas a las que estás aplicando. No te preocupes, estamos aqui para ayudarte!</target></trans-unit>
+      <target>Tu AIESEC más cercano entrará en contacto para sacar tus dudas e indicar oportunidades.</target></trans-unit>      
+      
       <trans-unit id="applyInOurVacanciesTitle" datatype="html">
         <source>
                 Aplique em nossas vagas

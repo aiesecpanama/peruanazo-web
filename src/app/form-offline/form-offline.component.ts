@@ -31,7 +31,8 @@ export class FormOfflineComponent implements OnInit {
     utm_medium: '',
     utm_campaign: '',
     utm_term: '',
-    utm_content: ''
+    utm_content: '',
+    accepted_terms: false
   }
 
   msgs: Message[] = [];
@@ -86,18 +87,11 @@ export class FormOfflineComponent implements OnInit {
       birthdate: new FormControl(this.user.birthdate, [
         Validators.required
       ]),
-      password: new FormControl(this.user.password, [
-        Validators.required,
-        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
-      ]),
-      repassword: new FormControl(this.user.repassword, [
-        Validators.required,
-        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
-      ]),
       program: new FormControl(this.user.program, [
       	Validators.required
       ]),
-      cellphone_contactable: new FormControl(this.user.cellphone_contactable, [])
+      cellphone_contactable: new FormControl(this.user.cellphone_contactable, []),
+      accepted_terms: new FormControl(this.user.accepted_terms, []),
     });
     this.step2Form = new FormGroup({
       university_id: new FormControl(this.user.university_id, [
@@ -112,6 +106,14 @@ export class FormOfflineComponent implements OnInit {
       scholarity: new FormControl(this.user.scholarity, [
         Validators.required
       ]),
+      password: new FormControl(this.user.password, [
+        Validators.required,
+        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ]),
+      repassword: new FormControl(this.user.repassword, [
+        Validators.required,
+        Validators.pattern('^(?=.*?[0-9])(?=.*?[A-Z])(?=.*?[a-z]).{8,}$')
+      ])
     });
     window.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años" : this.placeholderBirthdate = "Fecha de nacimiento";
   }
@@ -271,14 +273,7 @@ export class FormOfflineComponent implements OnInit {
   nextStep() {
 
     this.submittedPersonal = true;
-    if (this.user.password != this.user.repassword) {
-      this.invalidPassword = true;
-    }
-    else {
-      this.invalidPassword = false;
-    }
-
-    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPassword && !this.invalidPhone && this.matchDate && !this.isValidPersonal('password')) {
+    if (this.user.fullname && this.user.cellphone && this.user.email && this.user.birthdate && !this.invalidPhone && this.matchDate) {
       /*this.personalData = false;
       this.studyData = true;*/
       if(this.user.program == '0'){

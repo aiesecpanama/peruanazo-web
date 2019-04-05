@@ -3,6 +3,11 @@
 @import '~node_modules/primeng/resources/themes/nova-light/theme.css';
 @import '~node_modules/primeng/resources/primeng.min.css';
 // form A/B - start
+a {
+    color: white;
+    text-decoration: underline;
+}
+
 .relative-form {
     position: relative;
     .toggle-form {
@@ -647,6 +652,10 @@ section.header h1 {
     border-top: none;
     border-left: none;
     border-right: none;
+    &.input-group-text-without-input {
+        width: 100%;
+        margin: 5px;
+    }
 }
 
 input::-webkit-input-placeholder {
@@ -1922,4 +1931,8 @@ label.input-terms-label {
         font-size: 16px;
         font-style: initial;
     }
+}
+
+.form-email-warning{
+    color:#e2462d !important;
 }
