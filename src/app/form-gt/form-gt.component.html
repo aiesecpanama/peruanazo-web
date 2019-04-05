@@ -4,7 +4,7 @@
 <div id="step1" class="form-talentos-globais" [ngClass]="{'full-screen': formedUser, 'full-screen-embedded': embeddedForm}">
   <div class="full-width">
     <!-- Header -->
-    <section class="header" id="header-talentos-globais">
+    <section class="header" id="header-talentos-globais" #headerGTRef>
       <div class="container">
         <div class="row justify-content-center" *ngIf="!embeddedForm">
           <div class="col-sm text-center">
@@ -426,8 +426,8 @@
               </div>
               <div class="col text-right">
                 <button type="button" (click)="registerUser()" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
-                  [ngx-scroll-to]="'#header-talentos-globais'" i18n="@@next">Próximo</button>
-                <button type="button" (click)="submit()" class="btn btn-primary submit-form" *ngIf="studyData" [ngx-scroll-to]="'#header-talentos-globais'"
+                  [ngx-scroll-to]="headerGTRef" i18n="@@next">Próximo</button>
+                <button type="button" (click)="submit()" class="btn btn-primary submit-form" *ngIf="studyData" [ngx-scroll-to]="headerGTRef"
                   [disabled]='unableToSubmit()' i18n="@@send">
                   Enviar
                   <i class="fab fa-telegram-plane"></i>
