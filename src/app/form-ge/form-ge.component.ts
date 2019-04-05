@@ -90,6 +90,7 @@ export class FormGeComponent implements OnInit {
 
   personalData: boolean = true;
   studyData: boolean = false;
+  persona: any;
 
   invalidEmail: boolean = false;
   invalidPassword: boolean = false;
@@ -179,8 +180,7 @@ export class FormGeComponent implements OnInit {
   }
 
   ngOnInit() {
-
-
+    this.checkPersonaValue();
     if (this.formedUser) {
       this.user = this.formedUser;
       this.personalData = false;
@@ -228,6 +228,26 @@ export class FormGeComponent implements OnInit {
     this.filteredPreferredDestinationsOptions = this.preferredDestionationOptions;
 
     this.cellphoneMask = this.cellphoneDefaultMask;
+  }
+
+  checkPersonaValue(){
+    let url = this.router.url.replace('/',''),
+        type = null;
+    if (url == 'emprendedor-para-crecer' || url == 'emprendedor-para-explorar' || url == 'emprendedor-para-conocer'){
+      this.persona = true;
+      switch (url){
+        case 'emprendedor-para-crecer':
+          type = 0;
+        break;
+        case 'emprendedor-para-explorar':
+          type = 1;
+        break;
+        case 'emprendedor-para-conocer':
+          type = 2;
+        break;
+      }
+      this.user.exchange_reason = type;
+    }
   }
 
   onResize(event) {

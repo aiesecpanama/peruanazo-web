@@ -69,6 +69,7 @@ export class FormGvComponent implements OnInit {
 
   personalData: boolean = true;
   studyData: boolean = false;
+  persona : any;
 
   invalidEmail: boolean = false;
   invalidPassword: boolean = false;
@@ -157,6 +158,7 @@ export class FormGvComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.checkPersonaValue();
     if (this.formedUser) {
       this.user = this.formedUser;
       this.personalData = false;
@@ -198,6 +200,26 @@ export class FormGvComponent implements OnInit {
     });
 
     this.cellphoneMask = this.cellphoneDefaultMask;
+  }
+
+  checkPersonaValue(){
+    let url = this.router.url.replace('/',''),
+        type = null;
+    if (url == 'volutario-para-explorar' || url == 'volutario-para-crecer' || url == 'volutario-para-impactar'){
+      this.persona = true;
+      switch (url){
+        case 'volutario-para-crecer':
+          type = 0;
+        break;
+        case 'volutario-para-explorar':
+          type = 1;
+        break;
+        case 'volutario-para-impactar':
+          type = 2;
+        break;
+      }
+      this.user.exchange_reason = type;
+    }
   }
 
   searchScholarity(event) {
