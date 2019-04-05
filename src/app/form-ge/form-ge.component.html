@@ -444,10 +444,8 @@
                 <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()" data-target="#modalCancelar1">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
               </div>
               <div class="col text-right">
-                <button type="button" (click)="registerUser()" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms'
-                  [ngx-scroll-to]="headerGERef" i18n="@@next">Próximo</button>
-                <button type="button" (click)="submit()" class="btn btn-primary submit-form" *ngIf="studyData" [ngx-scroll-to]="headerGERef"
-                  [disabled]='unableToSubmit()' i18n="@@send">
+                <button type="button" (click)="registerUser(headerGERef)" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms' i18n="@@next">Próximo</button>
+                <button type="button" (click)="submit(headerGERef)" class="btn btn-primary submit-form" *ngIf="studyData" [disabled]='unableToSubmit()' i18n="@@send">
                   Enviar
                   <i class="fab fa-telegram-plane"></i>
                 </button>
