@@ -1357,7 +1357,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">224</context>
         </context-group>
-        <target>¿Con cuánto tiempo de experiencia laboral entu área cuentas?</target>
+        <target>¿Con cuánto tiempo de experiencia laboral en tu área cuentas?</target>
       </trans-unit>
 
       <trans-unit id="cityPlaceholder" datatype="html">
