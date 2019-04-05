@@ -237,7 +237,7 @@ export class FormGtComponent implements OnInit {
     (event.target.innerWidth > 600 ? this.placeholderBirthdate = "Os programas da AIESEC são para pessoas de 18 à 30 anos" : this.placeholderBirthdate = "Fecha de nacimiento");
   }
 
-  cancelSignUp() {
+  cancelSignUp(el: HTMLElement) {
     if (this.formedUser) {
       this.onCancelEvent.emit();
     } else {
@@ -246,6 +246,7 @@ export class FormGtComponent implements OnInit {
         this.submittedStudy = false;
         this.personalData = true;
         this.studyData = false;
+        el.scrollIntoView();
       } else {
         this.router.navigate(['/']);
       }
