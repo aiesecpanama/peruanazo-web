@@ -94,6 +94,7 @@ export class FormGtComponent implements OnInit {
 
   personalData: boolean = true;
   studyData: boolean = false;
+  persona : any;
 
   invalidEmail: boolean = false;
   invalidPassword: boolean = false;
@@ -178,7 +179,7 @@ export class FormGtComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.checkPersonaValue();
     if (this.formedUser) {
       this.user = this.formedUser;
       this.personalData = false;
@@ -226,6 +227,26 @@ export class FormGtComponent implements OnInit {
           map(value => this._filter(value, this.courses))
         );
     });    
+  }
+
+  checkPersonaValue(){
+    let url = this.router.url.replace('/',''),
+        type = null;
+    if (url == 'talento-global-oportunidades' || url == 'talento-global-profesional' || url == 'talento-global-networking'){
+      this.persona = true;
+      switch (url){
+        case 'talento-global-oportunidades':
+          type = 0;
+        break;
+        case 'talento-global-profesional':
+          type = 1;
+        break;
+        case 'talento-global-networking':
+          type = 2;
+        break;
+      }
+      this.user.exchange_reason = type;
+    }
   }
 
   private _filter(value: string, options: any): any[] {

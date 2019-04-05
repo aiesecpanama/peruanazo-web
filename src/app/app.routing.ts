@@ -9,11 +9,47 @@ export const router : Routes = [
         loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
     },
     {
+        path: 'volutario-para-crecer',
+        loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
+    },
+    {
+        path: 'volutario-para-explorar',
+        loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
+    },
+    {
+        path: 'volutario-para-impactar',
+        loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
+    },
+    {
         path: 'talento-global',
         loadChildren: './landing-page-gt/landing-page-gt.module#LandingPageGtModule'
     },
     {
+        path: 'talento-global-oportunidades',
+        loadChildren: './landing-page-gt/landing-page-gt.module#LandingPageGtModule'
+    },
+    {
+        path: 'talento-global-profesional',
+        loadChildren: './landing-page-gt/landing-page-gt.module#LandingPageGtModule'
+    },
+    {
+        path: 'talento-global-networking',
+        loadChildren: './landing-page-gt/landing-page-gt.module#LandingPageGtModule'
+    },
+    {
         path: 'emprendedor-global',
+        loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
+    },
+    {
+        path: 'emprendedor-para-crecer',
+        loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
+    },
+    {
+        path: 'emprendedor-para-explorar',
+        loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
+    },
+    {
+        path: 'emprendedor-para-conocer',
         loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
     },
     {
