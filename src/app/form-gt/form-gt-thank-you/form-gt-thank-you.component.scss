@@ -41,20 +41,20 @@ $break-sm: 576px;
             border-radius: 5px;
             &.back-to-home {
                 @at-root :host-context(.no-webp) #{&} {
-                    background-image: url('/assets/products/gt/brasil.png');
+                    background-image: url('/assets/products/gt/india.png');
                 }
                 @at-root :host-context(.webp) #{&} {
-                    background-image: url('/assets/products/gt/brasil.webp');
+                    background-image: url('/assets/products/gt/india.webp');
                 }
 
                 background-position: right center;
             }
             &.go-to-portal {
                 @at-root :host-context(.no-webp) #{&} {
-                    background-image: url('/assets/products/gt/india.png');
+                    background-image: url('/assets/products/gt/brasil.png');
                 }
                 @at-root :host-context(.webp) #{&} {
-                    background-image: url('/assets/products/gt/india.webp');
+                    background-image: url('/assets/products/gt/brasil.webp');
                 }
 
             }

@@ -33,8 +33,8 @@ export class FormGtThankYouComponent implements OnInit {
     window.open("https://aiesec.org/search?home_mcs=1606&type=2", "_blank");
   }
 
-  goToGtIndia(){
-    window.open("https://aiesec.org/search?home_mcs=1585&type=2", "_blank");
+  goToGtTCS(){
+    window.open("https://aiesec.org/search?organisations=236193&type=2", "_blank");
   }
 
   goToGtPanama(){

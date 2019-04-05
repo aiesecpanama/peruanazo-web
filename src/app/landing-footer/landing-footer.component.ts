@@ -97,7 +97,7 @@ export class LandingFooterComponent implements OnInit {
         },
         {
           title: 'Municipalidad de Lima',
-          img: webpSupport ? '../../assets/images/partners/muni.webp' : '../../assets/images/partners/muni.jpg',
+          img: webpSupport ? '../../assets/images/partners/muni.webp' : '../../assets/images/partners/muni.png',
           site: 'https://munibecas.org/',
 
         },

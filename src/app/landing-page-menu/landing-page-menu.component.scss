@@ -124,32 +124,32 @@ ul#menu {
         z-index: 5;
         &.talento-global {
             @at-root :host-context(.no-webp) #{&} {
-                background-image: url('../../assets/products/gt/gt-intro.png');
-                filter: brightness(100%);
+                background-image: url('../../assets/products/gt/gt-intro.jpeg');
+                filter: brightness(50%);
             }
             @at-root :host-context(.webp) #{&} {
                 background-image: url('../../assets/products/gt/gt-intro.webp');
-                filter: brightness(100%);
+                filter: brightness(50%);
             }
         }
         &.voluntario-global {
             @at-root :host-context(.no-webp) #{&} {
-                background-image: url('../../assets/products/gv/gv-intro.png');
-                filter: brightness(100%);
+                background-image: url('../../assets/products/gv/gv-intro.jpg');
+                filter: brightness(50%);
             }
             @at-root :host-context(.webp) #{&} {
                 background-image: url('../../assets/products/gv/gv-intro.webp');
-                filter: brightness(100%);
+                filter: brightness(50%);
             }
         }
         &.emprendedor-global {
             @at-root :host-context(.no-webp) #{&} {
-                background-image: url('../../assets/products/ge/ge-intro.png');
-                filter: brightness(100%);
+                background-image: url('../../assets/products/ge/ge-intro.jpg');
+                filter: brightness(50%);
             }
             @at-root :host-context(.webp) #{&} {
                 background-image: url('../../assets/products/ge/ge-intro.webp');
-                filter: brightness(100%);
+                filter: brightness(50%);
             }
         }
     }
