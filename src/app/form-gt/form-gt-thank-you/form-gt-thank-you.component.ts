@@ -26,7 +26,7 @@ export class FormGtThankYouComponent implements OnInit {
   }
 
   goToBlog() {
-    window.open("https://aiesec.pe/blog/", "_blank");
+    window.open("https://blog.aiesec.pe/", "_blank");
   }
 
   goToGtBrasil(){
