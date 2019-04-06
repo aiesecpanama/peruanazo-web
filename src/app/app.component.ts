@@ -60,7 +60,7 @@ export class AppComponent {
         title = 'Amplia tu red, con Talento Global';
         break;
       default:
-        title = 'AIESEC Peru - Liderazgo a través de intercambio'
+        title = 'AIESEC en Peru - Liderazgo a través de intercambio'
         break;
     }
     this.titleService.setTitle(title);

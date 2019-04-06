@@ -23,11 +23,23 @@ export class FormGeThankYouComponent implements OnInit {
   }
 
   goToAiesec() {
-    window.open("https://aiesecargentina.org/", "_blank");
+    window.open("https://aiesec.pe/", "_blank");
   }
 
   goToBlog() {
-    window.open("https://aiesecargentina.org/blog/", "_blank");
+    window.open("https://blog.aiesec.pe/", "_blank");
+  }
+
+  goToGeArgentina() {
+    window.open("https://aiesec.org/search?home_mcs=1535&type=5", "_blank");
+  }
+
+  goToGeEgipto() {
+    window.open("https://aiesec.org/search?home_mcs=1609&type=5", "_blank");
+  }
+
+  goToGeBrasil() {
+    window.open("https://aiesec.org/search?home_mcs=1606&type=5", "_blank");
   }
 
 }

@@ -46,7 +46,7 @@
             background-image: url('../../assets/products/ge/ge-product-step.jpg');
         }
         @at-root :host-context(.webp) #{&} {
-            background-image: url('../../assets/products/ge/ge-product-step.jpg.webp');
+            background-image: url('../../assets/products/ge/ge-product-step.webp');
         }
         min-height: 500px;
         position: relative;
@@ -175,10 +175,10 @@
     }
     .faq-image {
         @at-root :host-context(.no-webp) #{&} {
-            background-image: url('../../assets/products/ge/ge-faq-image.jpeg');
+            background-image: url('../../assets/products/ge/ge-faq-image.png');
         }
         @at-root :host-context(.webp) #{&} {
-            background-image: url('../../assets/products/ge/ge-faq-image.jpg.webp');
+            background-image: url('../../assets/products/ge/ge-faq-image.webp');
         }
         min-height: 450px;
         position: relative;
@@ -268,10 +268,10 @@
     }
     .aiesec-image {
         @at-root :host-context(.no-webp) #{&} {
-            background-image: url('../../assets/products/ge/ge-aiesec.png');
+            background-image: url('../../assets/products/ge/ge-aiesec.jpg');
         }
         @at-root :host-context(.webp) #{&} {
-            background-image: url('../../assets/products/ge/ge-aiesec.jpg.webp');
+            background-image: url('../../assets/products/ge/ge-aiesec.webp');
         }
         min-height: 450px;
         position: relative;

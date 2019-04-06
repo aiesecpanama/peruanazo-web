@@ -402,7 +402,7 @@ div#our-stories {
         background-image: url('/assets/images/party.jpg');
     }
     @at-root :host-context(.webp) #{&} {
-        background-image: url('/assets/images/party.jpg.webp');
+        background-image: url('/assets/images/party.webp');
     }
     .round {
         right: -37.5px;        
@@ -660,19 +660,19 @@ div#our-stories {
 
 .case-1 {    
     @at-root :host-context(.no-webp) #{&} {
-        background-image: url('/assets/images/case1.jpeg');
+        background-image: url('/assets/images/case1.png');
     }
     @at-root :host-context(.webp) #{&} {
-        background-image: url('/assets/images/case1.jpg.webp');
+        background-image: url('/assets/images/case1.webp');
     }
 }
 
 .case-2 {    
     @at-root :host-context(.no-webp) #{&} {
-        background-image: url('/assets/images/case2.jpeg');
+        background-image: url('/assets/images/case2.jpg');
     }
     @at-root :host-context(.webp) #{&} {
-        background-image: url('/assets/images/case2.jpg.webp');
+        background-image: url('/assets/images/case2.webp');
     }
 }
 
@@ -681,7 +681,7 @@ div#our-stories {
         background-image: url('/assets/images/case3.jpg');
     }
     @at-root :host-context(.webp) #{&} {
-        background-image: url('/assets/images/case3.jpg.webp');
+        background-image: url('/assets/images/case3.webp');
     }
 }
 

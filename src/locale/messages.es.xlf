@@ -12,7 +12,7 @@
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
           <context context-type="linenumber">95</context>
         </context-group>
-      <target>Hacé un intercambio</target></trans-unit>
+      <target>Haz un intercambio</target></trans-unit>
       <trans-unit id="globalVolunteer" datatype="html">
         <source>
                   Voluntário Global
@@ -80,7 +80,7 @@
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">75</context>
         </context-group>
-      <target>Hospedá a un intercambista</target></trans-unit>
+      <target>Familia Global</target></trans-unit>
       <trans-unit id="becomeOurPartner" datatype="html">
         <source>Seja nosso Parceiro</source>
         <context-group purpose="location">
@@ -174,7 +174,7 @@
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">103</context>
         </context-group>
-      <target>Business</target></trans-unit>
+      <target>Empresas</target></trans-unit>
       <trans-unit id="students" datatype="html">
         <source>
                     Estudantes
@@ -202,7 +202,7 @@
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
           <context context-type="linenumber">149</context>
         </context-group>
-      <target>Planeá tu viaje</target></trans-unit>
+      <target>Planifica tu viaje</target></trans-unit>
       <trans-unit id="airlineTickets" datatype="html">
         <source>
                     Passagens Aéreas
@@ -385,14 +385,14 @@
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">114</context>
         </context-group>
-      <target>Contactános</target></trans-unit>
+      <target>Contactanos</target></trans-unit>
       <trans-unit id="footerCopyright" datatype="html">
         <source>AIESEC do Brasil 2018. Todos os direitos reservados.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">136</context>
         </context-group>
-      <target>AIESEC Argentina 2019. Todos los derechos reservados. </target></trans-unit>
+      <target>AIESEC Peru 2019. Todos los derechos reservados. </target></trans-unit>
       <trans-unit id="landingGvAboutDesktop" datatype="html">
         <source>
           Ser um voluntário global é transformar
@@ -403,7 +403,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">13</context>
         </context-group>
-      <target>Ser un voluntario global es transformar tus valores en acciones y hacer la diferencia en diversas regiones del mundo</target></trans-unit>
+      <target>¿Te atreves a impactar positivamente el mundo?
+¡Bueno, creemos que puedes hacerlo a través del Voluntariado Internacional hacia los Objetivos de Desarrollo Sostenible propuestos por la ONU!</target></trans-unit>
       <trans-unit id="landingGvAboutMobile" datatype="html">
         <source>
           Intercâmbio Voluntário em Fundações
@@ -412,7 +413,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
-      <target>Intercambio voluntario en Fundaciones</target></trans-unit>
+      <target>¿Te atreves a impactar positivamente el mundo?
+¡Bueno, creemos que puedes hacerlo a través del Voluntariado Internacional hacia los Objetivos de Desarrollo Sostenible propuestos por la ONU!</target></trans-unit>
       <trans-unit id="learnMore" datatype="html">
         <source>SAIBA MAIS</source>
         <context-group purpose="location">
@@ -439,7 +441,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">129</context>
         </context-group>
-      <target>Conocé más</target></trans-unit>
+      <target>Conoce más</target></trans-unit>
       <trans-unit id="learnMoreGvItem1" datatype="html">
         <source>
                 Tenha uma experiência de voluntário em ONGs, Escolas ou Fundações de diversos países com duração de 6 a 8 semanas.
@@ -483,7 +485,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">158</context>
         </context-group>
-      <target>Inscribite</target></trans-unit>
+      <target>Inscríbete</target></trans-unit>
       <trans-unit id="landingGeAboutDesktop" datatype="html">
         <source>
           Assuma os desafios de trabalhar em uma
@@ -494,7 +496,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">66</context>
         </context-group>
-      <target>Asume los desafíos de trabajar en una StartUp y desarróllate como un líder emprendedor</target></trans-unit>
+      <target>¿Te entusiasma un entorno de trabajo dinámico y acelerado? ¿Quieres obtener tu primer experiencia laboral?
+¡Comience su viaje empresarial con una pasantía internacional en una startup!</target></trans-unit>
       <trans-unit id="landingGeAboutMobile" datatype="html">
         <source>
           Imersão em Startups
@@ -503,7 +506,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">71</context>
         </context-group>
-      <target>Inmersión en Startups</target></trans-unit>
+      <target>¿Te entusiasma un entorno de trabajo dinámico y acelerado? ¿Quieres obtener tu primer experiencia laboral?
+¡Comience su viaje empresarial con una pasantía internacional en una startup!</target></trans-unit>
       <trans-unit id="learnMoreGeItem1" datatype="html">
         <source>
                 Ter uma experiência de imersão em uma startup durante 6 a 12 semanas
@@ -541,7 +545,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">119</context>
         </context-group>
-      <target>Sumá un diferencial a tu CV con esta experiencia enriquecedora</target></trans-unit>
+      <target>¿Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? 
+Diferenciate a través de una pasantía profesional en el extranjero. </target></trans-unit>
       <trans-unit id="landingGtAboutMobile" datatype="html">
         <source>
           Estágio internacional em empresas
@@ -550,7 +555,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">124</context>
         </context-group>
-      <target>Práctica internacional en empresas</target></trans-unit>
+      <target>Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? 
+Diferenciate a través de una pasantía profesional en el extranjero</target></trans-unit>
       <trans-unit id="learnMoreGtItem1" datatype="html">
         <source>
                 Ter uma experiência de estágio internacional em empresas durante 3 a 12 meses.
@@ -611,7 +617,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">189</context>
         </context-group>
-      <target>450 miembros en Argentina</target></trans-unit>
+      <target>+700 miembros en Peru</target></trans-unit>
       <trans-unit id="historyPresentCountries" datatype="html">
         <source>Presente em
                 <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
@@ -649,7 +655,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">232</context>
         </context-group>
-      <target>El modelo de desarrollo de liderazgo de AIESEC prepara a los jóvenes para defender aquello que ellos creen que los torna capaces de hacer la diferencia todos los dias.</target></trans-unit>
+      <target>El modelo de desarrollo de liderazgo de AIESEC prepara jovenes para que sean un agente de cambio en el mundo, 
+permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada día.</target></trans-unit>
       <trans-unit id="getToKnowOurPrograms" datatype="html">
         <source>Conheça nossos programas</source>
         <context-group purpose="location">
@@ -718,7 +725,11 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">303</context>
         </context-group>
-      <target>“Mi Voluntariado Global fue una experiencia única, todavía recuerdo cada uno de los 45 días que compartí con 40 niños que me veían como su Superheroe”</target></trans-unit>
+      <target>“Ser parte de un voluntariado internacional es el mejor camino para entender el 
+                      sentido de SERVIR. Mi experiencia en Costa Rica cubrió mis expectativas, siempre 
+                      habrá algo nuevo que visitar y cosas nuevas que aprender, además su gente te contagiara
+                       de su buena vibra.  Asimismo aunque se presenten algunos problemas en el camino eso nos
+                        ayudará a conocernos a nosotros mismos y saber de lo que somos capaces”</target></trans-unit>
       <trans-unit id="landingOurHistory2" datatype="html">
         <source>
                       &quot;Meu intercâmbio no Egito definiu muito do que será minha carreira daqui pra frente. Além de aprender muito na Startup que
@@ -729,7 +740,11 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">318</context>
         </context-group>
-      <target>“Me dieron libertad absoluta para ayudarlos a organizarse, para armarles los cuadros y todo lo necesario para crear la empresa y que empiecen a proyectarse estableciendo sus metas.”</target></trans-unit>
+      <target>“Cuando inicie la experiencia en mi startup tenía miedo de no poder comunicar lo que 
+                      quería decir debido al idioma, pero las personas aquí hicieron que todo sea más fácil,
+                       nunca antes hubiera podido imaginar lo fascinante y amplio que es el mundo emprendedor, 
+                       día a día tengo que esforzarme para estar al nivel. En esta experiencia pude abrir mi
+                        mente a muchas cosas que no había visto en Perú.”</target></trans-unit>
       <trans-unit id="landingOurHistory3" datatype="html">
         <source>
                       &quot;Fazer meu intercâmbio na Índia foi com certeza a experiência que eu mais de desafiei e desenvolvi, tanto profissionalmente
@@ -739,7 +754,11 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">334</context>
         </context-group>
-      <target>“El intercambio me dio la oportunidad de enseñar en una universidad, y poder decirme a mí mismo y al resto del mundo “fui profesor de inglés empresarial en una universidad de ciencias económicas en Cracovia, Polonia”.</target></trans-unit>
+      <target>“Durante este tiempo en India he aprendido diversas herramientas como Analista de 
+                      Compras para Tata Consultancy Services LTD. El estar dentro del mercado internacional
+                       es algo completamente distinto. Esto me enseñó el trabajo en equipo, la gestión y
+                        sobre todo ganar una experiencia profesional que me abrirá muchas puertas en el 
+                        futuro”.</target></trans-unit>
       <trans-unit id="formGeTitle" datatype="html">
         <source>Assuma os desafios de trabalhar em uma Startup e se desenvolva como um líder empreendedor.</source>
         <context-group purpose="location">
@@ -1835,7 +1854,8 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">387</context>
         </context-group>
-      <target>Gracias por inscribirte!</target></trans-unit>
+      <target>¡Gracias por inscribirte!
+</target></trans-unit>
       <trans-unit id="thanksForSubscribleMessage" datatype="html">
         <source>Fique ligado no seu e-mail que enviaremos informações úteis para você por lá.</source>
         <context-group purpose="location">
@@ -1858,7 +1878,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">388</context>
         </context-group>
-      <target>Quedate atento a tu mail que enviaremos informaciones útiles para vos ahí!</target></trans-unit>
+      <target>Ahora estás listo para empezar la búsqueda de la oportunidad perfecta para ti.</target></trans-unit>
       <trans-unit id="registerResult" datatype="html">
         <source>
                           Agora que você criou a sua conta, você poderá acessar a nossa plataforma e começar a buscar por imersão internacional em
@@ -1907,7 +1927,7 @@
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">400</context>
         </context-group>
-      <target>Acceder al Portal de Opportunities</target></trans-unit>
+      <target></target></trans-unit>
       <trans-unit id="next" datatype="html">
         <source>Próximo</source>
         <context-group purpose="location">
@@ -1965,7 +1985,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">72</context>
         </context-group>
-        <target>Es necesario preparar tu CV en inglés para presentar a las empresas a las que estás aplicando. No te preocupes, estamos aqui para ayudarte!</target>
+        <target>Es necesario preparar tu curriculum vitae en inglés para presentar a las Start Ups a las que estás aplicando. No te preocupes, estamos aquí para ayudarte.</target>
       </trans-unit>
       
       <trans-unit id="accessHomePage" datatype="html">
@@ -1980,7 +2000,7 @@
           <context context-type="sourcefile">app/form-gt/form-gt-thank-you/form-gt-thank-you.component.html</context>
           <context context-type="linenumber">44</context>
         </context-group>
-      <target>Acceder la página inicial</target></trans-unit>
+      <target></target></trans-unit>
       <trans-unit id="vacancies" datatype="html">
         <source>Vagas</source>
         <context-group purpose="location">
@@ -1991,7 +2011,7 @@
           <context context-type="sourcefile">app/form-gt/form-gt-thank-you/form-gt-thank-you.component.html</context>
           <context context-type="linenumber">53</context>
         </context-group>
-      <target>Oportunidades </target></trans-unit>
+      <target>Home</target></trans-unit>
       <trans-unit id="learnMoreAboutOurStories" datatype="html">
         <source>
 												Conheça mais nossas histórias
@@ -2004,7 +2024,7 @@
           <context context-type="sourcefile">app/form-gt/form-gt-thank-you/form-gt-thank-you.component.html</context>
           <context context-type="linenumber">66</context>
         </context-group>
-      <target>Conoza más nuestras historias</target></trans-unit>
+      <target></target></trans-unit>
       <trans-unit id="privacyPolicy" datatype="html">
         <source>
       Privacy Policy
@@ -2828,7 +2848,7 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
-      <target> Emprendedor Global es una experiencia de imersión en una Startup durante 6 a 12 semanas en la que el joven tiene la chance de vivir un ambiente dinámico e innovador de una Startup. Las áreas de acción son Marketing, Administración, IT, diseño y desarrollo de negocios! El joven necesita sólo saber inglés intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia</target></trans-unit>
+      <target>Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (estudiantes o graduados) podrán desarrollar su carrera profesional trabajando en una Startup durante 8 a 12 semanas. Las áreas de acción son Marketing, Administración, Tecnología e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia</target></trans-unit>
       <trans-unit id="register" datatype="html">
         <source>
                 Cadastre-se
@@ -2845,7 +2865,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">40</context>
         </context-group>
-      <target>Inscribite</target></trans-unit>
+      <target>Inscríbete</target></trans-unit>
       <trans-unit id="registerAndSeeOpportunities" datatype="html">
         <source>
                 Preencha seu cadastro e veja as oportunidades em nosso site.
@@ -2862,7 +2882,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">43</context>
         </context-group>
-      <target>Llená tu inscripción y ve las oportunidades en nuestro sitio.</target></trans-unit>
+      <target>Llena tu inscripción y mira las oportunidades que tenemos para ti.</target></trans-unit>
       <trans-unit id="contactWithAiesec" datatype="html">
         <source>
                 Contato com a AIESEC
@@ -2896,7 +2916,9 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">56</context>
         </context-group>
-      <target>Tu AIESEC más cercano entrará en contacto para sacar tus dudas e indicar oportunidades.</target></trans-unit>      
+      <target>La oficina de AIESEC más cercana a ti entrará en contacto para resolver tus dudas e indicarte las mejores oportunidades.
+
+</target></trans-unit>      
       
       <trans-unit id="applyInOurVacanciesTitle" datatype="html">
         <source>
@@ -2914,7 +2936,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">66</context>
         </context-group>
-      <target>Aplicá en nuestras oportunidades</target></trans-unit>
+      <target>Aplicar a nuestras oportunidades</target></trans-unit>
       <trans-unit id="applyInOurVacanciesText" datatype="html">
         <source>
                 No site você pode se candidatar as diversas vagas que encaixam no seu perfil, a partir da consultoria feita com seu escritório
@@ -2932,7 +2954,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">69</context>
         </context-group>
-      <target>En la plataforma podés aplicar a diversas oportunidades que encajan con tu perfil, a partir de la consultoría hecha con tu oficina más cercana de AIESEC.</target></trans-unit>
+      <target>En la plataforma podrás aplicar a diversas oportunidades que encajarán con tu perfil a partir de la consultoría hecha por la oficina de AIESEC.</target></trans-unit>
       <trans-unit id="interviewsForVacanciesTitle" datatype="html">
         <source>
                 Entrevistas para vagas que for selecionado
@@ -2945,7 +2967,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">97</context>
         </context-group>
-      <target>Entrevistas para las oportunidades en las que seas seleccionado</target></trans-unit>
+      <target>Entrevista con la empresa que estás aplicando.</target></trans-unit>
       <trans-unit id="interviewsForVacanciesText" datatype="html">
         <source>
                 Você vai passar por uma entrevista com a oportunidade que você se candidatou, para se apresentar, responder algumas perguntas
@@ -2959,7 +2981,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">100</context>
         </context-group>
-      <target>Vas a pasar por una entrevista con la oportunidad a la que aplicaste, para presentarte, responder alguna preguntas y sacar dudas.</target></trans-unit>
+      <target>Vas a realizar una entrevista con la Start Up a la que aplicaste, donde te presentarás y responderás algunas preguntas de selección.</target></trans-unit>
       <trans-unit id="beApprovedOnTheJobTitle" datatype="html">
         <source>
                 Ser aprovado na vaga
@@ -3007,7 +3029,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">93</context>
         </context-group>
-      <target>Preparate para tu intercambio</target></trans-unit>
+      <target> Prepárate para tu intercambio</target></trans-unit>
       <trans-unit id="getReadyForYourExchangesText" datatype="html">
         <source>
                 Com o suporte da AIESEC você se preparará para viajar e fazer um projeto incrível.
@@ -3041,7 +3063,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">106</context>
         </context-group>
-      <target>#VivíLaExperiencia</target></trans-unit>
+      <target>Vive la Experiencia</target></trans-unit>
       <trans-unit id="livesExperienceText" datatype="html">
         <source>
                 Agora é só viajar e, com auxílio da AIESEC, viver uma experiência de liderança!
@@ -3058,7 +3080,9 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">109</context>
         </context-group>
-      <target>Ahora es solamente viajar y con soporte de AIESEC, vivir una experiencia de liderazgo!</target></trans-unit>
+      <target>Ahora es solamente viajar y con soporte de AIESEC podrás vivir una experiencia de liderazgo que impactará el mundo.
+
+</target></trans-unit>
       <trans-unit id="subscribeNow" datatype="html">
         <source>
                 Inscreva-se já
@@ -3075,7 +3099,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">116</context>
         </context-group>
-      <target>Inscribíte</target></trans-unit>
+      <target>Inscríbete</target></trans-unit>
       <trans-unit id="faqFrequentlyAskedQuestions" datatype="html">
         <source>
             FAQ - Dúvidas Frequentes
@@ -3101,7 +3125,7 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">164</context>
         </context-group>
-      <target>Voy a cobrar en la Startup?</target></trans-unit>
+      <target>¿Voy a recibir alguna remuneración por parte de la Start Up?</target></trans-unit>
       <trans-unit id="faqGeItem1Answer" datatype="html">
         <source>
                 Não, a experiência não é remunerada para este tipo de intercâmbio. Mas em compensação, você irá receber acomodação pelo período
@@ -3120,7 +3144,7 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">173</context>
         </context-group>
-      <target>Los vacantes son solo en Startups?</target></trans-unit>
+      <target>¿Los vacantes son solo en Startups?</target></trans-unit>
       <trans-unit id="faqGeItem2Answer" datatype="html">
         <source>
                 Não, existem vagas também em aceleradoras e incubadoras de negócios.
@@ -3138,7 +3162,7 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">181</context>
         </context-group>
-      <target>Necesito seguro de salud internacional para viajar?</target></trans-unit>
+      <target>¿Necesito seguro de salud para viajar?</target></trans-unit>
       <trans-unit id="faqGeItem3Answer" datatype="html">
         <source>
                 Sim, o seguro saúde é obrigatório no seu intercâmbio com a AIESEC, para garantir seu bem-estar durante toda a viagem. Nós
@@ -3149,7 +3173,9 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">184</context>
         </context-group>
-      <target>Sí, el seguro es obligatorio en tu intercambio con AIESEC, para garantizar tu bienestar durante todo el viaje.</target></trans-unit>
+      <target>Si, el seguro de salud es obligatorio para tu intercambio con AIESEC, para garantizar tu bienestar durante todo el viaje. Nosotros podemos recomendarte un servicio de seguros, pero tú puedes contratar la aseguradora que más prefieras.
+
+</target></trans-unit>
       <trans-unit id="faqGeItem4" datatype="html">
         <source>
                 Qual o tipo de acomodação que irei ficar?
@@ -3158,7 +3184,7 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">191</context>
         </context-group>
-      <target>Cual es el tipo de acomodación en la que me quedaré?</target></trans-unit>
+      <target>¿En qué tipo de hospedaje voy acomodarme?</target></trans-unit>
       <trans-unit id="faqGeItem4Answer" datatype="html">
         <source>
                 Depende do seu país de destino. Você poderá ficar hospedado em uma casa com nativos, hostel ou apartamento com outros intercambistas!
@@ -3167,7 +3193,7 @@
           <context context-type="sourcefile">app/landing-page-ge/landing-page-ge.component.html</context>
           <context context-type="linenumber">194</context>
         </context-group>
-      <target>Depende del país de destino. Podras quedarte hospedado en una casa, hostel o departamento con otros intercambistas!</target></trans-unit>
+      <target>Depende del país de destino. Podrás estar alojado en una familia, un hostel o en un departamento con otros intercambistas.</target></trans-unit>
       <trans-unit id="contactUsForm" datatype="html">
         <source>
                 Fale conosco
@@ -3184,7 +3210,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">160</context>
         </context-group>
-      <target>Contactános</target></trans-unit>
+      <target>Contactanos</target></trans-unit>
       <trans-unit id="programAboutItem1Title" datatype="html">
         <source>
                 Auxílio para achar sua vaga
@@ -3342,7 +3368,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">240</context>
         </context-group>
-      <target>Hablá con uno de nuestros representantes</target></trans-unit>
+      <target>Habla con uno de nuestros representantes</target></trans-unit>
       <trans-unit id="gtOverview" datatype="html">
         <source>
             O Talento Global é uma experiência internacional em empresas durante 3 a 12 meses em que o jovem tem a chance de viver o
@@ -3355,7 +3381,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
-      <target>Talento global es una experiencia internacional en empresas durante 3 a 12 meses en la que los jóvenes tienen la chance de vivir el ambiente profesional y corporativo. Las grandes áres de trabajo de Talento Global son: Enseñanza de idiomas, IT, Administración, Finanzas, Gestión, RRHH y Marketing. Para el proceso son necesarios algunos requisitos como: inglés avanzado y experiencia en el área en la que te interesa trabajar. En esta experiencia, el intercambista recibe un soporte económico para cubrir los costos básicos durante el período de intercambio.</target></trans-unit>
+      <target>Ser un Talento global es una experiencia internacional en empresas durante 3 a 12 meses donde los jóvenes tienen la oportunidad de vivir el ambiente profesional y corporativo. Las grandes áreas de trabajo de Talento Global son: Tecnología e Información, Administración, Finanzas, Gestión, Recursos Humanos, Marketing y Enseñanza de idiomas. Para el proceso son necesarios algunos requisitos como inglés avanzado y experiencia en el área en la que te interesa trabajar. En esta experiencia, el intercambista recibe un soporte económico para cubrir los costos básicos durante el período de intercambio.</target></trans-unit>
       <trans-unit id="faqGtItem1" datatype="html">
         <source>
                 Como será meu contato com a AIESEC durante o intercâmbio?
@@ -3364,7 +3390,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">165</context>
         </context-group>
-      <target>Como será mi contacto con AIESEC durante mi intercambio?</target></trans-unit>
+      <target>¿Cuál es el tipo de perfil para ser un Talento Global?</target></trans-unit>
       <trans-unit id="faqGtItem1Answer" datatype="html">
         <source>
                 Ele será feito com frequência tanto pela AIESEC de destino quanto pela AIESEC de origem, combinado previamente por vocês.
@@ -3373,7 +3399,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">168</context>
         </context-group>
-      <target>Pasará con frecuencia tanto por AIESEC de tu destino cuanto por AIESEC de tu país, conversado previamente por ustedes.</target></trans-unit>
+      <target>El perfil es para graduados entre 18 y 30 años, con inglés avanzado y experiencia previa en alguna de esas áreas: Administración, Recursos Humanos, Marketing, Tecnología de la Información, Gestión y Enseñanza de Lenguas.</target></trans-unit>
       <trans-unit id="faqGtItem2" datatype="html">
         <source>
                 Como é a questão do pagamento?
@@ -3382,7 +3408,8 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">173</context>
         </context-group>
-      <target>Vas a hacer el proceso sin costos, y solamente después de ser aprobado en un vacante firmarás el contrato con AIESEC y pagarás la tasa.</target></trans-unit>
+      <target>¿Voy a recibir alguna remuneración por parte de la empresa?
+</target></trans-unit>
       <trans-unit id="faqGtItem2Answer" datatype="html">
         <source>
                 Você fará o processo todo sem custos, e só após ser aprovado em uma vaga que assinará o contrato com a AIESEC e pagará a
@@ -3392,7 +3419,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">176</context>
         </context-group>
-      <target>Vas a hacer el proceso sin costos, y solamente después de ser aprobado en un vacante firmarás el contrato con AIESEC y pagarás la tasa.</target></trans-unit>
+      <target>Si, la experiencia es remunerada para este intercambio. Recibirás un soporte económico para cubrir los costos básicos durante el período de intercambio.</target></trans-unit>
       <trans-unit id="faqGtItem3" datatype="html">
         <source>
                 Preciso de seguro saúde para viajar?
@@ -3401,7 +3428,7 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">182</context>
         </context-group>
-      <target>Necesito seguro de salud internacional para viajar?</target></trans-unit>
+      <target>¿Alguien me acompañará durante el intercambio?</target></trans-unit>
       <trans-unit id="faqGtItem3Answer" datatype="html">
         <source>
                 Sim, o seguro saúde é obrigatório no seu intercâmbio com a AIESEC, para garantir seu bem-estar durante toda a viagem. Nós
@@ -3412,7 +3439,9 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">185</context>
         </context-group>
-      <target>Sí, el seguro es obligatorio en tu intercambio con AIESEC, para garantizar tu bienestar durante todo el viaje.</target></trans-unit>
+      <target>Siempre tendrás una persona de AIESEC en contacto contigo, tanto del país de origen como del país de destino.
+
+</target></trans-unit>
       <trans-unit id="faqGtItem4" datatype="html">
         <source>
                 Qual o perfil ideal para fazer um Talento Global?
@@ -3421,7 +3450,8 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">192</context>
         </context-group>
-      <target>Cual es el perfil ideal para hacer un Talento Global?</target></trans-unit>
+      <target>¿Necesito seguro de salud para viajar?
+</target></trans-unit>
       <trans-unit id="faqGtItem4Answer" datatype="html">
         <source>
                 Você não precisa ser estudante ou recém-formado para esse intercâmbio. O que é necessário é ter entre 18 e 30 anos, com inglês
@@ -3432,7 +3462,9 @@
           <context context-type="sourcefile">app/landing-page-gt/landing-page-gt.component.html</context>
           <context context-type="linenumber">195</context>
         </context-group>
-      <target>No necesitas ser estudiante o recién recibido para este intercambio. Lo que necesitas es tener entre 18 y 30 años, con ingles avanzado y experiencia previa en alguna de esas areas: Enseñanza de Lenguas, Marketing, Tecnologia de la Información, Gestión.</target></trans-unit>
+      <target>Si, el seguro de salud es obligatorio para tu intercambio con AIESEC, para garantizar tu bienestar durante todo el viaje. Nosotros podemos recomendarte un servicio de seguros, pero tú puedes contratar la aseguradora que más prefieras.
+
+</target></trans-unit>
       <trans-unit id="gvOverview" datatype="html">
         <source>
             O Voluntário Global é uma experiência voluntária em ONGs, Escolas ou Fundações em diversos países. Todos os projetos são
@@ -3444,7 +3476,9 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
-      <target>Voluntariado Global es una experiencia voluntaria en ONGs, Escuelas o Fundaciones en diversos paises. Todos los proyectos están vinculados con los Objetivos de Desarrollo Sostenible de las Naciones Unidas y tienen una gran potencia de impacto en el mundo. Los proyectos tienen una duración de 6 a 8 semanas y el unico requisito es tener entre 18 y 30 años para dejar tu huella en el mundo.</target></trans-unit>
+      <target>Ser un Voluntario Global es una experiencia intercultural para jóvenes que desean obtener un desarrollo personal y dejar un impacto positivo en el mundo. Con esta experiencia voluntaria realizarás proyectos sociales en ONGs, Escuelas o Fundaciones en diversos países del mundo, todos los proyectos están vinculados con los Objetivos de Desarrollo Sostenible propuestas por la ONU. Los proyectos tienen una duración de 6 a 8 semanas y el único requisito es tener entre 18 y 30 años para dejar tu huella en el mundo.
+
+</target></trans-unit>
       <trans-unit id="beApprovedOnTheJobGvText" datatype="html">
         <source>
                 Depois do contato com a AIESEC que vai te receber, você é convidado a fechar a vaga para aquele projeto, mediante o pagamento
@@ -3463,7 +3497,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">134</context>
         </context-group>
-      <target>¿Alguien me va a acompañar durante el intercambio?</target></trans-unit>
+      <target>¿Alguien me acompañará durante el intercambio?</target></trans-unit>
       <trans-unit id="faqGvItem1Answer" datatype="html">
         <source>
                 Sempre haverá uma pessoa da AIESEC em contato com você, tanto do país aonde você está quanto do Brasil.
@@ -3472,7 +3506,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">137</context>
         </context-group>
-      <target>Siempre tendrás una persona de AIESEC en contacto con vos, tanto del país donde estas como de Argentina.</target></trans-unit>
+      <target>Siempre tendrás una persona de AIESEC en contacto contigo, tanto del país de origen como del país de destino.</target></trans-unit>
       <trans-unit id="faqGvItem2" datatype="html">
         <source>
                 Preciso de seguro saúde para viajar?
@@ -3492,7 +3526,7 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">145</context>
         </context-group>
-      <target>Si, el seguro de salud es obligatorio para tu intercambio con AIESEC, para garantizar tu bienestar durante todo el viaje. Nosotros podemos recomendarte un servicio de seguros, pero vos podes contratar la aseguradora que más prefieras.</target></trans-unit>
+      <target>Si, el seguro de salud es obligatorio para tu intercambio con AIESEC, para garantizar tu bienestar durante todo el viaje. Nosotros podemos recomendarte un servicio de seguros, pero tú puedes contratar la aseguradora que más prefieras.</target></trans-unit>
       <trans-unit id="faqGvItem3" datatype="html">
         <source>
                 Qual o tipo de acomodação que irei ficar?
@@ -3501,7 +3535,8 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">152</context>
         </context-group>
-      <target>¿En qué tipo de hospedaje voy a parar?</target></trans-unit>
+      <target>¿En qué tipo de hospedaje voy a acomodarme?
+</target></trans-unit>
       <trans-unit id="faqGvItem3Answer" datatype="html">
         <source>
                 Depende do seu país de destino. Você poderá ficar hospedado em uma casa com nativos, hostel ou apartamento com outros intercambistas!
@@ -3510,7 +3545,8 @@
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">155</context>
         </context-group>
-      <target>Depende del país de destino. Podrás estar alojado en una casa con personas del país, un hostel o en un departamento con otros intercambistas!</target></trans-unit>
+      <target>Depende del país de destino. Podrás estar alojado en una familia, un hostel o en un departamento con otros intercambistas.
+</target></trans-unit>
     </body>
   </file>
 </xliff>

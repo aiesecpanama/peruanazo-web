@@ -466,7 +466,7 @@ export class FormGeComponent implements OnInit {
           localStorage.removeItem('utm_term');
           localStorage.removeItem('utm_content');
           el.scrollIntoView();
-          this.router.navigate(['/emprendedor-global/obrigado']);
+          this.router.navigate(['/emprendedor-global/gracias']);
         }
       },
         (err) => {
