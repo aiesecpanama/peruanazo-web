@@ -385,14 +385,14 @@
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">114</context>
         </context-group>
-      <target>Contactános</target></trans-unit>
+      <target>Contactanos</target></trans-unit>
       <trans-unit id="footerCopyright" datatype="html">
         <source>AIESEC do Brasil 2018. Todos os direitos reservados.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">136</context>
         </context-group>
-      <target>AIESEC Argentina 2019. Todos los derechos reservados. </target></trans-unit>
+      <target>AIESEC Peru 2019. Todos los derechos reservados. </target></trans-unit>
       <trans-unit id="landingGvAboutDesktop" datatype="html">
         <source>
           Ser um voluntário global é transformar
@@ -3099,7 +3099,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">116</context>
         </context-group>
-      <target>Inscribíte</target></trans-unit>
+      <target>Inscríbete</target></trans-unit>
       <trans-unit id="faqFrequentlyAskedQuestions" datatype="html">
         <source>
             FAQ - Dúvidas Frequentes
@@ -3210,7 +3210,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">160</context>
         </context-group>
-      <target>Contactános</target></trans-unit>
+      <target>Contactanos</target></trans-unit>
       <trans-unit id="programAboutItem1Title" datatype="html">
         <source>
                 Auxílio para achar sua vaga
@@ -3368,7 +3368,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page-gv/landing-page-gv.component.html</context>
           <context context-type="linenumber">240</context>
         </context-group>
-      <target>Hablá con uno de nuestros representantes</target></trans-unit>
+      <target>Habla con uno de nuestros representantes</target></trans-unit>
       <trans-unit id="gtOverview" datatype="html">
         <source>
             O Talento Global é uma experiência internacional em empresas durante 3 a 12 meses em que o jovem tem a chance de viver o
