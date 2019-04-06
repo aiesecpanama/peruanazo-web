@@ -498,7 +498,7 @@ export class FormGvComponent implements OnInit {
           localStorage.removeItem('utm_term');
           localStorage.removeItem('utm_content');
           el.scrollIntoView();
-          this.router.navigate(['/voluntario-global/obrigado']);
+          this.router.navigate(['/voluntario-global/gracias']);
         }
       },
         (err) => {
