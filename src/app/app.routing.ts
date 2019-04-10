@@ -80,6 +80,26 @@ export const router : Routes = [
         path: 'jovens/emprendedor-global',
         loadChildren: './landing-page-ge/landing-page-ge.module#LandingPageGeModule'
     },
+    {
+        path: 'familia',
+        component: LandingPageComponent,
+        resolve: {
+            url: 'externalUrlRedirectResolver'
+        },
+        data: {
+            externalUrl: 'https://blog.aiesec.pe/familia/'
+        }
+    },
+    {
+        path: 'familia-gracias',
+        component: LandingPageComponent,
+        resolve: {
+            url: 'externalUrlRedirectResolver'
+        },
+        data: {
+            externalUrl: 'https://blog.aiesec.pe/familia-gracias/'
+        }
+    },
     { path: '**', component: LandingPageComponent }
 ]
 
