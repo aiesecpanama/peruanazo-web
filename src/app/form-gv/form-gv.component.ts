@@ -52,11 +52,11 @@ export class FormGvComponent implements OnInit {
   msgs: Message[] = [];
 
   scholarityOptions: any = [];
-  
+
   departments: any = [];
   citiesOptions: any = [];
 
-  referralTypes:any = [];  
+  referralTypes:any = [];
 
   universities: any[];
   filteredScholarityOptions: Observable<any[]>;
@@ -371,7 +371,7 @@ export class FormGvComponent implements OnInit {
 
     if (this.user.city) {
       this.fillUniversitySelect(scholarity_level && scholarity_level <= 1 ? 'otras' : undefined);
-    } 
+    }
   }
 
   checkPassword() {
@@ -406,7 +406,7 @@ export class FormGvComponent implements OnInit {
   emptyCourse() {
     if (+this.user.scholarity.id > 1 && this.user.college_course.id) {
       return !this.user.college_course.id
-    } 
+    }
     else if (+this.user.scholarity.id <= 1) {
       this.user.college_course = { id: '', name: '' };
       return false;
@@ -458,7 +458,7 @@ export class FormGvComponent implements OnInit {
     if(this.user.scholarity.id && +this.user.scholarity.id <= 1){
       this.user.university = this.universities[0];
     }
-    this.submittedStudy = true;    
+    this.submittedStudy = true;
     let user = {
       gv_participant: {
         city : this.user.city.name,
@@ -479,10 +479,11 @@ export class FormGvComponent implements OnInit {
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         when_can_travel: +this.user.when_can_travel,
         referral_type: +this.user.referral_type,
-        exchange_reason: this.user.exchange_reason
+        exchange_reason: this.user.exchange_reason,
+        department: this.user.department.name
       }
     };
-    this.loading = true; 
+    this.loading = true;
     this.signupService.addGvParticipant(user)
       .then((res: any) => {
         this.loading = false;

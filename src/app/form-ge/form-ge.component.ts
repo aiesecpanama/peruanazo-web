@@ -63,11 +63,11 @@ export class FormGeComponent implements OnInit {
 
   departments: any = [];
 
-  citiesOptions: any = []  
+  citiesOptions: any = []
 
   workExperienceOptions:any = [];
 
-  referralTypes:any = [];  
+  referralTypes:any = [];
 
   universities: any = [];
 
@@ -333,7 +333,7 @@ export class FormGeComponent implements OnInit {
 
     if (this.user.city) {
       this.fillUniversitySelect(scholarity_level && scholarity_level <= 1 ? 'otras' : undefined);
-    } 
+    }
   }
 
   checkPassword() {
@@ -368,7 +368,7 @@ export class FormGeComponent implements OnInit {
   emptyCourse() {
     if (+this.user.scholarity.id > 1 && this.user.college_course.id) {
       return !this.user.college_course.id
-    } 
+    }
     else if (+this.user.scholarity.id <= 1) {
       this.user.college_course = { id: '', name: '' };
       return false;
@@ -446,10 +446,11 @@ export class FormGeComponent implements OnInit {
         when_can_travel: +this.user.when_can_travel,
         referral_type: +this.user.referral_type,
         exchange_reason: this.user.exchange_reason,
-        work_experience: (this.user.work_experience ? +this.user.work_experience : null)
+        work_experience: (this.user.work_experience ? +this.user.work_experience : null),
+        department: this.user.department.name
       }
     };
-    
+
     this.loading = true;
     this.signupService.addGeParticipant(user)
       .then((res: any) => {
