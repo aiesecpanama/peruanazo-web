@@ -213,7 +213,7 @@ export class FormGtComponent implements OnInit {
     });
 
     this.cellphoneMask = this.cellphoneDefaultMask;
-    
+
     this.filteredScholarityOptions = this.scholarityOptions;
     this.filteredCitiesOptions = this.citiesOptions;
     this.filteredDepartmentsOptions = this.departments;
@@ -226,7 +226,7 @@ export class FormGtComponent implements OnInit {
           startWith(''),
           map(value => this._filter(value, this.courses))
         );
-    });    
+    });
   }
 
   checkPersonaValue(){
@@ -339,7 +339,7 @@ export class FormGtComponent implements OnInit {
 
     if (this.user.city) {
       this.fillUniversitySelect(scholarity_level && scholarity_level <= 1 ? 'otras' : undefined);
-    } 
+    }
   }
 
   checkPassword() {
@@ -351,7 +351,7 @@ export class FormGtComponent implements OnInit {
     }
   }
 
-  unableToSubmit() {    
+  unableToSubmit() {
     return this.emptyFields() || this.emptyUniversity() || this.emptyCourse() || !+this.user.referral_type || this.isValidStudy('password') || this.invalidPassword || !this.user.exchange_reason.toString();
   }
 
@@ -374,7 +374,7 @@ export class FormGtComponent implements OnInit {
   emptyCourse() {
     if (+this.user.scholarity.id > 1 && this.user.college_course.id) {
       return !this.user.college_course.id
-    } 
+    }
     else if (+this.user.scholarity.id <= 1) {
       this.user.college_course = { id: '', name: '' };
       return false;
@@ -451,7 +451,8 @@ export class FormGtComponent implements OnInit {
         utm_content: (localStorage.getItem('utm_content') ? localStorage.getItem('utm_content') : null),
         referral_type: +this.user.referral_type,
         exchange_reason: this.user.exchange_reason,
-        work_experience: (this.user.work_experience ? +this.user.work_experience : null)
+        work_experience: (this.user.work_experience ? +this.user.work_experience : null),
+        department: this.user.department.name
       }
     };
     this.loading = true;
