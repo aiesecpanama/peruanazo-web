@@ -32,13 +32,13 @@ export class AppComponent {
     let url = location.pathname.replace('/', ''),
       title = '';
     switch (url) {
-      case 'volutario-para-explorar':
+      case 'voluntario-para-explorar':
         title = 'Explora, con Voluntario Global';
         break;
-      case 'volutario-para-crecer':
+      case 'voluntario-para-crecer':
         title = 'Desarróllate, con Voluntario Global';
         break;
-      case 'volutario-para-impactar':
+      case 'voluntario-para-impactar':
         title = 'Impacta, con Voluntario Global';
         break;
       case 'emprendedor-para-crecer':

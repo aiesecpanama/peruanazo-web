@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page-ge',
@@ -8,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageGeComponent implements OnInit {
   
   constructor(
-  ) { }
+  ) { }  
+
+  changeTextContent(){
+    let router : Router;
+    let url = this.router.replace('/','');
+    let text : string;
+    geTextContent : string ;
+
+    text=null;
+    
+    if (url == 'emprendedor-para-crecer' || url=='emprendedor-para-explorar' || url=='emprendedor-para-conocer'){
+      switch (url){
+        case 'emprendedor-para-crecer':
+         text='Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (pre-grado y graduados) podrán desarrollar su carrera profesional trabajando en una Startup durante 8 a 12 semanas. Las áreas de acción son Marketing, Administración, Tecnología e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia';
+        break;
+        case 'emprendedor-para-explorar':
+          text='Ser un Emprendedor Global es una experiencia internacional para jóvenes que desean obtener experiencia profesional y además quieran salir de su zona de confort conociendo otras realidades y/o culturas en un país diferente al nuestro. Con esta experiencia de Emprendedor Global trabajarás junto a más pasantes internacionales que tienen el mismo objetivo que tú, viajar y ganar experiencia profesional. Los requisitos para ser un emprendedor global es poder estar fuera del país entre 8 a 12 semanas y tener entre 18 a 30 años, es de preferencia que el joven tenga inglés intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia';
+        break;
+        case 'emprendedor-para-conocer':
+          text='Ser un Emprendedor Global es una experiencia internacional para jóvenes que desean obtener experiencia profesional y además quieran salir de su zona de confort conociendo otras realidades y/o culturas en un país diferente al nuestro. Con esta experiencia de Emprendedor Global trabajarás junto a más pasantes internacionales que tienen el mismo objetivo que tú, viajar y ganar experiencia profesional. Los requisitos para ser un emprendedor global es poder estar fuera del país entre 8 a 12 semanas y tener entre 18 a 30 años, es de preferencia que el joven tenga inglés intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia';
+        break;
+      }
+      this.geTextContent = text;
+    }
+  }
 
   ngOnInit() {
+    this.changeTextContent();
   }
 
 }

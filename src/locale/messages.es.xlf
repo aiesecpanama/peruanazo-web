@@ -318,14 +318,14 @@
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">7</context>
         </context-group>
-      <target>Nuestros aliados premium</target></trans-unit>
+      <target>Nuestros aliados</target></trans-unit>
       <trans-unit id="footerText" datatype="html">
         <source>Aventure-se nessa nova experiência e alcance o seu potencial!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">41</context>
         </context-group>
-      <target>Aventurate en esta nueva experiencia y alcanzá tu potencial!</target></trans-unit>
+      <target>Aventurate en esta nueva experiencia y alcanza tu potencial!</target></trans-unit>
       <trans-unit id="institutional" datatype="html">
         <source>Institucional</source>
         <context-group purpose="location">
@@ -450,7 +450,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">31</context>
         </context-group>
-      <target>Tené una experiencia de voluntario en ONGs, Escuelas o Fundaciones de diversos países con una duración de 6 a 8 semanas.</target></trans-unit>
+      <target>Disponibilidad de realizar un intercambio de 6 semanas.</target></trans-unit>
       <trans-unit id="learnMoreGvItem2" datatype="html">
         <source>
                 Conheça projetos que são vinculados aos Objetivos de Desenvolvimento Sustentável das Nações Unidas.
@@ -459,7 +459,8 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">39</context>
         </context-group>
-      <target>Conocé los proyectos que son vinculados a los Objetivos de Desarrollo Sostenibles de Naciones Unidas.</target></trans-unit>
+      <target>Con esta experiencia voluntaria realizarás proyectos sociales en ONGs, Escuelas o Fundaciones en diversos países del mundo.
+</target></trans-unit>
       <trans-unit id="learnMoreGvItem3" datatype="html">
         <source>
                 Ter entre 18 e 30 anos é o único requisito para deixar sua marca no mundo.
@@ -468,7 +469,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">47</context>
         </context-group>
-      <target>Tener entre 18 y 30 años es el único requisito para dejar tu marca en el mundo.</target></trans-unit>
+      <target>Tener entre 18 y 30 años es el único requisito.</target></trans-unit>
       <trans-unit id="signup" datatype="html">
         <source>
             Inscreva-se
@@ -516,7 +517,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">84</context>
         </context-group>
-      <target>Tener una experiencia de inmersión en una Startup durante 6 a 12 semanas.</target></trans-unit>
+      <target>Disponibilidad de realizar un intercambio mínimo de 8 semanas o más.</target></trans-unit>
       <trans-unit id="learnMoreGeItem2" datatype="html">
         <source>
                 Viva em um ambiente dinâmico de uma Startup e atue em Marketing, Administração, T.I. ou Design.
@@ -525,7 +526,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">92</context>
         </context-group>
-      <target>Viví en un ambiente dinámico de una Startup y trabajá en Marketing, Administración, IT o Diseño</target></trans-unit>
+      <target>Disponibilidad de realizar un intercambio mínimo de 8 semanas o más.</target></trans-unit>
       <trans-unit id="learnMoreGeItem3" datatype="html">
         <source>
                 O jovem precisa apenas ter o inglês intermediário e alguma experiência prévia profissional
@@ -534,7 +535,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">100</context>
         </context-group>
-      <target>El joven sólo necesita tener el inglés intermedio y alguna experiencia previa profesional.</target></trans-unit>
+      <target>Debes tener entre 18 y 30 años de edad.</target></trans-unit>
       <trans-unit id="landingGtAboutDesktop" datatype="html">
         <source>
           Agregue diferencial ao seu currículo
@@ -565,7 +566,7 @@ Diferenciate a través de una pasantía profesional en el extranjero</target></t
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">137</context>
         </context-group>
-      <target>Tener una experiencia de práctica internacional en empresas durante 3 a 12 meses</target></trans-unit>
+      <target>Disponibilidad de realizar un intercambio durante 3 a 12 meses.</target></trans-unit>
       <trans-unit id="learnMoreGtItem2" datatype="html">
         <source>
                 Viva em um ambiente corporativo ensinando idiomas, trabalhando com TI, finanças, gestão, RH ou marketing.
@@ -574,7 +575,7 @@ Diferenciate a través de una pasantía profesional en el extranjero</target></t
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">145</context>
         </context-group>
-      <target>Viví en un ambiente corporativo enseñando idiomas, trabajando con IT, finanzas, gestión, RRHH o Marketing.</target></trans-unit>
+      <target>Las áreas de trabajo de Talento Global son: Tecnología e Información, Administración, Finanzas, Gestión, Recursos Humanos, Marketing y Enseñanza de idiomas.</target></trans-unit>
       <trans-unit id="learnMoreGtItem3" datatype="html">
         <source>
                 O jovem precisa ter o inglês avançado e experiência na área que quer atuar.
@@ -583,7 +584,7 @@ Diferenciate a través de una pasantía profesional en el extranjero</target></t
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">153</context>
         </context-group>
-      <target>Sólo necesitás tener inglés avanzado o experiencia en el área en la que querés trabajar.</target></trans-unit>
+      <target>Debe tener inglés avanzado y experiencia en el área en la que te interesa trabajar. El pasante recibirá un soporte económico para cubrir sus costos básicos durante su intercambio.</target></trans-unit>
       <trans-unit id="landingHistoryTitle" datatype="html">
         <source> Desenvolvendo liderança jovem desde 1948 </source>
         <context-group purpose="location">
