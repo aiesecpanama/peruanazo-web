@@ -5,28 +5,27 @@
 
   <app-landing-page-menu></app-landing-page-menu>
 
-  <section class="product-description margin-top-and-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="logo-product ge col-lg-5 col-sm-12 col-md-12"></div>
-        <div class="description col-lg-7 col-sm-12 col-md-12">
-          <h2 class="bold" i18n="@@programOverview">
-            ¿Qué significa ser un Emprendedor Global?
-          </h2>
-          <p *ngIf="geTextContent" i18n="@@geOverview">
-            Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (estudiantes o
-             graduados) podrán desarrollar su carrera profesional trabajando en una Startup durante 8 a 12 
-             semanas. Las áreas de acción son Marketing, Administración, Tecnología e Información, Diseño 
-             Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés intermedio y 
-             alguna experiencia profesional previa o académica en el área de ocupación de preferencia
-        </div>
-        <p *ngIf="geTextContent" i18n="@@geOverview">
-
+<section class="product-description margin-top-and-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="logo-product ge col-lg-5 col-sm-12 col-md-12"></div>
+      <div class="description col-lg-7 col-sm-12 col-md-12">
+        <h2 class="bold" i18n="@@programOverview">
+          ¿Qué significa ser un Emprendedor Global?
+        </h2>
+        <p *ngIf="!geTextContent">
+          Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (estudiantes o graduados) podrán desarrollar
+          su carrera profesional trabajando en una Startup durante 8 a 12 semanas. Las áreas de acción son Marketing, Administración,
+          Tecnología e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés
+          intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia
         </p>
-
+        <p *ngIf="geTextContent">
+          {{ geTextContent }}
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Form ge -->
   <app-form-ge id="form"></app-form-ge>

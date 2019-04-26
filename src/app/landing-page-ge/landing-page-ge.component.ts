@@ -8,18 +8,23 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LandingPageGeComponent implements OnInit {
   
+  geTextContent : string  = '';
+
   constructor(
+      private router: Router
   ) { }  
 
-  changeTextContent(){
-    let router : Router;
-    let url = this.router.replace('/','');
-    let text : string;
-    geTextContent : string ;
+ngOnInit() {
+    this.changeTextContent();
+  }
 
-    text=null;
+  changeTextContent(){
+      console.log('test');
+    let url = this.router.url.replace('/',''),
+        text = '';
     
     if (url == 'emprendedor-para-crecer' || url=='emprendedor-para-explorar' || url=='emprendedor-para-conocer'){
+      console.log('test - console');
       switch (url){
         case 'emprendedor-para-crecer':
          text='Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (pre-grado y graduados) podrán desarrollar su carrera profesional trabajando en una Startup durante 8 a 12 semanas. Las áreas de acción son Marketing, Administración, Tecnología e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia';
@@ -33,10 +38,9 @@ export class LandingPageGeComponent implements OnInit {
       }
       this.geTextContent = text;
     }
-  }
-
-  ngOnInit() {
-    this.changeTextContent();
+    else {
+        console.log('test - else');
+    }
   }
 
 }

@@ -1,23 +1,26 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page-gv',
   templateUrl: './landing-page-gv.component.html',
-  styleUrls: ['./landing-page-gv.component.scss'],
+  styleUrls: ['./landing-page-gv.component.scss']
 })
-
 export class LandingPageGvComponent implements OnInit {
+
+  gvTextContent : string  = '';
+
   constructor(
-  ) {
-  }
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.changeTextContent();   
+  }
 
-    changeTextContent(){
-    let url = this.router.replace('/','');
-    let text : string;
-    let gvTextContent : string ;
+  changeTextContent(){
+    let url = this.router.url.replace('/',''),
+    text = '';
 
     text=null;
     
@@ -34,13 +37,7 @@ export class LandingPageGvComponent implements OnInit {
         break;
       }
       this.gvTextContent = text;
-      console.log(url);
     }
   }
-
-
-  }
-
-  
 
 }
