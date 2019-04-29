@@ -9,15 +9,15 @@ export const router : Routes = [
         loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
     },
     {
-        path: 'volutario-para-crecer',
+        path: 'voluntario-para-crecer',
         loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
     },
     {
-        path: 'volutario-para-explorar',
+        path: 'voluntario-para-explorar',
         loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
     },
     {
-        path: 'volutario-para-impactar',
+        path: 'voluntario-para-impactar',
         loadChildren: './landing-page-gv/landing-page-gv.module#LandingPageGvModule'
     },
     {

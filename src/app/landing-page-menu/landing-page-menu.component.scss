@@ -152,6 +152,103 @@ ul#menu {
                 filter: brightness(50%);
             }
         }
+
+        /*Buyer de GV*/
+
+        &.voluntario-para-explorar {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/gv/para-explorar.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/gv/para-explorar.webp');
+                filter: brightness(50%);
+            }
+        }
+        &.voluntario-para-crecer {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/gv/para-crecer.jpeg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/gv/para-crecer.webp');
+                filter: brightness(50%);
+            }
+        }
+        &.voluntario-para-impactar {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/gv/para-impactar.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/gv/para-impactar.webp');
+                filter: brightness(50%);
+            }
+        }
+
+        /* Buyer de GE*/
+        &.emprendedor-para-explorar {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/ge/para-explorar.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/ge/para-explorar.webp');
+                filter: brightness(50%);
+            }
+        }
+        &.emprendedor-para-crecer {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/ge/para-crecer.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/ge/para-crecer.webp');
+                filter: brightness(50%);
+            }
+        }
+        &.emprendedor-para-aprender {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/ge/para-conocer.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/ge/para-conocer.webp');
+                filter: brightness(50%);
+            }
+        }
+        
+        /*Buyer de GT */
+        &.talento-global-oportunidades {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/gt/oportunidades.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/gt/oportunidades.webp');
+                filter: brightness(50%);
+            }
+        }
+        &.talento-global-profesional {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/gt/profesional.jpeg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/gt/profesional.webp');
+                filter: brightness(50%);
+            }
+        }
+        &.talento-global-networking {
+            @at-root :host-context(.no-webp) #{&} {
+                background-image: url('../../assets/products/gt/networking.jpg');
+                filter: brightness(50%);
+            }
+            @at-root :host-context(.webp) #{&} {
+                background-image: url('../../assets/products/gt/networking.webp');
+                filter: brightness(50%);
+            }
+        }
     }
     .header-menu {
         display: flex;
