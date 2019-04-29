@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LandingPageGtComponent implements OnInit {
 
-  geTextContent : string  = '';
+  gtTextContent : string  = '';
 
   constructor(
     private router: Router
