@@ -70,12 +70,14 @@ export class SignupService {
 			.then((res) => res.json());
 	}
 
-	getUniversities(search?, city?){
+	getUniversities(search?, filters:any = {}){
 
-		let query = { limit : 10, name : '', city : '' };
+		let query = { name : '', city : '', department : '', program : '' };
 
 		if (search) query.name = search;
-		if (city) query.city = city;
+		if (filters.city) query.city = filters.city;
+		if (filters.department) query.department = filters.department;
+		if (filters.program) query.program = filters.program;
 
 		return this.http.get(SignupService.url + `/universities`, {
 			params : query
@@ -94,5 +96,19 @@ export class SignupService {
 		return this.http.get(SignupService.url + '/local_committees')
 			.toPromise()
 			.then((res) => res.json());
+	}
+
+	registerUserToRD(user, formId){
+		var data = {
+			"token_rdstation": "81f10af20f51319deda30ab995bcbf2e",
+			"identificador": formId,
+			"email": user.email,
+		  "nome": user.fullname,
+		  "celular": user.cellphone,
+		  "nascimento": user.birthdate
+		}
+		return this.http.post('https://www.rdstation.com.br/api/1.3/conversions', data, this.headers())
+		.toPromise()
+		.then((res) => res.json());
 	}
 }

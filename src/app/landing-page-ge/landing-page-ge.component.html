@@ -5,29 +5,34 @@
 
   <app-landing-page-menu></app-landing-page-menu>
 
-  <section class="product-description margin-top-and-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="logo-product ge col-lg-5 col-sm-12 col-md-12"></div>
-        <div class="description col-lg-7 col-sm-12 col-md-12">
-          <h2 class="bold" i18n="@@programOverview">
-            Visão geral do programa
-          </h2>
-          <p i18n="@@geOverview">
-            O Empreendedor Global é uma experiência de imersão em Startup durante 6 a 12 semanas em que o jovem tem a chance de viver
-            o ambiente dinâmico e inovador de uma Startup. As áreas de atuação são Marketing, Administração, T.I., Design
-            e Desenvolvimento de Negócios! O jovem precisa apenas ter o inglês intermediário e alguma experiência prévia
-            profissional ou acadêmica na área de atuação de preferência.
-        </div>
+<section class="product-description margin-top-and-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="logo-product ge col-lg-5 col-sm-12 col-md-12"></div>
+      <div class="description col-lg-7 col-sm-12 col-md-12">
+        <h2 class="bold" i18n="@@programOverview">
+          ¿Qué significa ser un Emprendedor Global?
+        </h2>
+        <p *ngIf="!geTextContent">
+          Ser Emprendedor Global es una experiencia de pasantía internacional donde jóvenes (estudiantes o graduados) podrán desarrollar
+          su carrera profesional trabajando en una Startup durante 8 a 12 semanas. Las áreas de acción son Marketing, Administración,
+          Tecnología e Información, Diseño Gráfico y Desarrollo de Negocios. Es de preferencia que el joven tenga inglés
+          intermedio y alguna experiencia profesional previa o académica en el área de ocupación de preferencia
+        </p>
+        <p *ngIf="geTextContent">
+          {{ geTextContent }}
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Form ge -->
   <app-form-ge id="form"></app-form-ge>
 
   <section class="product-steps margin-top-and-bottom">
     <div class="container">
+        <h2 style="text-align:center;font-weight: bold; color:black;padding-bottom: 30px;">Pasos para realizar tu intercambio </h2>
       <div class="row">
         <div class="product-image background-default col-lg-5 col-md-12 col-sm-12">
           <div class="round icon circle"></div>
@@ -39,10 +44,10 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@register">
-                Cadastre-se
+                Inscríbete
               </h3>
               <p class="lighter" i18n="@@registerAndSeeOpportunities">
-                Preencha seu cadastro e veja as oportunidades em nosso site.
+                Llena tu inscripción y mira las oportunidades que tenemos para ti.
               </p>
             </div>
           </div>
@@ -52,10 +57,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@contactWithAiesec">
-                Contato com a AIESEC
+                Contacto con AIESEC
               </h3>
               <p class="lighter" i18n="@@contactWithAiesecText">
-                A AIESEC mais próxima de você entrará em contato para tirar suas dúvidas e indicar vagas.
+                La oficina de AIESEC más cercana a ti entrará en contacto para resolver tus dudas e 
+                indicarte las mejores oportunidades.
               </p>
             </div>
           </div>
@@ -65,11 +71,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@cvInEnglishTitle">
-                Fazer o CV em inglês
+                Hacer el CV en inglés
               </h3>
               <p class="lighter" i18n="@@cvInEnglishText">
-                É necessário preparar seu CV em inglês para apresentar para as empresas que você está se candidatando. Não se preocupe, estamos
-                aqui para te ajudar!
+                Es necesario preparar tu curriculum vitae en inglés para presentar a las Start Ups a las que 
+                estás aplicando. No te preocupes, estamos aquí para ayudarte.
               </p>
             </div>
           </div>
@@ -79,11 +85,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@applyInOurVacanciesTitle">
-                Aplique em nossas vagas
+                Aplicar a nuestras oportunidades
               </h3>
               <p class="lighter" i18n="@@applyInOurVacanciesText">
-                No site você pode se candidatar as diversas vagas que encaixam no seu perfil, a partir da consultoria feita com seu escritório
-                da AIESEC.
+                En la plataforma podrás aplicar a diversas oportunidades que encajarán con tu perfil a partir 
+                de la consultoría hecha por la oficina de AIESEC.
               </p>
             </div>
           </div>
@@ -93,11 +99,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@interviewsForVacanciesTitle">
-                Entrevistas para vagas que for selecionado
+                Entrevista con la empresa que estás aplicando.
               </h3>
               <p class="lighter" i18n="@@interviewsForVacanciesText">
-                Você vai passar por uma entrevista com a oportunidade que você se candidatou, para se apresentar, responder algumas perguntas
-                e tirar dúvidas.
+                Vas a realizar una entrevista con la Start Up a la que aplicaste, donde te presentarás y 
+                responderás algunas preguntas de selección..
               </p>
             </div>
           </div>
@@ -107,11 +113,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@beApprovedOnTheJobTitle">
-                Ser aprovado na vaga
+                Ser aprobado en la oportunidad.
               </h3>
               <p class="lighter" i18n="@@beApprovedOnTheJobGeText">
-                Depois das entrevistas, você será convidado a fechar o intercâmbio para a oportunidade que for aceito, mediante o pagamento
-                de uma taxa administrativa.
+                Después de la entrevista y de ser aceptado en la oportunidad, serás invitado para firmar el 
+                contrato de tu intercambio y hacer el pago de la tasa administrativa.
               </p>
             </div>
           </div>
@@ -121,10 +127,10 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@getReadyForYourExchangesTitle">
-                Se prepare para o seu Intercâmbio
+                Prepárate para tu intercambio
               </h3>
               <p class="lighter" i18n="@@getReadyForYourExchangesText">
-                Com o suporte da AIESEC você se preparará para viajar e fazer um projeto incrível.
+                Con el soporte de AIESEC, te vas a preparar para viajar y tener una experiencia increíble.
               </p>
             </div>
           </div>
@@ -134,17 +140,17 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@livesExperienceTitle">
-                Viva a Experiência
+                Vive la Experiencia
               </h3>
               <p class="lighter" i18n="@@livesExperienceText">
-                Agora é só viajar e, com auxílio da AIESEC, viver uma experiência de liderança!
+                Ahora es solamente viajar y con soporte de AIESEC podrás vivir una experiencia de liderazgo que impactará el mundo.
               </p>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
-              <button [ngx-scroll-to]="'#form'" class="with-background bold ge without-border centered" i18n="@@subscribeNow">
-                Inscreva-se já
+              <button [ngx-scroll-to]="'#form'" class="with-background bold ge without-border centered" i18n="@@subscribeNow" style="border-radius:5px;">
+                Quiero ser Emprendedor Global
               </button>
             </div>
           </div>
@@ -152,64 +158,10 @@
       </div>
     </div>
   </section>
-  <section class="faq padding-top-and-bottom with-background ge">
+  
+  <section class='know-aiesec padding-top-and-bottom with-background ge'>
     <div class="container">
-      <div class="row">
-        <div class="faq-info col-lg-7 col-sm-12 col-md-12">
-          <h2 class='bold' i18n="@@faqFrequentlyAskedQuestions">
-            FAQ - Dúvidas Frequentes
-          </h2>
-          <div class="row">
-            <div class="col-sm-12">
-              <h3 class='semibold' i18n="@@faqGeItem1">
-                Vou receber salário para trabalhar na Startup?
-              </h3>
-              <p class='lighter italic' i18n="@@faqGeItem1Answer">
-                Não, a experiência não é remunerada para este tipo de intercâmbio. Mas em compensação, você irá receber acomodação pelo período
-                do intercâmbio.
-              </p>
-            </div>
-            <div class="col-sm-12">
-              <h3 class='semibold' i18n="@@faqGeItem2">
-                As vagas são apenas em Startups?
-              </h3>
-              <p class='lighter italic' i18n="@@faqGeItem2Answer">
-                Não, existem vagas também em aceleradoras e incubadoras de negócios.
-              </p>
-            </div>
-            <div class="col-sm-12">
-              <h3 class='semibold' i18n="@@faqGeItem3">
-                Preciso de seguro saúde para viajar?
-              </h3>
-              <p class='lighter italic' i18n="@@faqGeItem3Answer">
-                Sim, o seguro saúde é obrigatório no seu intercâmbio com a AIESEC, para garantir seu bem-estar durante toda a viagem. Nós
-                recomendamos o seguro Assistcard para nossos intercambistas, mas você pode contratar a seguradora que você
-                preferir.
-              </p>
-            </div>
-            <div class="col-sm-12">
-              <h3 class='semibold' i18n="@@faqGeItem4">
-                Qual o tipo de acomodação que irei ficar?
-              </h3>
-              <p class='lighter italic' i18n="@@faqGeItem4Answer">
-                Depende do seu país de destino. Você poderá ficar hospedado em uma casa com nativos, hostel ou apartamento com outros intercambistas!
-              </p>
-            </div>
-            <div class="col-sm-12">
-              <button [ngx-scroll-to]="'#form'" class="centered without-border bold background-white ge" i18n="@@contactUsForm">
-                Fale conosco
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="faq-image background-default col-lg-5 col-sm-12 col-md-12">
-          <div class="round icon circle"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class='know-aiesec margin-top-and-bottom'>
-    <div class="container">
+        <h2 style="text-align:center;font-weight: bold; color:black;">¿Que incluye mi intercambio?</h2>
       <div class="row">
         <div class="aiesec-image background-default col-lg-5 col-sm-12 col-md-12">
           <div class="round icon circle"></div>
@@ -221,11 +173,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@programAboutItem1Title">
-                Auxílio para achar sua vaga
+                Soporte para encontrar tu vacante
               </h3>
               <p class="lighter lower" i18n="@@programAboutItem1Text">
-                Ao se inscrever, um voluntário da AIESEC vai te auxiliar a achar a vaga certa para o seu perfil, tirar todas suas dúvidas
-                e vai te colocar em contato com o escritório para onde você vai viajar.
+                Al inscribirte, un voluntario de AIESEC te va a ayudar a encontrar la oportunidad correcta 
+                para tu perfil, sacar todas las dudas y ponerte en contacto con la oficina a la cual vas a viajar.
               </p>
             </div>
           </div>
@@ -235,11 +187,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@programAboutItem2Title">
-                Apoio logístico
+                Soporte logístico
               </h3>
               <p class="lighter lower" i18n="@@programAboutItem2Text">
-                Antes e durante o intercâmbio, a AIESEC na sua cidade e no seu destino irão te auxiliar com a logística de transporte, acomodação
-                e preparo para o seu projeto.
+                Antes y durante el intercambio, AIESEC en tu ciudad y en el destino van ayudarte con la logística 
+                de transporte, acomodación y preparación para tu proyecto.
               </p>
             </div>
           </div>
@@ -249,12 +201,12 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@programAboutItem3Title">
-                Descrição de trabalho
+                Descripción de trabajo
               </h3>
               <p class="lighter lower" i18n="@@programAboutItem3Text">
-                Independente do tipo de intercâmbio, nossas oportunidades possuem descrições do projeto que você vai participar, carga horária
-                e as suas responsabilidades. Além disso, você pode conversar com a nossa equipe para esclarecer qualquer
-                dúvida.
+                Independiente del tipo de intercambio, nuestras oportunidades tienen descripciones del proyecto en el 
+                que vas a participar, carga horaria y responsabilidades. Además de eso, tu puedes conversar con nuestro 
+                equipo para aclarar cualquier duda.
               </p>
             </div>
           </div>
@@ -264,11 +216,11 @@
             </div>
             <div class="col-lg-10 col-md-12 col-sm-12">
               <h3 class="bold line-height-lower darker" i18n="@@programAboutItem4Title">
-                Experiência de Liderança
+                Experiencia de Liderazgo
               </h3>
               <p class="lighter lower" i18n="@@programAboutItem4Text">
-                Ao longo da sua experiência com a AIESEC, serão oferecidos diversos espaços para você refletir e aprimorar as habilidades
-                desenvolvidas no seu intercâmbio, para que você possa retornar e trazer um impacto real para sua cidade.
+                A lo largo de tu experiencia con AIESEC, serán brindados diversos espacios para que puedas reflexionar y 
+                mejorar las habilidades de liderazgo, para que puedas volver y traer un impacto real a tu ciudad.
               </p>
             </div>
           </div>
@@ -276,12 +228,70 @@
       </div>
       <div class="row">
         <div class="col-sm-12">
-          <button [ngx-scroll-to]="'#form'" class="border-radius centered without-border with-background default" i18n="@@talkWithOurRepresentatives">
-            Fale com um dos nossos representantes
+          <button [ngx-scroll-to]="'#form'" class="border-radius centered without-border" i18n="@@talkWithOurRepresentatives" style="background:#00AA90;color:white;font-weight:bold;">
+            Habla con uno de nuestros representantes
           </button>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="faq padding-top-and-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="faq-info col-lg-7 col-sm-12 col-md-12">
+            <h2 class='bold' i18n="@@faqFrequentlyAskedQuestions">
+              FAQ - Preguntas frecuentes
+            </h2>
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 class='semibold' i18n="@@faqGeItem1">
+                  ¿Voy a recibir alguna remuneración por parte de la Start Up?
+                </h3>
+                <p class='lighter italic' i18n="@@faqGeItem1Answer">
+                  No, la experiencia no es remunerada para este intercambio. Pero 
+                  en compensación, recibirás alojamiento por el periodo del intercambio.
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <h3 class='semibold' i18n="@@faqGeItem2">
+                  ¿Las vacantes son solo para Start Ups?
+                </h3>
+                <p class='lighter italic' i18n="@@faqGeItem2Answer">
+                  No, existen vacantes también en aceleradoras e incubadoras de negocios.
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <h3 class='semibold' i18n="@@faqGeItem3">
+                  ¿Necesito seguro de salud para viajar?
+                </h3>
+                <p class='lighter italic' i18n="@@faqGeItem3Answer">
+                  Si, el seguro de salud es obligatorio para tu intercambio con AIESEC, para garantizar tu 
+                  bienestar durante todo el viaje. Nosotros podemos recomendarte un servicio de seguros, 
+                  pero tú puedes contratar la aseguradora que más prefieras.
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <h3 class='semibold' i18n="@@faqGeItem4">
+                  ¿En qué tipo de hospedaje voy acomodarme?
+                </h3>
+                <p class='lighter italic' i18n="@@faqGeItem4Answer">
+                  Depende del país de destino. Podrás estar alojado en una familia, un hostel o en un 
+                  departamento con otros intercambistas.
+                </p>
+              </div>
+              <div class="col-sm-12">
+                <button [ngx-scroll-to]="'#form'" class="centered without-border bold" i18n="@@contactUsForm" style="background:#1BC69C;color:white;font-weight:bold;border-radius: 5px;">
+                  Contáctanos
+                 </button>
+              </div>
+            </div>
+          </div>
+          <div class="faq-image background-default col-lg-5 col-sm-12 col-md-12">
+            <div class="round icon circle"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 </main>
 <app-landing-footer></app-landing-footer>

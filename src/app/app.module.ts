@@ -22,6 +22,7 @@ import { LandingPageMenuModule } from './landing-page-menu/landing-page-menu.mod
 import { LandingFooterModule } from './landing-footer/landing-footer.module';
 import { FileValueAccessorDirective } from './file-control-value-accessor.directive';
 import { FileValidatorDirective } from './file-input-validator.directive';
+import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -79,6 +80,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     {
       provide: LOCALE_ID,
       useValue: 'en'
+    },
+    {
+      provide: 'externalUrlRedirectResolver',
+      useValue: (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>
+      {
+          window.location.href = (route.data as any).externalUrl;
+      }
     }
   ],
   bootstrap: [AppComponent]

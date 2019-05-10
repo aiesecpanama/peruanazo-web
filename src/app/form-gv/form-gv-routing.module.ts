@@ -10,7 +10,7 @@ const routes: Routes = [
     component: FormGvComponent
   },
   {
-    path: 'obrigado',
+    path: 'gracias',
     component: FormGvThankYouComponent
   }
 ];

@@ -46,6 +46,7 @@ $break-sm: 576px;
         }
     }
     #footer-carousel {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -61,7 +62,7 @@ $break-sm: 576px;
             z-index: 4;
             transition: .3s;
             &:hover {
-                transform: scale(1.05);
+                transform: scale(1);
                 cursor: pointer;
             }
         }
@@ -79,11 +80,11 @@ $break-sm: 576px;
                 display: flex;
                 align-items: center;
                 .footer-each-item {
-                    width: 6%;
+                    width: 10%;
                     height: 100px;
                     margin: 10px .325%;
                     box-sizing: box-shadow;
-                    background-position: center center;
+                    background-size: cover;
                     background-repeat: no-repeat;
                     z-index: 10;
                     float: left;
@@ -110,6 +111,7 @@ $break-sm: 576px;
                         color: $default;
                         display: none;
                         font-weight: bold;
+                        font-size: 0.8em;
                     }
                     img {
                         background-color: #fff;
@@ -117,7 +119,6 @@ $break-sm: 576px;
                         max-width: 100%;
                         transition: .3s;
                         opacity: .85;
-                        transform: scale(1.15);
                         cursor: default;
                         &:hover {
                             transform: scale(1.55);
