@@ -44,7 +44,7 @@ export class DomainsService {
 			{ id : 6, value: 'Otros' }
 		];
 	}
-	
+
 	getScholarityDomains(){
 		return [
 			{ id: '0', name: 'Primaria completa' },
@@ -194,6 +194,7 @@ export class DomainsService {
 			{ name : 'HUAURA', department: 'LIMA' },
 			{ name : 'OYON', department: 'LIMA' },
 			{ name : 'YAUYOS', department: 'LIMA' },
+      { name : 'IQUITOS', department: 'LORETO' },
 			{ name : 'MAYNAS', department: 'LORETO' },
 			{ name : 'ALTO AMAZONAS', department: 'LORETO' },
 			{ name : 'LORETO', department: 'LORETO' },
@@ -322,7 +323,7 @@ export class DomainsService {
   			value: 'Otra',
   			id: 3
   		}
-  	];  	
+  	];
   };
 
   getReasonsOptionsGT(){
@@ -343,6 +344,6 @@ export class DomainsService {
   			value: 'Otra',
   			id: 3
   		}
-  	];  	
+  	];
   };
 }
