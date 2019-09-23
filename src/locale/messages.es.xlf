@@ -32,7 +32,7 @@
       <target>Voluntario Global</target></trans-unit>
       <trans-unit id="globalEntrepreneur" datatype="html">
         <source>
-                  Empreendedor Global
+                  Emprendedor Global
                 </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -66,7 +66,7 @@
       <target>Talento Global</target></trans-unit>
       <trans-unit id="hostAnExchange" datatype="html">
         <source>
-                    Hospede um intercambista
+                    Hospede a un voluntario
                   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -82,7 +82,7 @@
         </context-group>
       <target>Familia Global</target></trans-unit>
       <trans-unit id="becomeOurPartner" datatype="html">
-        <source>Seja nosso Parceiro</source>
+        <source>Haga parte de nuestros aliados</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
           <context context-type="linenumber">36</context>
@@ -177,7 +177,7 @@
       <target>Empresas</target></trans-unit>
       <trans-unit id="students" datatype="html">
         <source>
-                    Estudantes
+                    Estudiantes
                   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -193,7 +193,7 @@
         </context-group>
       <target>Estudiantes</target></trans-unit>
       <trans-unit id="planYourTrip" datatype="html">
-        <source>Planeje sua viagem</source>
+        <source>Planea tu viaje</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
           <context context-type="linenumber">71</context>
@@ -205,7 +205,7 @@
       <target>Planifica tu viaje</target></trans-unit>
       <trans-unit id="airlineTickets" datatype="html">
         <source>
-                    Passagens Aéreas
+                    Pasajes aereos
                   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -218,7 +218,7 @@
       <target>Pasajes Aéreos </target></trans-unit>
       <trans-unit id="healthInsurance" datatype="html">
         <source>
-                    Seguro Saúde
+                    Seguro de salud
                   </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -231,7 +231,7 @@
       <target>Seguro de Salud</target></trans-unit>
       <trans-unit id="contact" datatype="html">
         <source>
-                Contato
+                Contacto
               </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -264,10 +264,10 @@
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
           <context context-type="linenumber">176</context>
         </context-group>
-      <target>Descubrí tu verdadero talento</target></trans-unit>
+      <target>Descubre tu verdadero talento</target></trans-unit>
       <trans-unit id="landingGeTitle" datatype="html">
         <source>
-        Empreendedor Global
+        Emprendedor Global
       </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -276,7 +276,7 @@
       <target>Emprendedor Global</target></trans-unit>
       <trans-unit id="landingGeDescription" datatype="html">
         <source>
-        Empreendedorismo é
+        Emprendedor
         <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>encontrar sua paixão.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
       </source>
         <context-group purpose="location">
@@ -286,7 +286,7 @@
       <target>Emprendimiento es encontrar tu pasión. </target></trans-unit>
       <trans-unit id="landingGvTitle" datatype="html">
         <source>
-        Voluntário Global
+        Voluntario Global
       </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -295,7 +295,7 @@
       <target>Voluntario Global</target></trans-unit>
       <trans-unit id="landingGvDescription" datatype="html">
         <source>
-        Voluntário para
+        Voluntario para
         <x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>as pessoas.<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/>
       </source>
         <context-group purpose="location">
@@ -305,7 +305,7 @@
       <target>Voluntario para las personas</target></trans-unit>
       <trans-unit id="landingPageIntro" datatype="html">
         <source>
-        A AIESEC é o maior movimento de liderança jovem do mundo
+        AIESEC el mayor movimiento de jovenes en el mundo
       </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page-menu/landing-page-menu.component.html</context>
@@ -341,7 +341,7 @@
         </context-group>
       <target>AIESEC</target></trans-unit>
       <trans-unit id="bePartOfIt" datatype="html">
-        <source>Faça parte</source>
+        <source>Sé miembro</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-footer/landing-footer.component.html</context>
           <context context-type="linenumber">54</context>
@@ -472,7 +472,7 @@
       <target>Tener entre 18 y 30 años es el único requisito.</target></trans-unit>
       <trans-unit id="signup" datatype="html">
         <source>
-            Inscreva-se
+            Inscríbete
           </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
@@ -501,7 +501,7 @@
 ¡Comience su viaje empresarial con una pasantía internacional en una startup!</target></trans-unit>
       <trans-unit id="landingGeAboutMobile" datatype="html">
         <source>
-          Imersão em Startups
+          Se interno en una Startup
         </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
@@ -511,7 +511,7 @@
 ¡Comience su viaje empresarial con una pasantía internacional en una startup!</target></trans-unit>
       <trans-unit id="learnMoreGeItem1" datatype="html">
         <source>
-                Ter uma experiência de imersão em uma startup durante 6 a 12 semanas
+                Ten una experiencia de inmersión en una startup durante 6 a 12 semanas
               </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
@@ -520,7 +520,7 @@
       <target>Disponibilidad de realizar un intercambio mínimo de 8 semanas o más.</target></trans-unit>
       <trans-unit id="learnMoreGeItem2" datatype="html">
         <source>
-                Viva em um ambiente dinâmico de uma Startup e atue em Marketing, Administração, T.I. ou Design.
+                Viva en un ambiente dinamico de una Startup en Marketing, Administración, IT o Diseño.
               </source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
@@ -546,7 +546,7 @@
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">119</context>
         </context-group>
-      <target>¿Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? 
+      <target>¿Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional?
 Diferenciate a través de una pasantía profesional en el extranjero. </target></trans-unit>
       <trans-unit id="landingGtAboutMobile" datatype="html">
         <source>
@@ -556,7 +556,7 @@ Diferenciate a través de una pasantía profesional en el extranjero. </target><
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">124</context>
         </context-group>
-      <target>Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional? 
+      <target>Buscas la próxima oportunidad para cambiar de vida y obtener experiencia profesional?
 Diferenciate a través de una pasantía profesional en el extranjero</target></trans-unit>
       <trans-unit id="learnMoreGtItem1" datatype="html">
         <source>
@@ -656,7 +656,7 @@ Diferenciate a través de una pasantía profesional en el extranjero</target></t
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">232</context>
         </context-group>
-      <target>El modelo de desarrollo de liderazgo de AIESEC prepara jovenes para que sean un agente de cambio en el mundo, 
+      <target>El modelo de desarrollo de liderazgo de AIESEC prepara jovenes para que sean un agente de cambio en el mundo,
 permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada día.</target></trans-unit>
       <trans-unit id="getToKnowOurPrograms" datatype="html">
         <source>Conheça nossos programas</source>
@@ -726,8 +726,8 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">303</context>
         </context-group>
-      <target>“Ser parte de un voluntariado internacional es el mejor camino para entender el 
-                      sentido de SERVIR. Mi experiencia en Costa Rica cubrió mis expectativas, siempre 
+      <target>“Ser parte de un voluntariado internacional es el mejor camino para entender el
+                      sentido de SERVIR. Mi experiencia en Costa Rica cubrió mis expectativas, siempre
                       habrá algo nuevo que visitar y cosas nuevas que aprender, además su gente te contagiara
                        de su buena vibra.  Asimismo aunque se presenten algunos problemas en el camino eso nos
                         ayudará a conocernos a nosotros mismos y saber de lo que somos capaces”</target></trans-unit>
@@ -741,9 +741,9 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">318</context>
         </context-group>
-      <target>“Cuando inicie la experiencia en mi startup tenía miedo de no poder comunicar lo que 
+      <target>“Cuando inicie la experiencia en mi startup tenía miedo de no poder comunicar lo que
                       quería decir debido al idioma, pero las personas aquí hicieron que todo sea más fácil,
-                       nunca antes hubiera podido imaginar lo fascinante y amplio que es el mundo emprendedor, 
+                       nunca antes hubiera podido imaginar lo fascinante y amplio que es el mundo emprendedor,
                        día a día tengo que esforzarme para estar al nivel. En esta experiencia pude abrir mi
                         mente a muchas cosas que no había visto en Perú.”</target></trans-unit>
       <trans-unit id="landingOurHistory3" datatype="html">
@@ -755,10 +755,10 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/landing-page/landing-page.component.html</context>
           <context context-type="linenumber">334</context>
         </context-group>
-      <target>“Durante este tiempo en India he aprendido diversas herramientas como Analista de 
+      <target>“Durante este tiempo en India he aprendido diversas herramientas como Analista de
                       Compras para Tata Consultancy Services LTD. El estar dentro del mercado internacional
                        es algo completamente distinto. Esto me enseñó el trabajo en equipo, la gestión y
-                        sobre todo ganar una experiencia profesional que me abrirá muchas puertas en el 
+                        sobre todo ganar una experiencia profesional que me abrirá muchas puertas en el
                         futuro”.</target></trans-unit>
       <trans-unit id="formGeTitle" datatype="html">
         <source>Assuma os desafios de trabalhar em uma Startup e se desenvolva como um líder empreendedor.</source>
@@ -1699,7 +1699,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="linenumber">383</context>
         </context-group>
       <target></target></trans-unit>
-      
+
       <trans-unit id="referralType" datatype="html">
         <source>
                     Como conheceu a AIESEC?
@@ -1711,7 +1711,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">398</context>
-        </context-group> 
+        </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/form-gv/form-gv.component.html</context>
           <context context-type="linenumber">351</context>
@@ -1988,7 +1988,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
         </context-group>
         <target>Es necesario preparar tu curriculum vitae en inglés para presentar a las Start Ups a las que estás aplicando. No te preocupes, estamos aquí para ayudarte.</target>
       </trans-unit>
-      
+
       <trans-unit id="accessHomePage" datatype="html">
         <source>
           Acessar a página inicial
@@ -2805,7 +2805,7 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
           <context context-type="sourcefile">app/form-gt/form-gt.component.html</context>
           <context context-type="linenumber">17</context>
         </context-group>
-      
+
       <target>Vive la realidad de una empresa internacional, desarrolla tus habilidades y trae el mundo a tu currículum</target></trans-unit>
       <trans-unit id="formGvTitle" datatype="html">
         <source>Ser um voluntário global é transformar seus valores em ação e fazer a diferença em diversas regiões do mundo.</source>
@@ -2919,8 +2919,8 @@ permitiendo a los jóvenes tomar decisiones que puedan hacer la diferencia cada 
         </context-group>
       <target>La oficina de AIESEC más cercana a ti entrará en contacto para resolver tus dudas e indicarte las mejores oportunidades.
 
-</target></trans-unit>      
-      
+</target></trans-unit>
+
       <trans-unit id="applyInOurVacanciesTitle" datatype="html">
         <source>
                 Aplique em nossas vagas

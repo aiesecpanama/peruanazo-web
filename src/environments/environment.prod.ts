@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl : 'https://api.aiesec.pe'
+  apiUrl : 'https://api.aiesec.org.pa'
 };
