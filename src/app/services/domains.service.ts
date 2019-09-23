@@ -52,7 +52,7 @@ export class DomainsService {
 			{ id: '2', name: 'Estudiante de pregrado' },
 			{ id: '3', name: 'Universidad Completa' },
 			{ id: '4', name: 'Instituto Técnico Completo' },
-			{ id: '5', name: 'Estudiante de Postgrado' }
+			{ id: '5', name: 'Estudiante de Posgrado' }
 		];
 	}
 

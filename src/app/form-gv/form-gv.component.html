@@ -15,7 +15,7 @@
         <div *ngIf="!completedSignup">
           <div class="row" [ngClass]="{ headerB: formToggle }" *ngIf="!embeddedForm">
             <div class="col-sm">
-              <h1 i18n="@@formGvTitle">Conviértete en un <strong> Voluntario Global</strong>. Tenemos oportunidades especialmente para ti. 
+              <h1 i18n="@@formGvTitle">Conviértete en un <strong> Voluntario Global</strong>. Tenemos oportunidades especialmente para ti.
                 <strong>Vive la experiencia,</strong> cambia tu forma de ver el mundo e impacta positivamente en la sociedad.</h1>
             </div>
           </div>
@@ -39,15 +39,15 @@
                 <i class="far fa-times-circle fa-lg"></i>
               </button>
               <p>
-                <span i18n="@@alreadyExistsUserEmail">Já existe um usuário com esse endereço de email!</span>
+                <span i18n="@@alreadyExistsUserEmail">Ya existe el usuario con ese email!</span>
                 <br/>
                 <a href="https://auth.aiesec.org/users/sign_in?country=Peru#login" class="form-email-warning">
-                  <strong i18n="@@accessThePlatformQuestion">Gostaria de acessar a plataforma?</strong>
+                  <strong i18n="@@accessThePlatformQuestion">¿Te gustaría acceder a la plataforma?</strong>
                 </a>
-                <br/>  
+                <br/>
                 <a href="https://auth.aiesec.org/users/password/new" class="form-email-warning">
-                  <strong i18n="@@recoverPlatformPassword">Recuperar minha senha</strong>
-                </a>                
+                  <strong i18n="@@recoverPlatformPassword">Recuperar contrasena</strong>
+                </a>
               </p>
             </div>
             <div class="animated fadeIn" *ngIf="personalData && !completedSignup">
@@ -56,7 +56,7 @@
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
                       <div class="input-group-text">
-                        <i class="fas fa-user"></i><span i18n="@@fullname">Nome Completo</span></div>
+                        <i class="fas fa-user"></i><span i18n="@@fullname">Nombre Completo</span></div>
                     </div>
                     <!-- desktop -->
                     <input type="text" class="form-control desktop" placeholder="Como é pra gente te chamar?" i18n-placeholder="@@fullnamePlaceholder" [(ngModel)]="user.fullname" formControlName="fullname"
@@ -109,19 +109,19 @@
                     <div class="valid-feedback" *ngIf="!invalidEmail">
                       <i class="fa fa-check"></i>
                     </div>
-                    <div class="invalid-feedback"><span i18n="@@mandatoryField">Campo obrigatório</span>
+                    <div class="invalid-feedback"><span i18n="@@mandatoryField">Campo obligatorio</span>
                       <i class="fas fa-times"></i>
                     </div>
                   </div>
                   <div *ngIf="isValidPersonal('email')" class='error-message' i18n='@@formEmailEmpty'>
-                    Preencha com o seu email.
+                    Ingrese su correo electrónico
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
                       <div class="input-group-text">
-                        <i class="fas fa-gift"></i><span i18n="@@birthdate">Data de Nascimento</span></div>
+                        <i class="fas fa-gift"></i><span i18n="@@birthdate">Fecha de nacimiento</span></div>
                     </div>
 
                     <i class="fas fa-gift mobile mobile-icon"></i>
@@ -132,24 +132,24 @@
                     </div>
                   </div>
                   <div *ngIf="invalidDate" class='error-message' i18n="@@formBirthdateInvalid">
-                    Por favor, preencha com uma data válida
+                    Por favor, ingrese una fecha valida.
                   </div>
                   <div *ngIf="!matchDate" class='error-message' i18n="@@formBirthdateError">
-                    Desculpe, nossos programas são direcionados para pessoas entre 18 e 30 anos.
+                    Disculpa, nuestros programas están dirigidos para personas de 18 a 30 años.
                   </div>
                 </div>
-                
+
                 <div class="form-group form-check text-center checkbox">
                   <input type="checkbox" class="form-check-input" [checked]="user.cellphone_contactable" id="aceitoContato" [(ngModel)]="user.cellphone_contactable"
                     formControlName="cellphone_contactable" name="cellphone_contactable">
-                  <label class="form-check-label" for="aceitoContato" i18n="@@cellphoneContactable"> Gostaria de ser contatado por ligação ou mensagens no meu número de celular.</label>
+                  <label class="form-check-label" for="aceitoContato" i18n="@@cellphoneContactable"> Te gustaría ser contactado por teléfono. </label>
                 </div>
 
                 <!-- Termos -->
                 <div class="form-group form-check text-center checkbox">
                   <input type="checkbox" class="form-check-input" [checked]="user.accepted_terms" id="aceitoTermos" [(ngModel)]="user.accepted_terms"
                     formControlName="accepted_terms" name="accepted_terms">
-                  <label class="form-check-label" for="aceitoTermos"><a href="assets/terms/Terminos y Condiciones - AIESEC en Perú.pdf" target="_blank" i18n="@@termsAndConditionsConfirmation">Li e aceito os termos e condições.</a></label>
+                  <label class="form-check-label" for="aceitoTermos"><a href="assets/terms/Terminos y Condiciones - AIESEC en Perú.pdf" target="_blank" i18n="@@termsAndConditionsConfirmation"> Acepto los términos y condiciones. </a></label>
                 </div>
 
               </form>
@@ -161,7 +161,7 @@
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
-                        <i class="fas fa-graduation-cap"></i><span i18n='@@scholarity'>Escolaridade</span></div>
+                        <i class="fas fa-graduation-cap"></i><span i18n='@@scholarity'>Grado de escolaridad. </span></div>
                     </div>
                     <div class="dropdown">
                       <div class="styled-select">
@@ -173,7 +173,7 @@
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('scholarity')" class='error-message' i18n='@@formScholarityEmpty'>
-                    Selecione um nível de escolaridade
+                    Seleccione el nivel de escolaridad.
                   </div>
                 </div>
 
@@ -196,7 +196,7 @@
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('department')" class='error-message' i18n="@@formDepartmentEmpty">
-                    Por favor, selecione seu departamento
+                    Por favor, seleccione su departamento
                   </div>
                 </div>
 
@@ -205,7 +205,7 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-home"></i>
-                        <span i18n="@@city">Cidade</span>
+                        <span i18n="@@city">Ciudad</span>
                       </div>
                     </div>
                     <div class="dropdown">
@@ -219,16 +219,16 @@
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('city')" class='error-message' i18n="@@formCityEmpty">
-                    Por favor, selecione sua cidade
+                    Por favor, seleccione su ciudad
                   </div>
                 </div>
-                
+
                 <div class="animated fadeIn faster form-group  university" *ngIf='user.city.name && user.scholarity.id > 1'>
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-graduation-cap"></i>
-                        <span i18n="@@university">Universidade</span>
+                        <span i18n="@@university">Universidad</span>
                       </div>
                     </div>
                     <div class="dropdown">
@@ -242,7 +242,7 @@
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('university_id')" class='error-message' i18n="@@formUniversityEmpty">
-                    Selecione uma universidade.
+                    Seleccione una universidad.
                   </div>
                 </div>
 
@@ -296,7 +296,7 @@
                   <div class="input-group">
                     <div class="input-group-prepend desktop">
                       <div class="input-group-text">
-                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Senha</span></div>
+                        <i class="fas fa-lock"></i><span i18n="@@confirmPassword">Confirmar Contraseña</span></div>
                     </div>
                     <!-- desktop -->
                     <input type="password" class="form-control desktop" placeholder="" [(ngModel)]="user.repassword" formControlName="repassword"
@@ -315,11 +315,11 @@
                   Preencha com a sua senha.
                   <br>
                   <span>
-                    (Pelo menos um caracter em maiúsculo, minúsculo, ao menos um número e no mínimo, 8 caracteres)
+                    (Por lo menos un caracter en mayúscula, minúscula, al menos un número y menos de 8 caracteres)
                   </span>
                 </div>
                 <div *ngIf="invalidPassword" class='error-message' i18n="@@formPasswordError">
-                  As senhas não conferem! Digite novamente
+                  La contraseña no coincide, digitela de nuevo.
                 </div>
 
                 <div class="form-group getToKnow" *ngIf='!persona'>
@@ -327,7 +327,7 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="fas fa-question-circle"></i>
-                        <span i18n='@@exchangeReasonGV'>Qual é a principal razão pela qual você quer ser um Voluntário Global?</span>
+                        <span i18n='@@exchangeReasonGV'>¿Cuál es la razón por la que deseas ser un voluntario global?</span>
                       </div>
                     </div>
                     <div class="dropdown">
@@ -338,7 +338,7 @@
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('exchange_reason')" class='error-message'>
-                    Por favor, selecione um valor
+                    Por favor, seleccione un valor
                   </div>
                 </div>
 
@@ -347,11 +347,11 @@
                     <div class="input-group-prepend">
                       <div class="input-group-text  input-group-text-without-input">
                         <i class="fas fa-plane"></i>
-                        <span i18n="@@whenCanTravel">Quando pode viajar</span>
+                        <span i18n="@@whenCanTravel">¿Cuando podrá viajar?</span>
                       </div>
                     </div>
                     <div class="label-experience">
-                      <span i18n="@@whenCanTravelAvailable">Escolha o período de tempo que você estará disponível</span>
+                      <span i18n="@@whenCanTravelAvailable">Escoja un período de tiempo en el que usted estará disponible.</span>
                     </div>
                   </div>
                   <div class="form-checkbox-select">
@@ -367,20 +367,20 @@
                   <div class="input-group select-dropdown">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
-                        <span i18n='@@referralType'>Como conheceu a AIESEC?</span>
+                        <span i18n='@@referralType'>¿Cómo conoció sobre AIESEC?</span>
                       </div>
                     </div>
                     <div class="dropdown">
                       <select required [(ngModel)]='user.referral_type' name='referral_type' formControlName='referral_type' class='select-without-background'>
-                        <option value='' i18n='@@referralTypeOption'> Selecione uma opção </option>
+                        <option value='' i18n='@@referralTypeOption'> Seleccione una opción </option>
                         <option *ngFor='let option of referralTypes' [ngValue]='option.id'> {{ option.value }}</option>
                       </select>
                     </div>
                   </div>
                   <div *ngIf="isValidStudy('referral_type')" class='error-message'>
-                    Por favor, selecione um valor
+                    Por favor, seleccione un valor
                   </div>
-                </div>                
+                </div>
 
               </form>
             </div>
@@ -394,8 +394,8 @@
                   <div class="col-sm">
                     <div class="row justify-content-center">
                       <div class="col-sm-9" id="header-resultado">
-                        <h2 i18n="@@thanksForSubscribleText">Obrigado por se increver!</h2>
-                        <h3 i18n="@@thanksForSubscribleMessage">Fique ligado no seu e-mail que enviaremos informações úteis para você por lá.</h3>
+                        <h2 i18n="@@thanksForSubscribleText">Gracias por inscribirte!</h2>
+                        <h3 i18n="@@thanksForSubscribleMessage"> Debes estar atento a tu correo electrónico, te enviaremos información útil del proceso.</h3>
                       </div>
                       <div class="col-sm-3">
                         <i class="fas fa-thumbs-up fa-10x color-icon"></i>
@@ -404,10 +404,9 @@
                     <div class="row justify-content-center">
                       <div class="col-sm-12" id="content-resultado">
                         <p i18n="@@registerResult">
-                          Agora que você criou a sua conta, você poderá acessar a nossa plataforma e começar a buscar por projetos de intercâmbio voluntário
-                          na data e destino ideal para você! Fique atento ao seu e-mail onde enviaremos mais informações.
+                          Ahora que has creado tu cuenta, podrás acceder a nuestra plataforma y comenzar a buscar proyectos de voluntariado en nuestros países aliados, en la fechas y destinos correctos para ti! Debes estar atento a tu correo electrónico donde te enviaremos mayor información.
                         </p>
-                        <button (click)="accessAiesec()" type="button" class="btn btn-primary" i18n="@@accesOpportunitiesPortal">Acessar o Portal de Oportunidades</button>
+                        <button (click)="accessAiesec()" type="button" class="btn btn-primary" i18n="@@accesOpportunitiesPortal">Acceder al Portal de Oportunidades</button>
                       </div>
                     </div>
                   </div>
@@ -420,7 +419,7 @@
                 <button type="button" class="btn btn-secondary" data-toggle="modal" (click)="cancelSignUp()" data-target="#modalCancelar1">{{formedUser || submittedPersonal ? 'Regresar' : 'Cancelar'}}</button>
               </div>
               <div class="col text-right">
-                <button type="button" (click)="registerUser(headerGVRef)" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms' i18n="@@next">Próximo</button>
+                <button type="button" (click)="registerUser(headerGVRef)" class="btn btn-primary" *ngIf="personalData" [disabled]='step1Form.invalid || (!matchDate || invalidEmail) || !user.accepted_terms' i18n="@@next">Siguiente</button>
                 <button type="button" (click)="submit(headerGVRef)" class="btn btn-primary submit-form" *ngIf="studyData" [disabled]='unableToSubmit()' i18n="@@send">
                   Enviar
                   <i class="fab fa-telegram-plane"></i>

@@ -23,22 +23,22 @@ export class FormGvThankYouComponent implements OnInit {
   }
 
   goToAiesec() {
-    window.open("https://aiesec.pe/", "_blank");
+    window.open("https://aiesec.org.pa/", "_blank");
   }
 
   goToBlog() {
-    window.open("https://blog.aiesec.pe/", "_blank");
+    window.open("https://blog.aiesec.org.pa/", "_blank");
   }
 
   goToGvBrasil(){
-    window.open("https://aiesec.org/search?type=1&home_mcs=1606", "_blank"); 
+    window.open("https://aiesec.org/search?type=1&home_mcs=1606", "_blank");
   }
 
   goToGvColombia(){
-    window.open("https://aiesec.org/search?type=1&home_mcs=1551", "_blank"); 
+    window.open("https://aiesec.org/search?type=1&home_mcs=1551", "_blank");
   }
 
   goToGvMexico(){
-    window.open("https://aiesec.org/search?type=1&home_mcs=1589", "_blank"); 
+    window.open("https://aiesec.org/search?type=1&home_mcs=1589", "_blank");
   }
 }

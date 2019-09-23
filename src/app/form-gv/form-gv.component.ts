@@ -300,7 +300,7 @@ export class FormGvComponent implements OnInit {
   };
 
   onResize(event) {
-    (event.target.innerWidth > 600 ? this.placeholderBirthdate = "Os programas da AIESEC são para pessoas de 18 à 30 anos" : this.placeholderBirthdate = "Fecha de nacimiento");
+    (event.target.innerWidth > 600 ? this.placeholderBirthdate = "Los programas de AIESEC son para personas de 18 a 30 años." : this.placeholderBirthdate = "Fecha de nacimiento");
   }
 
   cancelSignUp() {
@@ -351,7 +351,7 @@ export class FormGvComponent implements OnInit {
       this.universities = res;
     }, (err) => {
       this.msgs = [];
-      this.msgs.push({ severity: 'error', summary: 'FALHA EM RECUPERAR DADOS!', detail: 'Não foi possível recuperar os dados das faculdades disponíveis.' });
+      this.msgs.push({ severity: 'error', summary: 'Error al recuperar los datos!', detail: 'No es posible recuperar los datos de universidades disponibles.' });
     })
   }
 
@@ -362,7 +362,7 @@ export class FormGvComponent implements OnInit {
       this.courses = _.union(orderedList, other);
     }, (err) => {
       this.msgs = [];
-      this.msgs.push({ severity: 'error', summary: 'FALHA EM RECUPERAR DADOS!', detail: 'Não foi possível recuperar os dados dos cursos disponíveis.' });
+      this.msgs.push({ severity: 'error', summary: 'Error al recuperar los datos!', detail: 'No es posible recuperar los datos de los cursos disponibles.' });
     })
   }
 
