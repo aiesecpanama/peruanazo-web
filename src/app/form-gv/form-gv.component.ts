@@ -490,7 +490,7 @@ export class FormGvComponent implements OnInit {
         this.loading = false;
         if (res.status == 'failure') {
           this.msgs = [];
-          this.msgs.push({ severity: 'error', summary: 'FALHA AO SALVAR!', detail: 'Não foi possível salvar, tente novamente mais tarde.' });
+          this.msgs.push({ severity: 'error', summary: 'Falta guardar los datos!', detail: 'No es posible guardar los datos, intente nuevamente.' });
         }
         else {
           this.completedSignup = true;
@@ -505,7 +505,7 @@ export class FormGvComponent implements OnInit {
       },
         (err) => {
           this.msgs = [];
-          this.msgs.push({ severity: 'error', summary: 'ERRO AO SALVAR!', detail: 'Não foi possível salvar, tente novamente mais tarde.' });
+          this.msgs.push({ severity: 'error', summary: 'Error al guardar los datos!', detail: 'No es posible guardar los datos, intente nuevamente.' });
           this.loading = false;
         }
       )
@@ -517,7 +517,7 @@ export class FormGvComponent implements OnInit {
         res.email_exists ? this.invalidEmail = true : this.invalidEmail = false;
       }, (err) => {
         this.msgs = [];
-        this.msgs.push({ severity: 'error', summary: 'FALHA EM RECUPERAR DADOS!', detail: 'Não foi possível recuperar dados deste email.' });
+        this.msgs.push({ severity: 'error', summary: 'Falta recuperar los datos!', detail: 'No es posible recuperar los datos con este email.' });
       })
   }
 
